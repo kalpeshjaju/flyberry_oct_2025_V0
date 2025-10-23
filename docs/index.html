@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Flyberry Brand Package</title>
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #404040;
+            --accent: #d4762c;
+            --success: #2d7a3e;
+            --warning: #d97706;
+            --danger: #dc2626;
+            --bg-light: #fafafa;
+            --bg-white: #ffffff;
+            --border: #e0e0e0;
+            --text-primary: #1a1a1a;
+            --text-secondary: #6b7280;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-light);
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-white);
+            border-bottom: 3px solid var(--accent);
+            padding: 40px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        /* Executive Summary */
+        .executive-summary {
+            background: var(--bg-white);
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .summary-header {
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .summary-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* Metrics Grid */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin: 30px 0;
+        }
+
+        .metric-card {
+            background: var(--bg-light);
+            padding: 24px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+        }
+
+        .metric-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .metric-change {
+            font-size: 0.95rem;
+            color: var(--success);
+            font-weight: 600;
+        }
+
+        .metric-change.negative {
+            color: var(--danger);
+        }
+
+        /* Status Badges */
+        .status-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-complete {
+            background: var(--success);
+            color: white;
+        }
+
+        .status-ready {
+            background: var(--warning);
+            color: white;
+        }
+
+        .status-pending {
+            background: var(--secondary);
+            color: white;
+        }
+
+        /* Journey Map */
+        .journey-section {
+            margin: 60px 0;
+        }
+
+        .journey-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .journey-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .journey-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        /* Acts Grid */
+        .acts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .act-card {
+            background: var(--bg-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .act-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .act-header {
+            background: linear-gradient(135deg, var(--accent), #e59145);
+            color: white;
+            padding: 24px;
+        }
+
+        .act-number {
+            font-size: 0.9rem;
+            font-weight: 600;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .act-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .act-description {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            line-height: 1.5;
+        }
+
+        .act-body {
+            padding: 24px;
+        }
+
+        .act-documents {
+            margin-bottom: 20px;
+        }
+
+        .act-documents-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .document-list {
+            list-style: none;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: var(--secondary);
+        }
+
+        .document-list li::before {
+            content: "→";
+            margin-right: 8px;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .act-footer {
+            padding: 20px 24px;
+            background: var(--bg-light);
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .document-count {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .act-action {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .act-action:hover {
+            background: var(--secondary);
+        }
+
+        .act-action::after {
+            content: "→";
+            margin-left: 8px;
+        }
+
+        /* Key Deliverables */
+        .deliverables-section {
+            background: var(--bg-white);
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .deliverable-card {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .deliverable-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .deliverable-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .deliverable-description {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Quick Actions */
+        .quick-actions {
+            background: var(--primary);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .actions-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-light);
+            padding: 30px 0;
+            text-align: center;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .acts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+
+            <h1>Flyberry Brand Package</h1>
+            <p class="subtitle">Complete Brand Strategy & Execution Roadmap</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Executive Summary -->
+        <section class="executive-summary">
+            <div class="summary-header">
+                <h2 class="summary-title">Executive Overview</h2>
+                <span class="status-badge status-complete"> Complete & Execution-Ready</span>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Total Documents</div>
+                    <div class="metric-value">48</div>
+                    <div class="metric-change">Complete brand package</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-label">Timeline</div>
+                    <div class="metric-value">24 Months</div>
+                    <div class="metric-change">Transformation period</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-label">Transformation Scope</div>
+                    <div class="metric-value">Complete</div>
+                    <div class="metric-change">End-to-end strategy</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-label">Revenue Target</div>
+                    <div class="metric-value">₹100 Cr</div>
+                    <div class="metric-change">↑ From ₹35 Cr (FY25)</div>
+                </div>
+            </div>
+
+            <p style="margin-top: 30px; line-height: 1.8; color: var(--text-secondary);">
+                This comprehensive brand transformation package contains everything needed to reposition Flyberry from a
+                commodity-positioned snack brand to an innovation-led food brand that reimagines familiar foods through taste, craft, and imagination. The package includes detailed
+                strategy, execution plans, timelines, and success metrics organized in a sequential narrative
+                across 5 acts.
+            </p>
+        </section>
+
+        <!-- Journey Map -->
+        <section class="journey-section">
+            <div class="journey-header">
+                <h2 class="journey-title">Your Brand Transformation Journey</h2>
+                <p class="journey-subtitle">Navigate through 5 strategic acts, each building upon the previous</p>
+            </div>
+
+            <div class="acts-grid">
+                <!-- Act 1 -->
+                <a href="act-1-who-we-are.html" class="act-card">
+                    <div class="act-header">
+                        <div class="act-number">ACT 1</div>
+                        <div class="act-title">WHO WE ARE</div>
+                        <div class="act-description">Our story, standards, and soul.</div>
+                    </div>
+                    <div class="act-body">
+                        <div class="act-documents">
+                            <div class="act-documents-label">Key Documents</div>
+                            <ul class="document-list">
+                                <li>Master Brand Philosophy - Reimagining Food</li>
+                                <li>Our Origin Story</li>
+                                <li>Sourcing Philosophy</li>
+                                <li>Hero Products</li>
+                                <li>Brand Promise</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="act-footer">
+                        <span class="document-count">7 Documents</span>
+                        <span class="act-action">Explore</span>
+                    </div>
+                </a>
+
+                <!-- Act 2 -->
+                <a href="act-2-where-we-are.html" class="act-card">
+                    <div class="act-header">
+                        <div class="act-number">ACT 2</div>
+                        <div class="act-title">WHERE WE ARE TODAY</div>
+                        <div class="act-description">What's working, what's not — right now.</div>
+                    </div>
+                    <div class="act-body">
+                        <div class="act-documents">
+                            <div class="act-documents-label">Key Documents</div>
+                            <ul class="document-list">
+                                <li>Current Positioning (08)</li>
+                                <li>Current Customers (09)</li>
+                                <li>Current Performance (11)</li>
+                                <li>Recent Milestones (11A)</li>
+                                <li>Current Challenges (12)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="act-footer">
+                        <span class="document-count">6 Documents (08-12)</span>
+                        <span class="act-action">Explore</span>
+                    </div>
+                </a>
+
+                <!-- Act 3 -->
+                <a href="act-3-where-we-go.html" class="act-card">
+                    <div class="act-header">
+                        <div class="act-number">ACT 3</div>
+                        <div class="act-title">WHAT WE DISCOVERED</div>
+                        <div class="act-description">What the market told us.</div>
+                    </div>
+                    <div class="act-body">
+                        <div class="act-documents">
+                            <div class="act-documents-label">Key Documents</div>
+                            <ul class="document-list">
+                                <li>Competitive Landscape (13-13B)</li>
+                                <li>Customer Voice Analysis (14-15)</li>
+                                <li>Competitor Strategies (16)</li>
+                                <li>Market Opportunities (17)</li>
+                                <li>Customer Segments + Cultural Insights (18-18B)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="act-footer">
+                        <span class="document-count">10 Documents (13-18B)</span>
+                        <span class="act-action">Explore</span>
+                    </div>
+                </a>
+
+                <!-- Act 4 -->
+                <a href="act-4-where-we-should-go.html" class="act-card">
+                    <div class="act-header">
+                        <div class="act-number">ACT 4</div>
+                        <div class="act-title">WHERE WE SHOULD GO</div>
+                        <div class="act-description">Where we're going—and why it wins.</div>
+                    </div>
+                    <div class="act-body">
+                        <div class="act-documents">
+                            <div class="act-documents-label">Key Documents</div>
+                            <ul class="document-list">
+                                <li>Brand Vision 2027 (19)</li>
+                                <li>Repositioning Strategy (20)</li>
+                                <li>New Brand Positioning (21-25)</li>
+                                <li>Brand Architecture System (26-30)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="act-footer">
+                        <span class="document-count">12 Documents (19-30)</span>
+                        <span class="act-action">Explore</span>
+                    </div>
+                </a>
+
+                <!-- Act 5 -->
+                <a href="act-6-operating-plan.html" class="act-card">
+                    <div class="act-header">
+                        <div class="act-number">ACT 5</div>
+                        <div class="act-title">OPERATING PLAN</div>
+                        <div class="act-description">90‑day playbook, owners, metrics</div>
+                    </div>
+                    <div class="act-body">
+                        <div class="act-documents">
+                            <div class="act-documents-label">Key Documents</div>
+                            <ul class="document-list">
+                                <li>Execution Overview (34)</li>
+                                <li>Content & Brand Identity (35-40)</li>
+                                <li>Customer Experience (41-42)</li>
+                                <li>Growth & Partnerships (43-48)</li>
+                                <li>Success Metrics & KPIs (49-51)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="act-footer">
+                        <span class="document-count">18 Documents (34-51)</span>
+                        <span class="act-action">Explore</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Key Deliverables -->
+        <section class="deliverables-section">
+            <div class="container">
+
+                <h2 class="journey-title" style="text-align: center;">Key Deliverables</h2>
+                <div class="deliverables-grid">
+                    <div class="deliverable-card">
+                        <div class="deliverable-icon"></div>
+                        <div class="deliverable-title">Brand Strategy</div>
+                        <div class="deliverable-description">
+                            Complete repositioning from mid-premium to premier gourmet gourmet destination
+                        </div>
+                    </div>
+
+                    <div class="deliverable-card">
+                        <div class="deliverable-icon"></div>
+                        <div class="deliverable-title">Visual Identity</div>
+                        <div class="deliverable-description">
+                            Brand identity requirements, packaging specs, and store design guidelines
+                        </div>
+                    </div>
+
+                    <div class="deliverable-card">
+                        <div class="deliverable-icon"></div>
+                        <div class="deliverable-title">Portfolio Map</div>
+                        <div class="deliverable-description">
+                            Eight categories mapped for pack, shelf, and site
+                        </div>
+                    </div>
+
+                    <div class="deliverable-card">
+                        <div class="deliverable-icon"></div>
+                        <div class="deliverable-title">Execution Roadmap</div>
+                        <div class="deliverable-description">
+                            24-month timeline with milestones and success metrics
+                        </div>
+                    </div>
+
+                    <div class="deliverable-card">
+                        <div class="deliverable-icon"></div>
+                        <div class="deliverable-title">Growth Trajectory</div>
+                        <div class="deliverable-description">
+                            Strategic path to ₹100 Cr revenue through phased transformation
+                        </div>
+                    </div>
+
+                    <div class="deliverable-card">
+                        <div class="deliverable-icon"></div>
+                        <div class="deliverable-title">Proof Page</div>
+                        <div class="deliverable-description">
+                            Live claims registry with sources, owners, and dates — <a href="claims-registry.html">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <div class="container">
+
+                <h2 class="actions-title">Quick Access</h2>
+                <div class="action-buttons">
+                    <a href="act-1-who-we-are.html" class="btn btn-primary">Start Journey</a>
+                    <a href="act-6-execution.html#immediate-action-plan" class="btn btn-secondary">Immediate Actions</a>
+                    <a href="act-4-where-we-should-go.html#brand-vision-2025" class="btn btn-secondary">Brand Vision</a>
+                    <a href="#" onclick="downloadFullPackage()" class="btn btn-secondary">Download Package</a>
+                    <a href="claims-registry.html" class="btn btn-secondary">Claims Registry</a>
+                    <a href="act-4-where-we-should-go.html#origin-drop" class="btn btn-secondary">Origin Drop</a>
+                    <a href="gift-studio.html" class="btn btn-secondary">Gift Studio</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+
+            <p>Created by Growth Darji | October 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        function downloadFullPackage() {
+            alert('Full package download will be implemented. For now, navigate through each Act to access documents.');
+        }
+    </script>
+</body>
+</html>
