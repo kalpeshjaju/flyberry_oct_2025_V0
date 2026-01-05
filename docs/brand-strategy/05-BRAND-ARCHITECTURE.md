@@ -1,593 +1,373 @@
-# SECTION 5: BRAND ARCHITECTURE
-
-**Document**: Flyberry Brand Strategy
-**Section**: 5 of 7
-**Status**: Final
-**Last Updated**: January 2026
+# FLYBERRY BRAND STRATEGY
+## Section 5: Brand Architecture
 
 ---
 
-## 5.1 ARCHITECTURE OVERVIEW
-
-### 5.1.1 Master Brand Strategy: Branded House
-
-**Strategy**: All products live under the FLYBERRY master brand.
-
-**What This Means**:
-- Every product is "Flyberry [Product Name]"
-- One brand to build, one brand to protect
-- Quality promise transfers across categories
-- Simplified marketing investment
-
-**What We're NOT Doing**:
-- ❌ House of Brands (separate brand names per category)
-- ❌ Endorsed brands (Category Brand by Flyberry)
-- ❌ Sub-brands that compete with master brand
-
----
-
-### 5.1.2 Why Branded House
-
-| Benefit | Explanation |
-|---------|-------------|
-| **Single equity** | Every rupee spent builds Flyberry, not multiple brands |
-| **Trust transfer** | If customers love our dates, they'll trust our chips |
-| **Efficiency** | One website, one social presence, one brand guide |
-| **Clarity** | Customers always know what they're getting |
-| **Premium positioning** | One strong luxury brand > multiple diluted brands |
-
-**Trade-offs We Accept**:
-- Risk: If one product fails badly, it affects master brand
-- Mitigation: High quality standards, 85% rejection rate, limited risk categories
-- Risk: Less flexibility for radical experiments
-- Mitigation: FLYBERRY STUDIO sub-brand for experiments
-
----
-
-### 5.1.3 Architecture Visual
+## ARCHITECTURE MODEL: BRANDED HOUSE
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│                         FLYBERRY                                 │
-│                    (Master Brand)                                │
-│          "Taste Reimagined. Cold Chain Perfected."              │
-└─────────────────────────────────────────────────────────────────┘
-                              │
-        ┌─────────────────────┼─────────────────────┐
-        │                     │                     │
-        ▼                     ▼                     ▼
-┌───────────────┐   ┌───────────────┐   ┌───────────────┐
-│  CORE RANGE   │   │   FLYBERRY    │   │   FLYBERRY    │
-│ (7 Categories)│   │    STUDIO     │   │    GIFTING    │
-│               │   │  (Limited Ed) │   │   (Hampers)   │
-└───────────────┘   └───────────────┘   └───────────────┘
-        │
-        ├── Dates Collection
-        ├── Date-Based Innovations
-        ├── Vacuum-Fried Collection
-        ├── Berries & Superfruit
-        ├── Nuts, Seeds & Flours
-        ├── Dehydrated & Dried Fruits
-        └── Seasonal Collections
+                    ┌─────────────────────────────────────┐
+                    │          FLYBERRY GOURMET           │
+                    │      "Every product, #1 in class"   │
+                    │                                     │
+                    │   Master Brand: Trust, Innovation,  │
+                    │   Quality, Global Sourcing          │
+                    └─────────────────┬───────────────────┘
+                                      │
+    ┌─────────────────────────────────┼─────────────────────────────────┐
+    │                                 │                                 │
+    │              ┌──────────────────┴──────────────────┐              │
+    │              │         8 PRODUCT CATEGORIES        │              │
+    │              └──────────────────┬──────────────────┘              │
+    │                                 │                                 │
+┌───┴────┐ ┌────┐ ┌────┐ ┌────┐ ┌────┴────┐ ┌────┐ ┌────┐ ┌────────┐
+│ DATES  │ │NUTS│ │CHIP│ │SEED│ │BERRIES │ │DRIE│ │DATE│ │  GIFT  │
+│   12   │ │ 6  │ │ 6  │ │ 4  │ │   8    │ │FRT3│ │INNO│ │HAMPERS │
+│products│ │prod│ │prod│ │prod│ │products│ │prod│ │ 3  │ │ custom │
+└────────┘ └────┘ └────┘ └────┘ └─────────┘ └────┘ └────┘ └────────┘
 ```
 
----
-
-## 5.2 MASTER BRAND: FLYBERRY
-
-### 5.2.1 Master Brand Elements
-
-| Element | Specification |
-|---------|---------------|
-| **Name** | Flyberry |
-| **Tagline** | "Taste Reimagined. Cold Chain Perfected." |
-| **Category** | Innovation-Led Gourmet Foods |
-| **Promise** | Extraordinary sensory experiences from familiar foods |
-| **Differentiator** | Cold chain mastery, Fortune 500 validation, terroir sourcing |
-
-### 5.2.2 Master Brand Usage Rules
-
-**The name "Flyberry" ALWAYS appears**:
-- On all products (primary branding)
-- On all communications (sender identity)
-- On all packaging (prominent placement)
-- On all digital properties (URL, social handles)
-
-**Logo Placement**:
-- Packaging: Top center or top left, gold foil
-- Website: Top left (header), centered (footer)
-- Social: Profile picture, watermark on content
-- Documents: Top left (header)
+**Why Branded House:**
+- All products benefit from master brand trust
+- Fortune 500 validation extends to entire portfolio
+- Consistent quality promise across categories
+- Efficient marketing (one brand to build)
+- Cross-selling natural (same trust umbrella)
 
 ---
 
-## 5.3 CORE RANGE: 7 CATEGORIES
+## THE 8 CATEGORY PORTFOLIO
 
-### 5.3.1 Category Overview
+### Category Overview
 
-| # | Category | Current SKUs | Revenue Share | Growth Priority |
-|---|----------|--------------|---------------|-----------------|
-| 1 | Dates Collection | 4 | 35% | Maintain |
-| 2 | Date-Based Innovations | 2 | 8% | High Growth |
-| 3 | Vacuum-Fried Collection | 2 | 12% | High Growth |
-| 4 | Berries & Superfruit | 3 | 7% | Moderate |
-| 5 | Nuts, Seeds & Flours | 4 | 28% | Maintain |
-| 6 | Dehydrated & Dried Fruits | 3 | 10% | Moderate |
-| 7 | Seasonal Collections | Rotating | Variable | Strategic |
+| # | Category | Products | Price Range | Hero Product |
+|---|----------|----------|-------------|--------------|
+| 1 | **Premium Dates** | 12 | ₹249-₹2,899 | Majestic Medjoul |
+| 2 | **Exotic Nuts** | 6 | ₹299-₹2,599 | Macadamia |
+| 3 | **Vacuum-Fried Chips** | 6 | ₹49/20g | Spiced Okra |
+| 4 | **Super Seeds** | 4 | ₹179-₹999 | Chia Seeds |
+| 5 | **Dried Berries** | 8 | ₹229-₹1,199 | Nordic Blackcurrants |
+| 6 | **Dried Fruits** | 3 | ₹249-₹1,499 | Turkish Figs |
+| 7 | **Date Innovations** | 3 | ₹249-₹1,799 | Date Syrup |
+| 8 | **Gift Collections** | Custom | ₹499-₹7,249 | Fortune 500 Hampers |
 
----
-
-### 5.3.2 CATEGORY 1: Dates Collection
-
-**Category Definition**: Premium dates from world-renowned terroirs, cold chain preserved to maintain peak moisture and tenderness.
-
-**Current SKUs**:
-
-| Product | Origin | Terroir Story | Pack Sizes | Price Range |
-|---------|--------|---------------|------------|-------------|
-| **Mazafati Dates** | Bam, Iran | Desert oasis, 2,000-year heritage, "wet" dates | 100g, 400g, 1kg | ₹180-₹2,000 |
-| **Medjool Dates** | Jordan Valley | High altitude, King of Dates | 200g, 500g | ₹450-₹1,100 |
-| **Kalmi Dates** | India (Rajasthan) | Dry climate, firmer texture | 250g, 500g | ₹220-₹420 |
-| **Deri Dates** | Tunisia | Mediterranean, semi-dry | 300g | ₹280 |
-
-**Naming Convention**: Flyberry [Variety] Dates
-**Hero Claim**: "Cold Chain Preserved. Peak Tenderness."
-
-**Category Expansion (Pipeline)**:
-- Ajwa Dates (Medina, Saudi Arabia) - Premium religious significance
-- Khudri Dates (Saudi Arabia) - Value tier test
-- Single-origin Mazafati (specific Bam villages) - Via STUDIO
+**Total: 44 Unique Products**
 
 ---
 
-### 5.3.3 CATEGORY 2: Date-Based Innovations
+## CATEGORY 1: PREMIUM DATES
+### "The Crown Jewels of Our Portfolio"
 
-**Category Definition**: Innovative products using dates as primary ingredient, showcasing versatility beyond snacking.
+**Category Philosophy:**
+Dates are our flagship. Every variety represents the pinnacle of its type—specific origin, premium grade, cold chain fresh.
 
-**Current SKUs**:
+**The Collection (12 Varieties):**
 
-| Product | Form | Use Case | Pack Sizes | Price Range |
-|---------|------|----------|------------|-------------|
-| **Flyberry Date Syrup** | Liquid sweetener | Coffee, baking, drizzle | 250ml, 500ml | ₹350-₹650 |
-| **Flyberry Date Fudge** | Spreadable | Toast, dessert, snacking | 200g | ₹450 |
+| Variety | Origin | Grade | Key Benefit | Price (500g) |
+|---------|--------|-------|-------------|--------------|
+| **Medjoul Majestic** | Jordan Valley | Majestic (5× larger) | 90 Kcal sustained energy | ₹899 |
+| **Ajwa Authentic** | Medina, Saudi Arabia | Premium | Anti-inflammatory | ₹699 |
+| **Deglet Nour** | Jordan | Queen of Dates | Vitamin A (23% RDA) | ₹449 |
+| **Mabroom** | Saudi Arabia | Premium | Vitamin A (33% RDA) | ₹549 |
+| **Kalmi** | Saudi Arabia | Premium | 2× potassium of bananas | ₹499 |
+| **Deri** | Jordan | Premium | Iron-rich, pre-workout | ₹449 |
+| **Halawi** | Jordan | Premium | Gut-friendly fiber | ₹449 |
+| **Ameri** | Jordan | Premium | Low sugar, high fiber | ₹399 |
+| **Mazafati** | Iran | Rotab (fresh) | Softest texture | ₹599 |
+| **Sukkari** | Saudi Arabia | Premium | Candy-like sweetness | ₹599 |
+| **Khudri** | Saudi Arabia | Premium | Value entry point | ₹349 |
+| **Safawi** | Saudi Arabia | Premium | Balanced sweetness | ₹399 |
 
-**Naming Convention**: Flyberry Date [Product Form]
-**Hero Claim**: "No Added Sugar. Naturally Sweet."
+**Category Differentiator:**
+- **Industry-first cold chain** (5-10°C maintained)
+- **Specific origin** (not generic "Middle East")
+- **Grade transparency** (Majestic, Rotab clearly stated)
+- **5+ years Amazon Best-Seller** (Premium Dates category)
 
-**Category Expansion (Pipeline)**:
-- Date Rolls (bite-sized snacks) - Q2 2026
-- Date Energy Bars (no added sugar) - Q1 2027
-- Date Coffee (date-sweetened instant) - Concept stage
-
-**Why This Category Matters**:
-- Creates usage occasions beyond snacking
-- Demonstrates innovation capability
-- Differentiates from commodity competitors (they don't have this)
-- Aligns with health trends (natural sugar alternatives)
-
----
-
-### 5.3.4 CATEGORY 3: Vacuum-Fried Collection
-
-**Category Definition**: Healthier chip alternatives made using vacuum frying technology that preserves nutrients and reduces oil absorption.
-
-**Current SKUs**:
-
-| Product | Ingredient | Health Claim | Pack Sizes | Price Range |
-|---------|------------|--------------|------------|-------------|
-| **Flyberry Vacuum-Fried Chickpea Chips** | Chickpeas | 30% less oil, high protein | 75g, 150g | ₹120-₹196 |
-| **Flyberry Vacuum-Fried Banana Chips** | Bananas | 30% less oil, potassium | 100g, 200g | ₹140-₹250 |
-
-**Naming Convention**: Flyberry Vacuum-Fried [Ingredient] Chips
-**Hero Claim**: "30% Less Oil. 100% Flavor."
-
-**Category Expansion (Pipeline)**:
-- Jackfruit Chips - Q2 2026
-- Beetroot Chips - Q3 2026
-- Sweet Potato Chips - Q4 2026
-- Mixed Vegetable Chips - 2027
-
-**Why This Category Matters**:
-- Demonstrates innovation (vacuum frying is unique)
-- Health-conscious positioning
-- Appeals to Wellness Warriors
-- Defensible advantage (technology + process)
+**Hero: Majestic Medjoul**
+- 5× larger than common varieties
+- Each date: 40-50g, 90 Kcal
+- Deep caramel notes, soft texture
+- Cold chain preserved freshness
 
 ---
 
-### 5.3.5 CATEGORY 4: Berries & Superfruit
+## CATEGORY 2: EXOTIC NUTS
+### "The World's Finest, From Source"
 
-**Category Definition**: Premium berries and superfruits, often enhanced (juice-infused) to improve taste and nutrition.
+**Category Philosophy:**
+Not commodity nuts. Exotic, premium-grade nuts from their native habitats—Australia, USA, Bolivia, Turkey, Afghanistan.
 
-**Current SKUs**:
+**The Collection (6 Varieties):**
 
-| Product | Sourcing | Enhancement | Pack Sizes | Price Range |
-|---------|----------|-------------|------------|-------------|
-| **Flyberry Brilliant Blackcurrants** | Europe | Apple juice infused | 100g, 200g | ₹175-₹320 |
-| **Flyberry Goji Berries** | China | None (pure) | 100g | ₹280 |
-| **Flyberry Mulberries** | Turkey | None (pure) | 150g | ₹220 |
+| Variety | Origin | Key Nutrition | Why #1 | Price (250g) |
+|---------|--------|--------------|--------|--------------|
+| **Macadamia** | Australia | MUFA 45.6% RDA | Buttery richness, keto-friendly | ₹1,399 |
+| **Pecan** | Southern USA | Gamma-E, Omega-6 43.4% | Softer, sweeter than walnut | ₹1,199 |
+| **Brazil Nuts** | Bolivia (Amazon) | Selenium 247% RDA (2 nuts!) | Thyroid support, antioxidant | ₹1,199 |
+| **Pine Nuts** | Hindukush, Afghanistan | Zinc 8.1% RDA | Hand-harvested, mountain origin | ₹2,099 |
+| **Hazelnuts** | Turkey (Black Sea) | Fiber, MUFA 19% | Chocolate's perfect partner | ₹899 |
+| **Walnuts** | California/Chile | Omega-3 highest of all nuts | Brain health, heart health | ₹699 |
 
-**Naming Convention**: Flyberry [Berry Name]
-**Hero Claim**: "Cold Chain Preserved. Peak Nutrition."
+**Category Differentiator:**
+- **Premium origin story** (not generic sourcing)
+- **Style 0 grades** (premium whole kernels)
+- **Specific nutritional positioning** (each nut = specific benefit)
+- **Keto-friendly positioning** (Macadamia, Pecan, Pine)
 
-**Category Expansion (Pipeline)**:
-- Cranberries (dried, no added sugar) - Q3 2026
-- Goldenberries - Q4 2026
-- Acai Berry Powder - 2027
-
----
-
-### 5.3.6 CATEGORY 5: Nuts, Seeds & Flours
-
-**Category Definition**: Premium nuts sourced from world-renowned regions, with strict quality grading.
-
-**Current SKUs**:
-
-| Product | Origin | Quality Grade | Pack Sizes | Price Range |
-|---------|--------|---------------|------------|-------------|
-| **Flyberry California Almonds** | California, USA | Nonpareil, Top 5% | 250g, 500g, 1kg | ₹550-₹2,200 |
-| **Flyberry Kerala Cashews** | Kerala, India | W240/W320 | 250g, 500g | ₹450-₹850 |
-| **Flyberry Iran Pistachios** | Iran | Akbari/Fandoghi | 200g, 400g | ₹650-₹1,200 |
-| **Flyberry Premium Walnuts** | Chile | Halves | 200g | ₹480 |
-
-**Naming Convention**: Flyberry [Origin] [Nut Type]
-**Hero Claim**: "Top 5% of Harvest."
-
-**Category Expansion (Pipeline)**:
-- Almond Butter - Q3 2026
-- Cashew Butter - Q4 2026
-- Mixed Nut Butter - 2027
-- Almond Flour - 2027
+**Hero: Macadamia**
+- Australian coastal origin
+- 45.6% RDA heart-healthy MUFA per serving
+- Buttery richness, delicate crunch
+- Most expensive nut globally
 
 ---
 
-### 5.3.7 CATEGORY 6: Dehydrated & Dried Fruits
+## CATEGORY 3: VACUUM-FRIED CHIPS
+### "Innovation Meets Indulgence"
 
-**Category Definition**: Traditional dried fruits from premium origins, sourced for quality and terroir character.
+**Category Philosophy:**
+Japanese vacuum-frying technology. 70% less oil, nutrients preserved, natural colors. Guilt-free snacking that actually tastes indulgent.
 
-**Current SKUs**:
+**The Collection (6 Varieties):**
 
-| Product | Origin | Terroir Story | Pack Sizes | Price Range |
-|---------|--------|---------------|------------|-------------|
-| **Flyberry Turkish Figs** | Aydin, Turkey | Volcanic soil, 2,000-year heritage | 200g, 400g | ₹320-₹580 |
-| **Flyberry Turkish Apricots** | Malatya, Turkey | Mountain climate | 200g, 400g | ₹280-₹520 |
-| **Flyberry Indian Mango Slices** | Ratnagiri, India | Alphonso variety | 150g | ₹350 |
+| Variety | Key Benefit | Unique Selling Point | Price |
+|---------|-------------|---------------------|-------|
+| **Spiced Okra** | High fiber | Crunchy, savory perfection | ₹49/20g |
+| **Chickpea Crisps** | Protein-rich | Satisfying crunch | ₹49/20g |
+| **Sweet Beet** | Naturally sweet | Vibrant purple color | ₹49/20g |
+| **Spiced Taro** | Unique texture | Earthy, exotic flavor | ₹49/20g |
+| **Toasted Coconut** | Keto-friendly | Tropical sweetness | ₹49/20g |
+| **Banana Chips** | Classic favorite | Natural sweetness | ₹49/20g |
 
-**Naming Convention**: Flyberry [Origin] [Fruit Type]
-**Hero Claim**: "Sun-Dried. Cold Chain Sealed."
+**Category Differentiator:**
+- **70% less oil** than regular frying
+- **Nutrients preserved** (vitamins, minerals intact)
+- **Natural colors** (vibrant, not dulled)
+- **First in India** healthy snacking market
 
-**Category Expansion (Pipeline)**:
-- Pineapple Rings - Q2 2026
-- Papaya Chunks - Q3 2026
-- Apple Rings - Q4 2026
-
----
-
-### 5.3.8 CATEGORY 7: Seasonal Collections
-
-**Category Definition**: Limited-time offerings that celebrate seasonal harvests and occasions.
-
-**Structure**:
-
-| Season | Theme | Products | Timing |
-|--------|-------|----------|--------|
-| **Summer Harvest** | Tropical fruits | Mango, Pineapple, Jackfruit specials | April-June |
-| **Winter Indulgence** | Rich, warming | Premium dates, figs, nuts | October-February |
-| **Festival Specials** | Diwali, Christmas | Curated hampers, limited editions | Oct-Dec |
-| **New Harvest** | Fresh arrivals | First picks of new season | Varies by ingredient |
-
-**Naming Convention**: Flyberry [Season/Festival] Collection
-**Hero Claim**: "Limited Availability. Peak Flavor."
-
-**Why This Category Matters**:
-- Creates urgency and scarcity
-- Celebrates seasonality (terroir storytelling)
-- Provides marketing calendar hooks
-- Tests new products before core range
+**Technology Deep-Dive:**
+- Vacuum chamber frying at 90-120°C (vs. 170-190°C traditional)
+- Lower temp = water evaporates without high heat damage
+- Result: Crispy texture, minimal oil absorption
 
 ---
 
-## 5.4 SUB-BRAND: FLYBERRY STUDIO
+## CATEGORY 4: SUPER SEEDS
+### "Nutrient Density Maximized"
 
-### 5.4.1 Studio Purpose
+**Category Philosophy:**
+Seed = concentrated nutrition. Every variety chosen for specific wellness benefit—protein, selenium, omega-3, magnesium.
 
-**What**: An innovation lab sub-brand for limited editions, collaborations, and experiments.
+**The Collection (4 Varieties):**
 
-**Why**:
-- Test new products without risking core brand
-- Create scarcity and exclusivity
-- Drive PR and cultural relevance
-- Premium pricing justified by exclusivity
-- Appeal to collectors and enthusiasts
+| Variety | Key Nutrition | Primary Benefit | Price (250g) |
+|---------|--------------|-----------------|--------------|
+| **Chia Seeds** | Omega-3 (18% by weight) | Heart health, fiber | ₹549 |
+| **Pumpkin Seeds** | Magnesium 37% RDA | Sleep support, zinc | ₹549 |
+| **Watermelon Seeds** | Protein 30g/100g | Plant protein, magnesium | ₹449 |
+| **Sunflower Seeds** | Vitamin E 82% RDA | Antioxidant, heart health | ₹399 |
 
-**Who It's For**:
-- Conscious Millennials (discovery, exclusivity)
-- Gifting Enthusiasts (unique gifts)
-- Food enthusiasts and collectors
-
----
-
-### 5.4.2 Studio Structure
-
-**Type 1: Artist Collaborations**
-- Limited-edition packaging designed by artists
-- 500-1,000 units per release
-- Collectible box design (worth keeping)
-- Artist signature and numbered edition
-
-*Example*: "Flyberry Studio x Artist Sameer Kulavoor: Diwali Collection"
-- Traditional Diwali motifs reimagined
-- Limited to 500 boxes
-- Numbered certificate
-- Premium pricing (₹1,500 vs. ₹900 regular)
-
-**Type 2: Chef Partnerships**
-- Co-created recipes or flavor profiles
-- Chef's pairing guide included
-- Restaurant collaboration potential
-- Chef's endorsement and story
-
-*Example*: "Flyberry Studio x Chef Prateek Sadhu: Kashmir Apricot Collection"
-- Single-origin Kashmiri apricots
-- Chef's pairing suggestions
-- Story of Kashmir terroir
-- Limited to 1,000 jars
-
-**Type 3: Regional Explorations**
-- Single-origin deep dives
-- Micro-batch releases
-- Extreme terroir specificity
-- Educational content included
-
-*Example*: "Flyberry Studio: Mazafati from Bam Village #47"
-- Single village origin (not just "Bam, Iran")
-- Story of that specific farm
-- Limited to 300 jars
-- Highest premium (₹2,000+ for 400g)
+**Category Differentiator:**
+- **Specific RDA positioning** (each seed = specific nutrient)
+- **Plant-based nutrition** focus
+- **Versatile usage** (smoothies, salads, baking, snacking)
 
 ---
 
-### 5.4.3 Studio Naming & Numbering
+## CATEGORY 5: DRIED BERRIES
+### "Nordic Excellence, Concentrated"
 
-**Format**: Flyberry Studio x [Collaborator/Theme]: [Product Name]
-**Numbering**: "Limited Edition [XXX/500]" printed on packaging
+**Category Philosophy:**
+Berries from extreme environments (Nordic countries, high altitude) = concentrated antioxidants. Nature's supplement in food form.
 
-**Examples**:
-- Flyberry Studio x Sameer Kulavoor: Diwali Dates (247/500)
-- Flyberry Studio x Chef Prateek: Kashmir Apricots (089/1000)
-- Flyberry Studio: Bam Village #47 Mazafati (156/300)
+**The Collection (8 Varieties):**
 
----
+| Variety | Origin | Key Benefit | Price (250g) |
+|---------|--------|-------------|--------------|
+| **Blackcurrants** | Nordic (Sweden/Finland) | 4× Vitamin C of oranges | ₹549 |
+| **Blueberries** | Nordic | Brain health, memory | ₹949 |
+| **Cranberries** | USA | Urinary tract health | ₹699 |
+| **Strawberries** | Nordic | Vitamin C, antioxidants | ₹1,199 |
+| **Raspberries** | Nordic | Ellagic acid antioxidant | ₹1,099 |
+| **Cherries** | USA | Melatonin, sleep support | ₹799 |
+| **Lingonberries** | Scandinavia | Rare superfood, polyphenols | ₹1,199 |
+| **Mixed Dried Fruits** | Various | Variety pack | ₹799 |
 
-### 5.4.4 Studio Pricing
-
-**Premium**: 40-70% above equivalent core range product
-
-| Core Product | Core Price | Studio Price | Premium |
-|--------------|------------|--------------|---------|
-| Mazafati Dates 400g | ₹750 | ₹1,200-1,500 | 60-100% |
-| Vacuum-Fried Chips 150g | ₹196 | ₹350-400 | 80-100% |
-| Turkish Figs 400g | ₹580 | ₹900-1,000 | 55-70% |
-
-**Justification**: Scarcity, collectibility, collaboration story, premium packaging
-
----
-
-### 5.4.5 Studio Launch Cadence
-
-| Quarter | Release Type | Example |
-|---------|--------------|---------|
-| Q1 | Regional Exploration | Single-origin showcase |
-| Q2 | Artist Collaboration | Summer-themed packaging |
-| Q3 | Chef Partnership | Food pairing focus |
-| Q4 | Festival Special | Diwali/Christmas collector |
-
-**Total**: 4-6 Studio releases per year
+**Category Differentiator:**
+- **Nordic sourcing** (extreme conditions = concentrated nutrition)
+- **Antioxidant focus** (ORAC scores, anthocyanins)
+- **Rare varieties** (lingonberries, blackcurrants)
 
 ---
 
-## 5.5 SUB-BRAND: FLYBERRY GIFTING
+## CATEGORY 6: DRIED FRUITS
+### "Traditional Favorites, Premium Origins"
 
-### 5.5.1 Gifting Structure
+**Category Philosophy:**
+Classic dried fruits, but from premium origins with specific quality standards.
 
-**What**: Curated hampers for personal and corporate gifting occasions.
+**The Collection (3 Varieties):**
 
-**Why Separate Sub-Brand**:
-- Gifting is 50% of revenue target
-- Different purchase occasion than individual products
-- Requires different merchandising and presentation
-- Corporate gifting needs B2B infrastructure
+| Variety | Origin | Differentiator | Price (250g) |
+|---------|--------|----------------|--------------|
+| **Turkish Figs** | Turkey | Premium fig-growing region | ₹699 |
+| **Afghani Figs** | Afghanistan | Rare, exotic origin | ₹799 |
+| **Unsulphured Apricots** | Mediterranean | No sulphur dioxide (healthier) | ₹599 |
 
----
-
-### 5.5.2 Gifting Tiers
-
-**TIER A: Corporate Gifting**
-
-| Product | Price Range | Contents | Target |
-|---------|-------------|----------|--------|
-| **Executive Selection** | ₹2,000-5,000 | 5-7 premium products, luxury box, custom note | VIP clients, C-suite |
-| **Team Appreciation** | ₹500-1,000/person | 2-3 products, branded box | Employee gifting |
-| **Custom Corporate** | ₹10L+ projects | Fully customized, volume pricing | Large corporate |
-
-*Features*:
-- Dedicated account management
-- Custom branding options (logo on box, custom notes)
-- Bulk ordering and invoicing
-- Delivery tracking and confirmation
-
-**TIER B: Personal Celebrations**
-
-| Product | Price Range | Contents | Target Occasion |
-|---------|-------------|----------|-----------------|
-| **Celebration Box** | ₹1,000-2,000 | 3-4 products, festival packaging | Diwali, birthdays |
-| **Wedding Favors** | ₹300-800/favor | Elegant small boxes, bulk | Weddings, events |
-| **Thank You Box** | ₹800-1,500 | 3 products, appreciation theme | Host gifts, thank you |
-
-*Features*:
-- Gift-ready packaging (no rewrapping)
-- Personalized notes (handwriting style)
-- Bulk discounts for events
-- Occasion-specific designs
-
-**TIER C: Subscriptions**
-
-| Product | Price | Frequency | Contents |
-|---------|-------|-----------|----------|
-| **Gourmet Discovery** | ₹1,200/month | Monthly | 4-5 rotating products |
-| **Seasonal Selection** | ₹3,500/quarter | Quarterly | 8-10 seasonal products |
-| **Corporate Wellness** | Custom | Monthly | Healthy snacks for office |
-
-*Features*:
-- Subscriber discounts (15-25% vs. retail)
-- Early access to new products
-- Exclusive subscriber content
-- Pause/modify flexibility
+**Category Differentiator:**
+- **Unsulphured option** (healthier, natural brown color)
+- **Origin-specific** (Turkish vs. Afghani figs)
 
 ---
 
-### 5.5.3 Gifting Naming
+## CATEGORY 7: DATE INNOVATIONS
+### "Reimagining What Dates Can Be"
 
-**Format**: Flyberry [Tier/Occasion] [Descriptor]
+**Category Philosophy:**
+Date as ingredient, not just snack. Natural sweeteners, spreads, powders—sugar alternatives that nourish.
 
-**Examples**:
-- Flyberry Executive Selection
-- Flyberry Diwali Celebration Box
-- Flyberry Wedding Favor
-- Flyberry Monthly Gourmet Discovery
+**The Collection (3 Products):**
 
----
+| Product | Innovation | Key Benefit | Price |
+|---------|-----------|-------------|-------|
+| **Date Syrup** | Liquid sweetener | Lower GI than sugar/honey | ₹649/350ml |
+| **Date Powder** | Baking ingredient | Sugar substitute 1:1 | ₹549/250g |
+| **Hazelnut Spread** | Date-sweetened | No refined sugar (unlike Nutella) | ₹649/350g |
 
-## 5.6 PRODUCT NAMING FRAMEWORK
+**Category Differentiator:**
+- **Sugar replacement** category creation
+- **Date-sweetened** (not sugar-sweetened)
+- **Functional nutrition** (nutrients from dates preserved)
 
-### 5.6.1 Naming Template
-
-**Formula**: FLYBERRY [HERO ATTRIBUTE] [INGREDIENT/PRODUCT] [FORMAT/DESCRIPTOR]
-
-**Components**:
-1. **FLYBERRY**: Always first, always present
-2. **Hero Attribute**: What makes it special (origin, technique, benefit)
-3. **Ingredient/Product**: What it is
-4. **Format/Descriptor**: Additional context (optional)
-
----
-
-### 5.6.2 Naming Examples by Category
-
-| Category | Example Name | Breakdown |
-|----------|--------------|-----------|
-| Dates | Flyberry Mazafati Dates | Brand + Variety + Product |
-| Dates (with origin) | Flyberry Mazafati Dates (Iran Origin) | + Context |
-| Vacuum-Fried | Flyberry Vacuum-Fried Chickpea Chips | Brand + Technique + Ingredient + Format |
-| Date Innovation | Flyberry Date Syrup (No Added Sugar) | Brand + Product + Descriptor |
-| Nuts | Flyberry California Almonds | Brand + Origin + Nut |
-| Nuts (with grade) | Flyberry California Almonds (Top 5% Harvest) | + Context |
-| Berries | Flyberry Brilliant Blackcurrants | Brand + Descriptor + Berry |
-| Berries (enhanced) | Flyberry Brilliant Blackcurrants (Apple Juice Infused) | + Processing |
-| Studio | Flyberry Studio x Chef Prateek: Kashmir Apricots | Brand + Sub-brand + Collaborator + Product |
-| Gifting | Flyberry Executive Selection | Brand + Tier |
+**Hero: Date Syrup**
+- Made from Medjoul dates only
+- No additives, just extracted date essence
+- Lower glycemic index than sugar and honey
+- Uses: Pancakes, waffles, baking, tea, smoothies
 
 ---
 
-### 5.6.3 Naming Rules
+## CATEGORY 8: GIFT COLLECTIONS
+### "Fortune 500-Grade Gifting"
 
-**DO**:
-- ✅ Lead with "Flyberry" always
-- ✅ Use origin when it adds value (Mazafati, California, Turkish)
-- ✅ Include technique when differentiated (Vacuum-Fried)
-- ✅ Add context in parentheses when helpful
-- ✅ Keep it scannable (4-5 words before parentheses)
+**Category Philosophy:**
+Curated collections for corporate and personal gifting. Same quality Fortune 500 companies trust.
 
-**DON'T**:
-- ❌ Use generic words: "Premium," "Deluxe," "Special," "Best"
-- ❌ Create clever puns that obscure the product
-- ❌ Add sub-brand complexity (no "Flyberry Origins by Flyberry Gourmet")
-- ❌ Use numbers unless meaningful (batch, limited edition)
-- ❌ Make claims in the name ("Healthiest," "Finest")
+**The Collection:**
 
----
+| Collection | Contents | Target | Price Range |
+|-----------|----------|--------|-------------|
+| **Essential Gift Box** | 3-4 products | Personal gifting | ₹499-₹999 |
+| **Premium Collection** | 5-6 products | Special occasions | ₹999-₹1,999 |
+| **Luxury Hamper** | 8-10 products | Executive gifting | ₹1,999-₹3,999 |
+| **Fortune 500 Custom** | Customized | Corporate bulk | ₹3,999-₹7,249 |
+| **Festive Special** | Seasonal curation | Diwali, Eid, New Year | ₹999-₹2,999 |
 
-### 5.6.4 Naming Approval Process
-
-1. **Propose**: Product team suggests name options
-2. **Brand Review**: Marketing checks against brand guidelines
-3. **Legal Review**: Trademark search, regulatory compliance
-4. **Consumer Test**: If major launch, test with target persona
-5. **Final Approval**: Marketing Head signs off
+**Category Differentiator:**
+- **Custom branding** available for corporate
+- **Dedicated account management** for bulk orders
+- **Proven reliability** (50+ Fortune 500 clients)
 
 ---
 
-## 5.7 ARCHITECTURE GOVERNANCE
+## PRODUCT NAMING CONVENTION
 
-### 5.7.1 When to Launch New Category
+### The Flyberry Naming System
 
-**Criteria Checklist**:
+**Pattern: [Descriptor] + [Variety] + [Origin/Grade when relevant]**
+
+| Product Type | Naming Pattern | Example |
+|--------------|---------------|---------|
+| **Dates** | [Adj] [Variety] Dates | "Majestic Medjoul Dates" |
+| **Nuts** | [Origin] [Variety] | "Australian Macadamia" |
+| **Chips** | [Flavor] [Base] Chips | "Spiced Okra Chips" |
+| **Seeds** | Premium [Variety] Seeds | "Premium Chia Seeds" |
+| **Berries** | [Origin] [Variety] | "Nordic Blackcurrants" |
+| **Innovations** | [Descriptor] [Product] | "Pure Date Syrup" |
+
+**Naming Guidelines:**
+- Origin included when differentiating (Jordan, Medina, Australia)
+- Grade included when premium (Majestic, Style 0)
+- Benefit descriptor when functional (70% Less Oil)
+
+---
+
+## VISUAL HIERARCHY
+
+### Packaging Color System
+
+| Category | Primary Color | Hex Code | Rationale |
+|----------|--------------|----------|-----------|
+| **Dates** | Deep Purple | #4A148C | Royalty, premium |
+| **Nuts** | Warm Brown | #5D4037 | Earthy, natural |
+| **Chips** | Bright Green | #2E7D32 | Fresh, healthy |
+| **Seeds** | Teal | #00695C | Wellness, balance |
+| **Berries** | Berry Red | #880E4F | Category color |
+| **Dried Fruits** | Amber | #FF8F00 | Warm, dried |
+| **Innovations** | Gold | #D4AF37 | Innovation, premium |
+| **Gifts** | Black + Gold | #212121 + #D4AF37 | Luxury |
+
+### Typography
+
+| Element | Font | Weight | Usage |
+|---------|------|--------|-------|
+| **Brand Name** | Playfair Display | Bold | FLYBERRY GOURMET |
+| **Product Names** | Montserrat | SemiBold | Product titles |
+| **Body Copy** | Montserrat | Regular | Descriptions |
+| **Nutrition** | Montserrat | Light | Data tables |
+
+---
+
+## PORTFOLIO EXTENSION GUIDELINES
+
+### When to Add a New Product
+
+**Must Pass All Criteria:**
 
 | Criterion | Requirement |
 |-----------|-------------|
-| **Brand Alignment** | Must fit "Innovation-Led Gourmet" positioning |
-| **Capability Leverage** | Uses cold chain, vacuum frying, or terroir sourcing |
-| **Minimum Range** | 3-5 SKUs to establish credibility |
-| **Margin Requirement** | 40%+ gross margin achievable |
-| **Demand Validation** | Pre-orders, surveys, or B2B interest confirmed |
-| **Quality Confidence** | Can maintain 85%+ quality bar |
+| **#1 Potential** | Can it be best-in-class in its category? |
+| **Origin Story** | Is there a premium origin to source from? |
+| **Differentiation** | Does it add something competitors don't have? |
+| **Brand Fit** | Does it align with Flyberry values (taste, quality, wellness)? |
+| **Margin Viability** | Can it sustain premium pricing? |
 
-**Process**:
-1. Test concept via FLYBERRY STUDIO (limited edition)
-2. Gather data: Sales, repeat rate, feedback, margin
-3. If successful, propose core range addition
-4. Scale with full category naming, packaging, marketing
+### When to Add a New Category
+
+**Requirements:**
+
+| Criterion | Requirement |
+|-----------|-------------|
+| **Market Opportunity** | Growing category with premium potential |
+| **Sourcing Capability** | Can we source best-in-class? |
+| **Brand Extension Logic** | Does it make sense under Flyberry? |
+| **Operational Readiness** | Can we maintain quality standards? |
+
+### Categories Under Consideration
+
+| Potential Category | Fit Assessment | Timeline |
+|-------------------|----------------|----------|
+| **Organic Honey** | High (natural sweetener extension) | 2025 |
+| **Nut Butters** | High (nut portfolio extension) | 2025 |
+| **Spice Blends** | Medium (gourmet cooking) | 2026 |
+| **Olive Oils** | Medium (Mediterranean sourcing) | 2026 |
+| **Teas** | Low (different expertise) | Not planned |
 
 ---
 
-### 5.7.2 When to Kill a Product
+## ARCHITECTURE SUMMARY
 
-**Triggers**:
-
-| Trigger | Threshold |
+| Element | Definition |
 |---------|-----------|
-| Sales | <10% of category average for 6+ months |
-| Margin | <30% gross with no improvement path |
-| Quality | Inconsistency despite supplier changes |
-| Fit | No longer aligns with brand positioning |
-
-**Process**:
-1. Flag product for review
-2. Attempt turnaround (90 days)
-3. If unsuccessful, 3-month clearance sale
-4. Transparent communication to repeat customers
-5. Post-mortem documentation
-6. Reinvest resources into top performers
+| **Model** | Branded House (all products under FLYBERRY) |
+| **Categories** | 8 core categories |
+| **Products** | 44 unique products |
+| **Hero Products** | 8 (one per category) |
+| **Naming** | [Descriptor] + [Variety] + [Origin/Grade] |
+| **Extension Criteria** | #1 potential, origin story, differentiation |
 
 ---
 
-### 5.7.3 Annual Architecture Review
-
-**Quarterly**:
-- Category performance review
-- SKU-level analysis
-- Pipeline progress check
-
-**Annually** (January):
-- Full architecture assessment
-- Category expansion/contraction decisions
-- 3-year roadmap update
-- Naming convention refinement
-- Sub-brand performance evaluation
-
----
-
-## Section 5 Summary
-
-| Element | Description |
-|---------|-------------|
-| **Strategy** | Branded House—all products under FLYBERRY master brand |
-| **Core Range** | 7 categories, 18+ SKUs |
-| **Sub-Brands** | FLYBERRY STUDIO (limited editions), FLYBERRY GIFTING (hampers) |
-| **Naming** | FLYBERRY [Hero Attribute] [Ingredient] [Format] |
-| **Governance** | Clear criteria for launch/kill, annual review |
-
----
-
-**Previous Section**: [04-TARGET-PERSONAS.md](./04-TARGET-PERSONAS.md)
-**Next Section**: [06-STRATEGIC-RECOMMENDATIONS.md](./06-STRATEGIC-RECOMMENDATIONS.md)
+*Previous: [Section 4 - Target Personas](./04-TARGET-PERSONAS.md)*
+*Next: [Section 6 - Strategic Recommendations](./06-STRATEGIC-RECOMMENDATIONS.md)*
