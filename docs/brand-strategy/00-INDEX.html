@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyberry Brand Strategy Suite</title>
+    <style>
+        :root {
+            --color-primary: #8B5A3C;
+            --color-secondary: #4A3728;
+            --color-background: #F8F5F0;
+            --color-text: #2C2C2C;
+            --color-accent: #D4A574;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.7;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 70px;
+            padding-bottom: 50px;
+            border-bottom: 3px solid var(--color-primary);
+        }
+
+        h1 {
+            font-size: 3.5em;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 1.4em;
+            color: var(--color-secondary);
+            font-weight: 400;
+            margin-top: 25px;
+        }
+
+        .intro {
+            max-width: 700px;
+            margin: 40px auto 0;
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .section-title {
+            font-size: 2em;
+            color: var(--color-primary);
+            margin: 60px 0 30px 0;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--color-accent);
+        }
+
+        .doc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 35px;
+            margin: 40px 0;
+        }
+
+        .doc-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            border-left: 6px solid var(--color-primary);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .doc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .doc-card h3 {
+            font-size: 1.6em;
+            color: var(--color-primary);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .doc-card .doc-type {
+            display: inline-block;
+            background: var(--color-primary);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .doc-card .description {
+            font-size: 1.05em;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .doc-card .use-case {
+            background: #F8F5F0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 0.95em;
+        }
+
+        .use-case-label {
+            font-weight: 700;
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .doc-card .word-count {
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        .highlight-box {
+            background: white;
+            padding: 35px;
+            border-left: 5px solid var(--color-accent);
+            margin: 40px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-radius: 8px;
+        }
+
+        .highlight-box h3 {
+            color: var(--color-primary);
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .highlight-box ul {
+            margin: 15px 0 0 25px;
+        }
+
+        .highlight-box li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding-top: 50px;
+            border-top: 2px solid var(--color-accent);
+            text-align: center;
+            color: var(--color-secondary);
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 1000px) {
+            .doc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 50px 25px;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .tagline {
+                font-size: 1.2em;
+            }
+
+            .doc-card {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Flyberry Brand Strategy Suite</h1>
+            <p class="tagline">Complete brand documentation for teams, partners & stakeholders</p>
+            <p class="intro">
+                This collection contains everything you need to understand, communicate, and execute the Flyberry brand—from strategic foundations to practical messaging templates.
+            </p>
+        </header>
+
+        <!-- QUICK ACCESS SECTION -->
+        <div class="highlight-box">
+            <h3>🎯 Which Document Should I Use?</h3>
+            <ul>
+                <li><strong>Need to understand the brand quickly?</strong> → Start with <a href="FLYBERRY-BRAND-OVERVIEW.html" style="color: var(--color-primary);">Brand Overview</a></li>
+                <li><strong>Writing marketing copy or sales pitches?</strong> → Use <a href="BRAND-MESSAGING.html" style="color: var(--color-primary);">Brand Messaging</a></li>
+                <li><strong>Need voice/tone guidelines or templates?</strong> → See <a href="BRAND-COMMUNICATION.html" style="color: var(--color-primary);">Brand Communication</a></li>
+                <li><strong>Planning long-term strategy?</strong> → Dive into <a href="index.html" style="color: var(--color-primary);">Complete Strategy (12 Sections)</a></li>
+            </ul>
+        </div>
+
+        <!-- CORE DOCUMENTS SECTION -->
+        <h2 class="section-title">Core Strategy Documents</h2>
+
+        <div class="doc-grid">
+            <!-- Document 1: Brand Overview -->
+            <a href="FLYBERRY-BRAND-OVERVIEW.html" class="doc-card">
+                <span class="doc-type">Quick Start</span>
+                <h3>Brand Overview</h3>
+                <p class="description">
+                    Product-first brand strategy showing what customers experience, how we create it, and why Fortune 500 companies trust us. Covers all 8 hero products, taste philosophy, origin excellence, and innovation.
+                </p>
+                <div class="use-case">
+                    <span class="use-case-label">Best for:</span>
+                    Quick brand understanding, sharing with stakeholders, onboarding new team members, investor presentations
+                </div>
+                <p class="word-count">~3,200 words | 10-minute read</p>
+            </a>
+
+            <!-- Document 2: Complete Strategy (Modular) -->
+            <a href="index.html" class="doc-card">
+                <span class="doc-type">Deep Dive</span>
+                <h3>Complete Brand Strategy</h3>
+                <p class="description">
+                    Full 12-section brand strategy with detailed analysis: Foundation, Positioning, Values, Target Personas, Archetype, Messaging, Customer Journey, Competitive Analysis, Implementation Roadmap, and more.
+                </p>
+                <div class="use-case">
+                    <span class="use-case-label">Best for:</span>
+                    Strategic planning, annual reviews, agency briefings, comprehensive brand audits, market positioning research
+                </div>
+                <p class="word-count">~10,000 words | Interactive modular format</p>
+            </a>
+        </div>
+
+        <!-- MESSAGING & COMMUNICATION SECTION -->
+        <h2 class="section-title">Messaging & Communication Tools</h2>
+
+        <div class="doc-grid">
+            <!-- Document 3: Brand Messaging -->
+            <a href="BRAND-MESSAGING.html" class="doc-card">
+                <span class="doc-type">Practical Tool</span>
+                <h3>Brand Messaging Guide</h3>
+                <p class="description">
+                    Ready-to-use messaging frameworks: Value propositions for 3 audiences (B2B, D2C, retail), product messaging for all 8 hero products, taglines, elevator pitches, and competitive positioning messages.
+                </p>
+                <div class="use-case">
+                    <span class="use-case-label">Best for:</span>
+                    Marketing campaigns, sales presentations, website copy, social media content, product launches, pitch decks
+                </div>
+                <p class="word-count">~2,500 words | Copy-paste ready</p>
+            </a>
+
+            <!-- Document 4: Brand Communication -->
+            <a href="BRAND-COMMUNICATION.html" class="doc-card">
+                <span class="doc-type">Practical Tool</span>
+                <h3>Brand Communication Guide</h3>
+                <p class="description">
+                    Voice and tone guidelines (Confident Expert), channel-specific strategies (website, social, packaging, email, sales), do's and don'ts with examples, and message templates for common scenarios.
+                </p>
+                <div class="use-case">
+                    <span class="use-case-label">Best for:</span>
+                    Writing any customer-facing content, training teams on brand voice, ensuring consistency across channels, template library
+                </div>
+                <p class="word-count">~2,000 words | Templates included</p>
+            </a>
+        </div>
+
+        <!-- HOW TO USE SECTION -->
+        <div class="highlight-box" style="margin-top: 60px;">
+            <h3>📚 How to Use These Documents</h3>
+            <ul>
+                <li><strong>For New Team Members:</strong> Start with Brand Overview → then read Messaging + Communication guides</li>
+                <li><strong>For Marketing Teams:</strong> Use Messaging for campaigns, Communication for execution, Overview for strategy alignment</li>
+                <li><strong>For Sales Teams:</strong> Focus on Messaging (value props, competitive positioning), use Communication for presentations</li>
+                <li><strong>For Leadership:</strong> Review Complete Strategy annually, use Overview for stakeholder communication</li>
+                <li><strong>For Partners/Agencies:</strong> Share Overview + Messaging + Communication for brand understanding</li>
+            </ul>
+        </div>
+
+        <!-- DOCUMENT STRUCTURE OVERVIEW -->
+        <div class="highlight-box" style="margin-top: 40px;">
+            <h3>📖 What's Inside Each Document</h3>
+
+            <p style="margin-bottom: 20px;"><strong style="color: var(--color-primary);">Brand Overview:</strong></p>
+            <ul style="margin-bottom: 30px;">
+                <li>Section 1: Products & What You Experience (taste, richness, wellness)</li>
+                <li>Section 2: How We Create This (origin, innovation, quality)</li>
+                <li>Section 3: Why Trust This (Fortune 500 validation)</li>
+                <li>Section 4: The Flyberry Standard (brand promise summary)</li>
+            </ul>
+
+            <p style="margin-bottom: 20px;"><strong style="color: var(--color-primary);">Brand Messaging:</strong></p>
+            <ul style="margin-bottom: 30px;">
+                <li>Core Value Propositions (B2B Corporate, D2C Consumer, B2B2C Retail)</li>
+                <li>Product Messaging Frameworks (8 hero products with hooks, differentiators, proof)</li>
+                <li>Taglines & Elevator Pitches (30-sec, 60-sec, 2-min versions)</li>
+                <li>Competitive Positioning Messages (vs. Happilo, Farmley, Bateel, Amazon)</li>
+            </ul>
+
+            <p style="margin-bottom: 20px;"><strong style="color: var(--color-primary);">Brand Communication:</strong></p>
+            <ul style="margin-bottom: 30px;">
+                <li>Voice & Tone Guidelines (Confident Expert + tone by channel)</li>
+                <li>Channel-Specific Strategies (website, social, packaging, email, sales)</li>
+                <li>Do's and Don'ts (language, proof, positioning, tone with real examples)</li>
+                <li>Message Templates (product launch, customer inquiry, PR, social media)</li>
+            </ul>
+
+            <p style="margin-bottom: 20px;"><strong style="color: var(--color-primary);">Complete Strategy:</strong></p>
+            <ul>
+                <li>12 modular sections with click-to-expand cards</li>
+                <li>Foundation, Positioning, Values, Personas, Archetype, Messaging, Journey, Competitive Analysis, Implementation, Metrics, Voice, Manifesto</li>
+                <li>Full strategic depth for annual planning and market analysis</li>
+            </ul>
+        </div>
+
+        <!-- BRAND ESSENCE REMINDER -->
+        <div class="highlight-box" style="margin-top: 40px; background: linear-gradient(135deg, #F8F5F0 0%, white 100%); border-left: 5px solid var(--color-primary);">
+            <h3 style="font-size: 1.8em; margin-bottom: 20px;">The Flyberry Brand in One Line</h3>
+            <p style="font-size: 1.3em; font-style: italic; color: var(--color-secondary); line-height: 1.7;">
+                "Every product, the best in its class."
+            </p>
+            <p style="margin-top: 25px; font-size: 1.05em; color: #666;">
+                From Jordan Valley Medjoul dates to Australian macadamias—if it carries the Flyberry name, it's #1 in taste, quality, and wellness. Trusted by 50+ Fortune 500 companies for 10+ years.
+            </p>
+        </div>
+
+        <footer>
+            <p><strong>Flyberry Brand Strategy Suite</strong></p>
+            <p style="margin-top: 15px;">Complete brand documentation system</p>
+            <p style="margin-top: 10px; color: #999; font-size: 0.9em;">Version 1.0 | Last Updated: January 2026</p>
+            <p style="margin-top: 25px; font-size: 0.95em;">
+                Questions about these documents? Contact the brand team.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
