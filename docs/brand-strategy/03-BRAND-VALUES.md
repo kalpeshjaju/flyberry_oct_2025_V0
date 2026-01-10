@@ -12,30 +12,74 @@
                     │   taste, quality, wellness" │
                     └─────────────────────────────┘
                                  │
-          ┌──────────────────────┼──────────────────────┐
-          ▼                      ▼                      ▼
-    ┌───────────┐         ┌───────────┐         ┌───────────┐
-    │  SOURCING │         │ INNOVATION│         │ SELECTION │
-    │  MASTERY  │         │    LED    │         │   RIGOR   │
-    └───────────┘         └───────────┘         └───────────┘
-          │                      │                      │
-    ┌─────┴─────┐          ┌─────┴─────┐          ┌─────┴─────┐
-    │ Origin    │          │ Process   │          │ Quality   │
-    │ Excellence│          │ Innovation│          │ Standards │
-    │ Direct    │          │ Technology│          │ Nutrition │
-    │ Relations │          │ Enhance   │          │ First     │
-    └───────────┘          └───────────┘          └───────────┘
+                    ┌────────────┴────────────┐
+                    ▼                         │
+           ┌────────────────┐                 │
+           │ TASTE SUPREMACY│ ◄── PRIMARY     │
+           │ (The Ultimate  │     VALUE       │
+           │  Validator)    │                 │
+           └────────────────┘                 │
+                    │                         │
+          ┌─────────┼─────────┐               │
+          ▼         ▼         ▼               ▼
+    ┌───────────┐ ┌───────────┐ ┌───────────┐ ┌───────────┐
+    │  SOURCING │ │ INNOVATION│ │ SELECTION │ │  PROOF &  │
+    │  MASTERY  │ │    LED    │ │   RIGOR   │ │   TRUST   │
+    │  (HOW)    │ │  (HOW)    │ │  (HOW)    │ │(SUPPORTING│
+    └───────────┘ └───────────┘ └───────────┘ └───────────┘
 ```
+
+**The Correct Hierarchy:**
+1. **TASTE** (40%) - The Ultimate Validator (PRIMARY)
+2. **HOW** (35%) - Sourcing + Innovation + Selection (ENABLERS)
+3. **PROOF** (25%) - Fortune 500, QR reports, Transparency (SUPPORTING)
 
 ---
 
 ## THE 5 NON-NEGOTIABLES
 
-### Value 1: ORIGIN EXCELLENCE
+### Value 1: TASTE SUPREMACY (PRIMARY)
+**"Taste is the ultimate validator."**
+
+**Principle:**
+No amount of health benefits, origin stories, or marketing can substitute for extraordinary taste. The product must delight the palate. TASTE is what the brand delivers—everything else explains HOW we deliver it.
+
+**Why TASTE is #1:**
+- Soft, caramel-sweet dates that melt on your tongue—not dried-out commodity dates
+- Buttery macadamia crunch—not stale, flavorless nuts
+- Chips that taste like vegetables—not greasy, over-processed snacks
+
+**Behavioral Standards:**
+
+| Behavior | In Practice |
+|----------|-------------|
+| Sensory validation | Every product taste-tested before launch |
+| Flavor profiling | Documented tasting notes (caramel, buttery, tart) |
+| Texture matters | Soft dates, crunchy chips, creamy spreads |
+| Freshness guarantee | Cold chain, proper storage, no staleness |
+
+**Taste Standards by Category:**
+
+| Category | Taste Standard | Quality Marker |
+|----------|---------------|----------------|
+| **Dates** | Rich sweetness, specific flavor notes | No sugar crystallization, soft texture |
+| **Nuts** | Natural crunch, buttery/rich finish | Not stale, full flavor |
+| **Chips** | Satisfying crunch, vegetable flavor | Not oily, natural color |
+| **Spreads** | Creamy, complex sweetness | No artificial taste |
+| **Berries** | Concentrated flavor, natural tartness | Not overly processed |
+
+**The Taste Test:**
+- Would this product win a blind taste test against competitors?
+- Is the taste experience memorable, not just acceptable?
+- Does the taste justify the premium price?
+
+---
+
+### Value 2: ORIGIN EXCELLENCE (HOW)
 **"Go to the source. Accept only the best."**
 
 **Principle:**
-The quality of any food product begins at its origin. We don't source—we curate from the world's finest terroirs.
+The quality of any food product begins at its origin. We don't source—we curate from the world's finest terroirs. This is HOW we deliver extraordinary taste.
 
 **Behavioral Standards:**
 
@@ -61,11 +105,11 @@ The quality of any food product begins at its origin. We don't source—we curat
 
 ---
 
-### Value 2: INNOVATION INTEGRITY
+### Value 3: INNOVATION INTEGRITY (HOW)
 **"Innovate to elevate, never to compromise."**
 
 **Principle:**
-Technology and innovation serve quality, not cost reduction. Every innovation must make the product better for the customer.
+Technology and innovation serve taste, not cost reduction. Every innovation must make the product taste better. This is HOW we preserve and enhance extraordinary flavor.
 
 **Behavioral Standards:**
 
@@ -90,38 +134,6 @@ Technology and innovation serve quality, not cost reduction. Every innovation mu
 - Is the benefit measurable and communicable?
 - Are we willing to bear the cost for quality?
 - Can we prove the claim scientifically?
-
----
-
-### Value 3: TASTE SUPREMACY
-**"Taste is the ultimate validator."**
-
-**Principle:**
-No amount of health benefits, origin stories, or marketing can substitute for extraordinary taste. The product must delight the palate.
-
-**Behavioral Standards:**
-
-| Behavior | In Practice |
-|----------|-------------|
-| Sensory validation | Every product taste-tested before launch |
-| Flavor profiling | Documented tasting notes (caramel, buttery, tart) |
-| Texture matters | Soft dates, crunchy chips, creamy spreads |
-| Freshness guarantee | Cold chain, proper storage, no staleness |
-
-**Taste Standards by Category:**
-
-| Category | Taste Standard | Quality Marker |
-|----------|---------------|----------------|
-| **Dates** | Rich sweetness, specific flavor notes | No sugar crystallization, soft texture |
-| **Nuts** | Natural crunch, buttery/rich finish | Not stale, full flavor |
-| **Chips** | Satisfying crunch, vegetable flavor | Not oily, natural color |
-| **Spreads** | Creamy, complex sweetness | No artificial taste |
-| **Berries** | Concentrated flavor, natural tartness | Not overly processed |
-
-**The Taste Test:**
-- Would this product win a blind taste test against competitors?
-- Is the taste experience memorable, not just acceptable?
-- Does the taste justify the premium price?
 
 ---
 
@@ -161,11 +173,11 @@ Every product must contribute to wellness. Nutrition is not an afterthought—it
 
 ---
 
-### Value 5: TRUST THROUGH TRANSPARENCY
+### Value 5: TRUST THROUGH TRANSPARENCY (SUPPORTING)
 **"Prove it, don't just claim it."**
 
 **Principle:**
-Every claim must be verifiable. Transparency builds trust. We share everything—origins, processes, lab results, nutrition.
+When the taste is extraordinary, prove it. Every claim must be verifiable. Transparency builds trust. We share everything—origins, processes, lab results, nutrition. This is SUPPORTING evidence that backs up our TASTE claims.
 
 **Behavioral Standards:**
 
@@ -175,23 +187,84 @@ Every claim must be verifiable. Transparency builds trust. We share everything�
 | Origin disclosure | Specific country, region, grade on packaging |
 | Nutrition accuracy | Verified RDA percentages, not estimates |
 | Fortune 500 validation | Publicly reference corporate clients |
+| **Proof Over Promises** | If we can't verify it, we don't claim it |
+| **Specificity Over Vagueness** | "Jordan Valley" not "Middle East" |
 
 **Transparency Mechanisms:**
 
 | Mechanism | What It Proves |
 |-----------|---------------|
 | QR Code Lab Reports | Pesticide-free, contaminant-free |
-| Origin Labeling | Authentic terroir, not generic |
+| Origin Labeling | Authentic terroir, not generic (specific location, not region) |
 | FSSAI License | Regulatory compliance |
-| Fortune 500 Client List | Corporate-level trust |
+| Fortune 500 Client List | Corporate-level trust (Google, Goldman Sachs by name) |
 | Customer Reviews (4.8/5) | Market validation |
+| Named Suppliers | Actual supplier relationships, not middlemen |
 
 **Trust Proof Points:**
-- 50+ Fortune 500 corporate clients
+- 50+ Fortune 500 corporate clients (can name: Google, Microsoft, Goldman Sachs, Deloitte)
 - 5+ years Amazon best-seller
 - 4.8/5 rating (173 reviews on Justdial)
 - FSSAI License No.: 13624999000008
 - FSSC 22000 certification pathway
+- 10+ years supplier relationships (verifiable track record)
+
+---
+
+## THE PROOF PRINCIPLES
+
+### Foundation of "Best-in-Class Gourmet" Positioning
+
+**Principle 1: PROOF OVER PROMISES**
+
+**What It Means:**
+- Every claim must be verifiable (QR reports, named clients, specific origins)
+- If we can't prove it, we don't say it
+- Our enemy: Vague "premium" claims without verification
+
+**In Practice:**
+
+| Vague Claim (Competitors) | Flyberry's Proof |
+|---------------------------|------------------|
+| "Premium quality" | QR #AB12345 links to lab report showing pesticide-free certification |
+| "Trusted by corporates" | "Google (8+ years), Goldman Sachs, Microsoft, Deloitte—50+ Fortune 500 clients" |
+| "Best origins" | "Jordan Valley (GPS: 31.8°N), Majestic-grade, 7-year maturation, supplier: [Name]" |
+| "Fresh and natural" | "Cold chain 5-10°C from import to delivery, temperature logs available" |
+
+**Decision Test:**
+- Can we link to a QR report?
+- Can we name the client/supplier?
+- Can we show the exact origin on a map?
+- If NO to all → Don't make the claim
+
+---
+
+**Principle 2: SPECIFICITY OVER VAGUENESS**
+
+**What It Means:**
+- Say "Jordan Valley" not "Middle East"
+- Say "Majestic-grade" not "premium grade"
+- Say "Google (8+ years)" not "corporate clients"
+- Say "7-year maturation" not "aged"
+
+**Why Specificity Matters:**
+- Respects customer intelligence (they can verify)
+- Competitors can't match without infrastructure
+- Creates unfair advantage (details are defensible)
+
+**In Practice:**
+
+| Generic (What Competitors Say) | Specific (Flyberry Standard) |
+|-------------------------------|------------------------------|
+| "Premium dates from Saudi Arabia" | "Ajwa Dates from Medina, Saudi Arabia—only authentic terroir for this variety" |
+| "High-quality nuts" | "Style 0 Macadamia from Coastal Australia—premium whole kernels, 45.6% RDA MUFA" |
+| "Industry-leading technology" | "Vacuum frying at 90-120°C (vs. 170-190°C traditional), 70% less oil absorption" |
+| "Trusted by Fortune 500 companies" | "50+ Fortune 500 clients including Google (8+ years), Goldman Sachs, Microsoft, Deloitte" |
+
+**Decision Test:**
+- Can a competitor copy our claim without our infrastructure?
+- Does it include numbers, locations, or names?
+- If it's generic → make it specific or don't say it
 
 ---
 
@@ -201,11 +274,16 @@ Every claim must be verifiable. Transparency builds trust. We share everything�
 
 | Anti-Value | Why We Reject It | Example |
 |------------|------------------|---------|
-| **Commodity Sourcing** | Destroys differentiation | "Dates from Middle East" |
-| **Cost Optimization** | Compromises quality | Switching to cheaper suppliers |
-| **Feature Marketing** | Doesn't build trust | "Premium quality" without proof |
-| **Health Hype** | Damages credibility | Miracle cure claims |
-| **Price Competition** | Race to bottom | Matching Happilo's prices |
+| **Commodity Sourcing** | Destroys differentiation | "Dates from Middle East" (generic region) |
+| **Vague Premium Claims** | Can't verify, damages trust | "Premium quality" without QR proof |
+| **Cost Optimization** | Compromises quality | Switching to cheaper suppliers to increase margin |
+| **Feature Marketing** | Doesn't build trust | "Best-in-class" without showing how |
+| **Health Hype** | Damages credibility | Miracle cure claims, exaggerated benefits |
+| **Price Competition** | Race to bottom | Matching Happilo's prices instead of proving value |
+| **Fake Farmer Stories** | Not authentic (we source through intermediaries) | Inventing narratives we can't verify |
+| **Founder Myths** | We're corporate-grade, not startup | Pretending to be founder-led when we're B2B-strong |
+| **Scarcity Hype** | We maintain steady supply | "Limited harvest" when we plan for reliability |
+| **Lifestyle Marketing** | Dates are functional, not lifestyle | Making premium food into fake movement |
 
 ---
 
@@ -291,11 +369,11 @@ Every claim must be verifiable. Transparency builds trust. We share everything�
 
 ### Priority Order (When Trade-offs Required):
 
-1. **Trust** (non-negotiable—never compromise)
+1. **Taste** (PRIMARY—must delight, not just satisfy)
 2. **Wellness** (never harm the customer)
-3. **Taste** (must delight, not just satisfy)
-4. **Origin** (best available, premium grade)
-5. **Innovation** (when it adds value)
+3. **Origin** (best available, premium grade)
+4. **Innovation** (when it improves taste)
+5. **Trust/Proof** (SUPPORTING—verify the taste claims)
 
 **Example Conflict Resolution:**
 
@@ -309,13 +387,18 @@ Every claim must be verifiable. Transparency builds trust. We share everything�
 
 ## VALUES SUMMARY
 
-| Value | One-Line | Decision Test |
-|-------|----------|---------------|
-| **Origin Excellence** | Go to the source, accept only the best | Is this the best origin in the world? |
-| **Innovation Integrity** | Innovate to elevate, never to compromise | Does this improve customer experience? |
-| **Taste Supremacy** | Taste is the ultimate validator | Would this win a blind taste test? |
-| **Wellness First** | Food that nourishes, not just feeds | Does this contribute to wellness? |
-| **Trust Transparency** | Prove it, don't just claim it | Can we verify every claim? |
+| # | Value | Type | One-Line | Decision Test |
+|---|-------|------|----------|---------------|
+| **1** | **Taste Supremacy** | PRIMARY | Taste is the ultimate validator | Would this win a blind taste test? |
+| **2** | **Origin Excellence** | HOW | Go to the source, accept only the best | Is this the best origin in the world? |
+| **3** | **Innovation Integrity** | HOW | Innovate to elevate, never to compromise | Does this improve taste experience? |
+| **4** | **Wellness First** | HOW | Food that nourishes, not just feeds | Does this contribute to wellness? |
+| **5** | **Trust Transparency** | SUPPORTING | Prove it, don't just claim it | Can we verify every claim? |
+
+**The Hierarchy:**
+- **TASTE** (40%) - What the brand delivers (PRIMARY)
+- **HOW** (35%) - Origin, Innovation, Wellness (ENABLERS)
+- **PROOF** (25%) - Trust & Transparency (SUPPORTING)
 
 ---
 

@@ -1,10 +1,10 @@
 # FLYBERRY BRAND STRATEGY
 ## Master Document & Comprehensive Index
 
-**Version:** 2.0  
-**Date:** January 2026  
-**Classification:** Strategic Document  
-**Total Sections:** 7 Core Sections + Appendices
+**Version:** 3.2
+**Date:** January 2026
+**Classification:** Strategic Document
+**Total Sections:** 12 Core Sections (Strategy + Knowledge Base + Visual Identity + Data Verification)
 
 ---
 
@@ -213,12 +213,45 @@ This document transforms Flyberry from a quality dried fruit supplier (₹35 Cr)
 │   ├── 2.7.1 Core voice characteristics
 │   └── 2.7.2 Tone by context table
 │
-└── 2.8 Positioning Proof Points
-    ├── 2.8.1 Taste proof
-    ├── 2.8.2 Quality proof
-    ├── 2.8.3 Wellness proof
-    ├── 2.8.4 Sourcing proof
-    └── 2.8.5 Innovation proof
+├── 2.8 Positioning Proof Points
+│   ├── 2.8.1 Taste proof
+│   ├── 2.8.2 Quality proof
+│   ├── 2.8.3 Wellness proof
+│   ├── 2.8.4 Sourcing proof
+│   └── 2.8.5 Innovation proof
+│
+├── 2.9 Customer Testimonials & Case Studies
+│   ├── 2.9.1 Purpose & Role
+│   ├── 2.9.2 Testimonial Collection Framework
+│   ├── 2.9.3 Ready-to-Use Testimonial Templates
+│   │   ├── Medjoul Dates testimonials (2)
+│   │   ├── Brazil Nuts testimonials (2)
+│   │   ├── Vacuum-Fried Chips testimonials (2)
+│   │   └── Corporate Gifting testimonials (2)
+│   ├── 2.9.4 Fortune 500 Client Case Study Templates
+│   │   ├── Tech Company case
+│   │   ├── Financial Services case
+│   │   └── Consulting Firm case
+│   └── 2.9.5 Testimonial Usage Guidelines
+│
+└── 2.10 Competitive Scenario Planning & Response Strategies
+    ├── 2.10.1 Purpose & Methodology
+    ├── 2.10.2 Scenario 1: Happilo Copies Fortune 500 Positioning
+    │   ├── Probability & Impact
+    │   ├── Defensive Strategy (3 phases)
+    │   └── Do NOT list
+    ├── 2.10.3 Scenario 2: New Luxury Entrant (Bateel-Level)
+    │   ├── Probability & Impact
+    │   ├── Response Strategy
+    │   └── Do NOT list
+    ├── 2.10.4 Scenario 3: Price War Initiated by Mid-Market
+    │   ├── Probability & Impact
+    │   ├── Response Strategy
+    │   └── Do NOT list
+    └── 2.10.5 Competitive Moat Analysis
+        ├── STRONG moats (hard to replicate)
+        ├── MEDIUM moats (replicable with effort)
+        └── WEAK moats (easily copied)
 ```
 
 ---
@@ -315,8 +348,21 @@ This document transforms Flyberry from a quality dried fruit supplier (₹35 Cr)
 ├── 4.6 Persona Comparison Matrix
 │   └── 4.6.1 Side-by-side comparison table
 │
-└── 4.7 Revenue Potential by Persona
-    └── 4.7.1 Revenue share table
+├── 4.7 Revenue Potential by Persona
+│   └── 4.7.1 Revenue share table
+│
+└── 4.8 Persona Validation & Research Methodology
+    ├── 4.8.1 Current Status: Hypothetical vs. Validated
+    ├── 4.8.2 Recommended Research Methodology (3 phases)
+    │   ├── Phase 1: Quantitative Segmentation
+    │   ├── Phase 2: Qualitative Validation
+    │   └── Phase 3: Persona Finalization
+    ├── 4.8.3 Research Tools & Resources
+    │   ├── CRM/sales data export
+    │   ├── Interview question bank
+    │   └── Survey templates
+    ├── 4.8.4 Persona Validation Checklist
+    └── 4.8.5 Persona Refresh Schedule (Annual)
 ```
 
 ---
@@ -362,10 +408,35 @@ This document transforms Flyberry from a quality dried fruit supplier (₹35 Cr)
 │   ├── 5.4.1 Packaging color system
 │   └── 5.4.2 Typography system
 │
-└── 5.5 Portfolio Extension Guidelines
-    ├── 5.5.1 When to add new product (criteria)
-    ├── 5.5.2 When to add new category (requirements)
-    └── 5.5.3 Categories under consideration
+├── 5.5 Portfolio Extension Guidelines
+│   ├── 5.5.1 When to add new product (criteria)
+│   ├── 5.5.2 When to add new category (requirements)
+│   └── 5.5.3 Categories under consideration
+│
+└── 5.6 Product Performance Matrix
+    ├── 5.6.1 Performance Metrics Framework
+    │   ├── Revenue
+    │   ├── Gross Margin
+    │   ├── Repeat Purchase Rate
+    │   └── Customer Lifetime Value (CLV)
+    ├── 5.6.2 Product Performance Templates by Category
+    │   ├── Category 1: Premium Dates (12 products)
+    │   ├── Category 2: Exotic Nuts (6 products)
+    │   ├── Category 3-8: Performance tables
+    │   └── Gift Collections tracking
+    ├── 5.6.3 BCG Matrix Adaptation for Flyberry
+    │   ├── Stars (high growth, high margin)
+    │   ├── Cash Cows (stable revenue, high margin)
+    │   ├── Question Marks (high growth, low margin)
+    │   └── Dogs (low growth, low margin)
+    ├── 5.6.4 Product Optimization Framework
+    │   ├── Criteria for discontinuation
+    │   ├── Criteria for doubling down
+    │   └── Criteria for repositioning
+    └── 5.6.5 Data Collection & Ownership
+        ├── Finance team responsibilities
+        ├── Sales team responsibilities
+        └── Quarterly review process
 ```
 
 ---
@@ -393,7 +464,15 @@ This document transforms Flyberry from a quality dried fruit supplier (₹35 Cr)
 │   ├── 6.2.5 Tier 4: Atelier (₹2,599-₹7,249)
 │   │   ├── Products table
 │   │   └── Tier strategy
-│   └── 6.2.6 Competitive pricing position
+│   ├── 6.2.6 Competitive pricing position
+│   └── 6.2.7 Pricing Methodology & Research
+│       ├── Value-Based Pricing Framework
+│       ├── Competitive Price Benchmarking Process
+│       ├── Willingness-to-Pay Research (Van Westendorp PSM)
+│       ├── Margin Analysis by Product
+│       ├── Psychological Pricing Principles (Charm pricing)
+│       ├── Example Calculations (Medjoul Dates, Okra Chips)
+│       └── Pricing Governance (approval, review cycles)
 │
 ├── 6.3 Packaging Strategy
 │   ├── 6.3.1 Pack size logic table
@@ -472,6 +551,314 @@ This document transforms Flyberry from a quality dried fruit supplier (₹35 Cr)
 └── 7.6 Narrative Application Guide
     ├── 7.6.1 By channel table
     └── 7.6.2 By persona table
+```
+
+---
+
+### SECTION 8: LEARNING RESOURCES & FRAMEWORKS
+**File:** [08-LEARNING-RESOURCES.md](./08-LEARNING-RESOURCES.md)
+
+```
+8. LEARNING RESOURCES
+│
+├── 8.1 Foundational Books
+│   ├── 8.1.1 Designing Brand Identity (Alina Wheeler)
+│   │   ├── 5-Phase Brand Process
+│   │   ├── 10 Brand Identity Principles
+│   │   └── Applied to Flyberry (scoring by phase)
+│   └── 8.1.2 Storytelling Techniques Deck (The Plot)
+│       ├── 20 Storytelling Techniques
+│       ├── Advanced Frameworks (Peak-End, Hero-Villain-Guide)
+│       ├── How to Spot a Good Story
+│       ├── Stories by Channel
+│       └── Audience Perspective Framework
+│
+├── 8.2 Brand Strategy Frameworks Applied
+│   ├── 8.2.1 Brand Positioning Framework (Ries & Trout)
+│   ├── 8.2.2 Brand Archetype (Jung/Mark & Pearson)
+│   ├── 8.2.3 Brand Identity Prism (Kapferer)
+│   └── 8.2.4 StoryBrand Framework (Donald Miller)
+│
+├── 8.3 Case Studies & Examples
+│   ├── 8.3.1 Luxury Food Brand Positioning
+│   │   ├── Bateel case study
+│   │   └── Whole Foods 365 case study
+│   └── 8.3.2 Storytelling in Gourmet Food Marketing
+│       ├── Blue Bottle Coffee example
+│       └── Patagonia Provisions example
+│
+├── 8.4 Knowledge Synthesis Tables
+│   ├── 8.4.1 Framework Comparison Matrix
+│   ├── 8.4.2 When to Use Which Storytelling Technique
+│   └── 8.4.3 Brand Theory Comparison: Quality Positioning
+│
+├── 8.5 Citation & Source Index
+│   ├── Books (full text available)
+│   └── Books (referenced, to be added)
+│
+├── 8.6 Learning Roadmap
+│   ├── Immediate resources to add
+│   ├── Short-term priorities
+│   └── Long-term learning goals
+│
+└── 8.7 Quick Reference: Key Takeaways
+    ├── From Wheeler
+    ├── From Storytelling Techniques
+    ├── From Positioning Theory
+    └── From Brand Archetypes
+```
+
+---
+
+### SECTION 9: LEARNING JOURNAL
+**File:** [09-LEARNING-JOURNAL.md](./09-LEARNING-JOURNAL.md)
+
+```
+9. LEARNING JOURNAL
+│
+├── 9.1 What Worked: Successful Decisions
+│   ├── 9.1.1 Positioning Strategy (Fortune 500-trusted)
+│   ├── 9.1.2 Category Redefinition (#1-in-category narrative)
+│   ├── 9.1.3 Specific Origin Storytelling
+│   ├── 9.1.4 Dual Archetype Blend (Connoisseur + Innovator)
+│   └── 9.1.5 Narrative Frameworks (5 repeatable frameworks)
+│
+├── 9.2 What Failed: Anti-Patterns & Abandoned Approaches
+│   ├── 9.2.1 Feature-Focused Positioning
+│   ├── 9.2.2 Generic Health Claims
+│   ├── 9.2.3 Trying to Compete on Price
+│   ├── 9.2.4 Single-Category Focus
+│   └── 9.2.5 Complex Messaging Hierarchy
+│
+├── 9.3 LLM-to-LLM Context: Critical Insights
+│   ├── 9.3.1 Understanding Flyberry's Unique Position
+│   ├── 9.3.2 Critical Files & Their Purposes
+│   ├── 9.3.3 Decision Rationale & Tradeoffs
+│   └── 9.3.4 What to Preserve vs. What to Evolve
+│
+├── 9.4 Lessons Learned by Topic
+│   ├── 9.4.1 Positioning Lessons
+│   ├── 9.4.2 Messaging Lessons
+│   ├── 9.4.3 Visual Identity Lessons (pending)
+│   └── 9.4.4 Implementation Lessons
+│
+├── 9.5 Retrospective: What We'd Do Differently
+│   ├── If starting from scratch today
+│   ├── What we'd skip
+│   └── What we'd add
+│
+├── 9.6 Confidence Assessment
+│   ├── Overall brand strategy confidence (0.90)
+│   └── Breakdown by section
+│
+├── 9.7 Open Questions & Future Research
+│   ├── Visual identity direction
+│   ├── Pricing psychology
+│   ├── Category expansion (#9)
+│   └── B2B vs. D2C balance
+│
+└── 9.8 Handoff Notes for Next LLM
+    ├── Start here (reading order)
+    ├── Most important files
+    ├── Key principles
+    └── What NOT to do
+```
+
+---
+
+### SECTION 10: REFERENCE LIBRARY
+**File:** [10-REFERENCE-LIBRARY.md](./10-REFERENCE-LIBRARY.md)
+
+```
+10. REFERENCE LIBRARY
+│
+├── 10.1 Strategic Concepts Glossary
+│   ├── Brand Architecture
+│   ├── Brand Archetype
+│   ├── Brand Essence
+│   ├── Brand Identity Prism
+│   ├── Brand Positioning
+│   ├── Brand Promise
+│   ├── Brand Values
+│   └── (15+ definitions with Flyberry applications)
+│
+├── 10.2 Framework Quick Cards
+│   ├── 10.2.1 Brand Positioning Statement
+│   ├── 10.2.2 Hero-Villain-Guide (StoryBrand)
+│   ├── 10.2.3 The Origin Story Framework
+│   ├── 10.2.4 The Innovation Story Framework
+│   ├── 10.2.5 The Trust Story Framework
+│   └── 10.2.6 Peak-End Rule
+│
+├── 10.3 Competitive Analysis Archive
+│   ├── 10.3.1 Market Positioning Map
+│   └── 10.3.2 Competitor Brand Audits
+│
+├── 10.4 Citation & Source Index
+│   ├── Primary sources (full text available)
+│   └── Referenced frameworks (to be added)
+│
+├── 10.5 Quick Decision Checklists
+│   ├── 10.5.1 Is This "On Brand" for Flyberry? (5 questions)
+│   ├── 10.5.2 Should We Add This Product? (#1-in-Category Test)
+│   └── 10.5.3 How to Tell Flyberry's Story (channel-specific)
+│
+├── 10.6 Voice & Tone Quick Reference
+│   ├── The Flyberry Voice
+│   ├── Tone by Context (table)
+│   └── Do's and Don'ts
+│
+├── 10.7 Glossary of Brand Strategy Terms
+│   └── 20+ terms with definitions
+│
+├── 10.8 Common Questions & Answers
+│   ├── Why Fortune 500-trusted positioning?
+│   ├── Isn't #1 in every category too ambitious?
+│   ├── Why dual archetypes?
+│   └── (4+ FAQs)
+│
+├── 10.9 Brand Asset Locations
+│   └── File paths for all key documents
+│
+└── 10.10 One-Page Brand Summary
+    └── Quick onboarding (What, Who, Differentiators, Promise, Moat)
+```
+
+---
+
+### SECTION 11: VISUAL IDENTITY SYSTEM
+**File:** [11-VISUAL-IDENTITY-SYSTEM.md](./11-VISUAL-IDENTITY-SYSTEM.md)
+
+```
+11. VISUAL IDENTITY SYSTEM
+│
+├── 11.1 Visual Brand Philosophy
+│   ├── Principle 1: Familiar Transformed, Not Foreign Luxury
+│   ├── Principle 2: Visual Weight Mirrors Brand Pillars (50-25-15-10)
+│   └── Principle 3: Craft Over Corporate
+│
+├── 11.2 Brand Color System
+│   ├── Primary Palette (6 colors)
+│   │   ├── Flyberry Medjoul (Caramel Brown) - Primary
+│   │   ├── Jordan Valley Earth (Dark Brown) - Secondary
+│   │   ├── Craft White (Warm Off-White) - Background
+│   │   ├── Innovation Green (Process Indicator)
+│   │   ├── Verification Blue (Transparency)
+│   │   └── Golden Validation (Fortune 500 - 10% use only)
+│   ├── Accent Colors (3 category-specific)
+│   └── Color Usage Rules (50-25-15-10 allocation)
+│
+├── 11.3 Typography System
+│   ├── Primary: Freight Display Pro (Refined warmth)
+│   ├── Secondary: Brandon Grotesque (Modern approachable)
+│   ├── Tertiary: Courier Prime (Artisan authentication)
+│   └── Typography Hierarchy (6 levels with pillar weights)
+│
+├── 11.4 Logo System
+│   ├── Primary Wordmark (lowercase, crafted ligatures)
+│   ├── Logo Variations (3 versions)
+│   └── Clear Space & Minimum Size Rules
+│
+├── 11.5 Iconography System
+│   ├── Quality Icons (50% weight - hero icons)
+│   ├── Innovation Icons (25% weight - enabler)
+│   ├── Transparency Icons (15% weight - trust)
+│   └── Validation Icons (10% weight - proof, smallest)
+│
+├── 11.6 Photography Style
+│   ├── Primary: Transformation Moments (familiar → extraordinary)
+│   ├── Secondary: Origin Stories (specific places)
+│   ├── Tertiary: Consumer Experience (30s taste authority)
+│   └── Photography Usage Allocation (50-25-15-10)
+│
+├── 11.7 Packaging Design System
+│   ├── Front Panel Architecture (50% taste hero)
+│   ├── Back Panel Architecture (25-15-10 split)
+│   ├── Material & Finish Guidelines
+│   └── Packaging by Tier (4 tiers)
+│
+├── 11.8 Digital Presence
+│   ├── Website Design System
+│   ├── Social Media Templates
+│   └── Color & Typography Usage
+│
+├── 11.9 Retail/Store Design
+│   ├── Tasting Counter (50% of space - centerpiece)
+│   ├── Innovation Journey Wall (25% of space)
+│   ├── Transparency Corner (15% of space)
+│   └── Fortune 500 Validation Wall (10% - smallest, back placement)
+│
+├── 11.10 Print Collateral
+│   ├── Corporate Gifting Catalog
+│   ├── Product Cards
+│   └── Shelf Talkers
+│
+└── 11.11 Visual Identity Governance
+    ├── Brand Guardian Checklist
+    └── Implementation Phases (3 phases)
+```
+
+---
+
+### SECTION 13: DATA SOURCES & VERIFICATION APPENDIX
+**File:** [13-DATA-SOURCES-APPENDIX.md](./13-DATA-SOURCES-APPENDIX.md)
+
+```
+13. DATA SOURCES & VERIFICATION APPENDIX
+│
+├── 13.1 Purpose & Critical Need
+│   ├── Why this section exists
+│   └── Regulatory/legal importance
+│
+├── 13.2 Verification Framework
+│   ├── 13.2.1 Customer Rating (4.8/5)
+│   │   ├── Verification status (🔶 PENDING)
+│   │   ├── Required evidence
+│   │   └── Placeholder data source template
+│   ├── 13.2.2 Brand Awareness (<20%)
+│   │   ├── Verification status
+│   │   ├── Required evidence
+│   │   └── Survey methodology needed
+│   ├── 13.2.3 Market Growth (25%+ premium food)
+│   │   ├── Verification status
+│   │   └── Market research citations needed
+│   ├── 13.2.4 Fortune 500 Clients (50+)
+│   │   ├── Verification status
+│   │   ├── Client list template
+│   │   └── Permission requirements
+│   ├── 13.2.5 Amazon Best-Seller (5+ years)
+│   │   ├── Verification status
+│   │   └── ASIN-level proof needed
+│   └── 13.2.6 Competitive Claims Verification
+│       ├── Happilo competitive intelligence
+│       ├── Farmley competitive intelligence
+│       └── Bateel competitive intelligence
+│
+├── 13.3 Evidence Repository Structure
+│   ├── 13.3.1 Folder organization
+│   │   ├── /customer-reviews/
+│   │   ├── /market-research/
+│   │   ├── /client-testimonials/
+│   │   ├── /competitive-intel/
+│   │   └── /certifications/
+│   ├── 13.3.2 File naming conventions
+│   └── 13.3.3 Version control requirements
+│
+├── 13.4 Quarterly Verification Workflow
+│   ├── 13.4.1 Q1 Tasks (January-March)
+│   ├── 13.4.2 Q2 Tasks (April-June)
+│   ├── 13.4.3 Q3 Tasks (July-September)
+│   └── 13.4.4 Q4 Tasks (October-December)
+│
+├── 13.5 Ownership & Accountability
+│   ├── Marketing team responsibilities
+│   ├── Finance team responsibilities
+│   └── Sales team responsibilities
+│
+└── 13.6 Implementation Checklist
+    ├── Immediate (Week 1-2): Create evidence folders
+    ├── Short-term (Month 1): Collect Amazon data
+    └── Ongoing: Quarterly verification reviews
 ```
 
 ---
@@ -561,26 +948,55 @@ This document draws from established brand strategy methodologies:
 /docs/brand-strategy/
 │
 ├── 00-MASTER-INDEX.md          ← You are here
-├── 01-BRAND-FOUNDATION.md
-├── 02-BRAND-POSITIONING.md
-├── 03-BRAND-VALUES.md
-├── 04-TARGET-PERSONAS.md
-├── 05-BRAND-ARCHITECTURE.md
-├── 06-STRATEGIC-RECOMMENDATIONS.md
-└── 07-MANIFESTO-NARRATIVES.md
+│
+├── BRAND STRATEGY (Sections 01-07)
+│   ├── 01-BRAND-FOUNDATION.md
+│   ├── 02-BRAND-POSITIONING.md           [UPDATED: Added 02.9, 02.10]
+│   ├── 03-BRAND-VALUES.md
+│   ├── 04-TARGET-PERSONAS.md             [UPDATED: Added 04.8]
+│   ├── 05-BRAND-ARCHITECTURE.md          [UPDATED: Added 05.6]
+│   ├── 06-STRATEGIC-RECOMMENDATIONS.md   [UPDATED: Added 06.2.7]
+│   └── 07-MANIFESTO-NARRATIVES.md
+│
+├── KNOWLEDGE BASE (Sections 08-10)
+│   ├── 08-LEARNING-RESOURCES.md
+│   ├── 09-LEARNING-JOURNAL.md
+│   └── 10-REFERENCE-LIBRARY.md
+│
+├── VISUAL IDENTITY (Section 11)
+│   └── 11-VISUAL-IDENTITY-SYSTEM.md
+│
+├── GAP REMEDIATION SUMMARY
+│   └── BRAND-STRATEGY-GAP-REMEDIATION-COMPLETE.md
+│
+└── DATA VERIFICATION (Section 13)
+    └── 13-DATA-SOURCES-APPENDIX.md       [NEW]
 ```
 
 ### Quick Links by Topic
 
 | If You Need | Go To |
 |-------------|-------|
+| **BRAND STRATEGY** | |
 | Brand purpose, vision, mission | Section 1 |
 | Positioning statement, differentiation | Section 2 |
+| Customer testimonials, competitive scenarios | Section 2.9, 2.10 |
 | Decision-making framework | Section 3 |
-| Customer understanding | Section 4 |
-| Product portfolio details | Section 5 |
+| Customer understanding, persona validation | Section 4, 4.8 |
+| Product portfolio details, performance metrics | Section 5, 5.6 |
 | Pricing, packaging, communication | Section 6 |
+| Pricing methodology & justification | Section 6.2.7 |
 | Brand stories, taglines | Section 7 |
+| **KNOWLEDGE BASE** | |
+| Brand strategy frameworks, books | Section 8 |
+| What worked/failed, LLM handoffs | Section 9 |
+| Quick reference, glossary | Section 10 |
+| **VISUAL IDENTITY** | |
+| Logo, colors, typography, photography | Section 11 |
+| **DATA VERIFICATION** | |
+| Claim verification, evidence repository | Section 13 |
+| **HANDOFF SUMMARY** | |
+| Complete gap remediation report | BRAND-STRATEGY-GAP-REMEDIATION-COMPLETE.md |
 
 ---
 
@@ -600,6 +1016,8 @@ This document draws from established brand strategy methodologies:
 |---------|------|---------|
 | 1.0 | Jan 2026 | Initial comprehensive document |
 | 2.0 | Jan 2026 | Rebuilt with accurate product data, added knowledge graph, checks & balances |
+| 3.1 | Jan 2026 | Added Section 11: Visual Identity System (colors, typography, logo, photography, packaging design aligned with 50-25-15-10 brand pillar hierarchy) |
+| 3.2 | Jan 2026 | **Gap Remediation Complete**: Added Section 13 (Data Sources & Verification Appendix), expanded Section 02 with 02.9 (Customer Testimonials) and 02.10 (Competitive Scenarios), added Section 04.8 (Persona Validation), Section 05.6 (Product Performance Matrix), Section 06.2.7 (Pricing Methodology). Created BRAND-STRATEGY-GAP-REMEDIATION-COMPLETE.md summary document. |
 
 ---
 

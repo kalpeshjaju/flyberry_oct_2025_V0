@@ -1,417 +1,352 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flyberry Brand Strategy - Complete Documentation</title>
-    <style>
-        :root {
-            --color-primary: #8B5A3C;
-            --color-secondary: #4A3728;
-            --color-background: #F8F5F0;
-            --color-white: #FFFFFF;
-            --color-border: #E5E5E5;
-            --color-text: #4A3728;
-            --color-text-light: #6B6B6B;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
-            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--color-text);
-            background: var(--color-background);
-        }
-        
-        .header {
-            background: var(--color-white);
-            padding: 2rem;
-            text-align: center;
-            box-shadow: var(--shadow-sm);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header h1 {
-            color: var(--color-primary);
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .header-subtitle { color: var(--color-text-light); font-size: 1.1rem; }
-        
-        .header-meta {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            color: var(--color-text-light);
-        }
-        
-        .header-meta span {
-            padding: 0.25rem 0.75rem;
-            background: var(--color-background);
-            border-radius: 4px;
-        }
-        
-        .container { max-width: 1400px; margin: 0 auto; padding: 2rem; }
-        
-        .sections-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .section-card {
-            background: var(--color-white);
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: var(--shadow-md);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border-left: 4px solid var(--color-primary);
-        }
-        
-        .section-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .section-number {
-            font-size: 0.85rem;
-            color: var(--color-primary);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .section-title {
-            font-size: 1.5rem;
-            color: var(--color-secondary);
-            margin-bottom: 0.75rem;
-        }
-        
-        .section-meta {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-            font-size: 0.85rem;
-            color: var(--color-text-light);
-        }
-        
-        .section-meta span {
-            padding: 0.25rem 0.5rem;
-            background: var(--color-background);
-            border-radius: 4px;
-        }
-        
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 1000;
-            overflow-y: auto;
-        }
-        
-        .modal.active { display: block; }
-        
-        .modal-content {
-            background: var(--color-white);
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 3rem;
-            border-radius: 8px;
-            box-shadow: var(--shadow-lg);
-            position: relative;
-        }
-        
-        .modal-close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: var(--color-primary);
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        
-        .modal-close:hover { background: var(--color-secondary); }
-        
-        .section-content h1 {
-            color: var(--color-primary);
-            border-bottom: 3px solid var(--color-primary);
-            padding-bottom: 0.5rem;
-            margin: 2rem 0 1rem 0;
-        }
-        
-        .section-content h2 {
-            color: var(--color-primary);
-            margin: 1.5rem 0 1rem 0;
-            border-bottom: 1px solid var(--color-border);
-            padding-bottom: 0.5rem;
-        }
-        
-        .section-content h3 {
-            color: var(--color-secondary);
-            margin: 1.25rem 0 0.75rem 0;
-        }
-        
-        .section-content p { margin: 1rem 0; line-height: 1.8; }
-        
-        .section-content table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .section-content th,
-        .section-content td {
-            padding: 0.75rem;
-            text-align: left;
-            border: 1px solid var(--color-border);
-        }
-        
-        .section-content th {
-            background: var(--color-primary);
-            color: white;
-            font-weight: 600;
-        }
-        
-        .section-content tr:nth-child(even) { background: var(--color-background); }
-        
-        .section-content code {
-            background: var(--color-background);
-            padding: 0.2rem 0.4rem;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9em;
-        }
-        
-        .section-content pre {
-            background: var(--color-background);
-            padding: 1rem;
-            border-radius: 4px;
-            overflow-x: auto;
-            border-left: 4px solid var(--color-primary);
-            margin: 1rem 0;
-        }
-        
-        .section-content pre code { background: none; padding: 0; }
-        
-        .section-content blockquote {
-            border-left: 4px solid var(--color-primary);
-            padding-left: 1rem;
-            margin: 1.5rem 0;
-            font-style: italic;
-            background: var(--color-background);
-            padding: 1rem 1rem 1rem 1.5rem;
-            border-radius: 4px;
-        }
-        
-        .section-content ul,
-        .section-content ol {
-            margin: 1rem 0;
-            padding-left: 2rem;
-        }
-        
-        .section-content li { margin: 0.5rem 0; }
-        
-        @media (max-width: 768px) {
-            .sections-grid { grid-template-columns: 1fr; }
-            .header h1 { font-size: 2rem; }
-            .modal-content { margin: 1rem; padding: 2rem 1.5rem; }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Flyberry Brand Strategy - Complete Documentation</title>
+  <style>
+
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+  <style type="text/css">body {
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+line-height: 1.6;
+max-width: 1200px;
+margin: 0 auto;
+padding: 40px 20px;
+background: #f8f5f0;
+color: #4a3728;
+}
+h1 { color: #8b5a3c; border-bottom: 3px solid #8b5a3c; padding-bottom: 10px; margin-top: 40px; }
+h2 { color: #8b5a3c; margin-top: 35px; border-bottom: 1px solid #ddd; padding-bottom: 8px; }
+h3 { color: #4a3728; margin-top: 25px; }
+table { border-collapse: collapse; width: 100%; margin: 20px 0; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+th { background-color: #8b5a3c; color: white; font-weight: 600; }
+tr:nth-child(even) { background-color: #f9f9f9; }
+code { background: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-family: 'Courier New', Consolas, monospace; font-size: 0.9em; }
+pre { background: #f0f0f0; padding: 15px; border-radius: 5px; overflow-x: auto; border-left: 4px solid #8b5a3c; }
+pre code { background: none; padding: 0; }
+blockquote { border-left: 4px solid #8b5a3c; padding-left: 20px; margin-left: 0; font-style: italic; background: #f9f9f9; padding: 15px 20px; border-radius: 4px; }
+#TOC { background: white; padding: 20px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+#TOC ul { list-style-type: none; padding-left: 0; }
+#TOC li { margin: 8px 0; }
+#TOC a { color: #8b5a3c; text-decoration: none; }
+#TOC a:hover { text-decoration: underline; color: #4a3728; }
+a { color: #8b5a3c; }
+a:hover { color: #4a3728; }
+ul, ol { margin: 15px 0; padding-left: 30px; }
+li { margin: 8px 0; }
+strong { color: #4a3728; font-weight: 600; }
+#header { background: white; padding: 30px; margin-bottom: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center; }
+#header h1 { border-bottom: none; margin-top: 0; }
+.header-meta { color: #8b5a3c; font-size: 0.9em; margin-top: 10px; }
+</style>
 </head>
 <body>
-    <div class="header">
-        <h1>Flyberry Brand Strategy</h1>
-        <p class="header-subtitle">Complete Documentation - Version 3.2</p>
-        <div class="header-meta">
-            <span>📁 17 Sections</span>
-            <span>📅 January 2026</span>
-            <span>📊 61,046 words</span>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="sections-grid">
-
-            <div class="section-card" onclick="openModal('01')">
-                <div class="section-number">SECTION 01</div>
-                <h2 class="section-title">Brand Foundation</h2>
-                <div class="section-meta">
-                    <span>📄 1,021 words</span>
-                    <span>✅ Complete</span>
-                </div>
-            </div>
-
-            <div class="section-card" onclick="openModal('02')">
-                <div class="section-number">SECTION 02</div>
-                <h2 class="section-title">Brand Positioning</h2>
-                <div class="section-meta">
-                    <span>📄 6,340 words</span>
-                    <span>✅ Complete</span>
-                </div>
-            </div>
-
-            <div class="section-card" onclick="openModal('03')">
-                <div class="section-number">SECTION 03</div>
-                <h2 class="section-title">Brand Values</h2>
-                <div class="section-meta">
-                    <span>📄 1,752 words</span>
-                    <span>✅ Complete</span>
-                </div>
-            </div>
-
-            <div class="section-card" onclick="openModal('04')">
-                <div class="section-number">SECTION 04</div>
-                <h2 class="section-title">Target Personas</h2>
-                <div class="section-meta">
-                    <span>📄 5,067 words</span>
-                    <span>✅ Complete</span>
-                </div>
-            </div>
-
-            <div class="section-card" onclick="openModal('05')">
-                <div class="section-number">SECTION 05</div>
-                <h2 class="section-title">Brand Architecture</h2>
-                <div class="section-meta">
-                    <span>📄 5,340 words</span>
-                    <span>✅ Complete</span>
-                </div>
-            </div>
-
-            <div class="section-card" onclick="openModal('06')">
-                <div class="section-number">SECTION 06</div>
-                <h2 class="section-title">Strategic Recommendations</h2>
-                <div class="section-meta">
-                    <span>📄 4,441 words</span>
-                    <span>✅ Complete</span>
-                </div>
-            </div>
-
-            <div class="section-card" onclick="openModal('07')">
-                <div class="section-number">SECTION 07</div>
-                <h2 class="section-title">Manifesto & Narratives</h2>
-                <div class="section-meta">
-                    <span>📄 1,999 words</span>
-                    <span>✅ Complete</span>
-                </div>
-            </div>
-
-            <div class="section-card" onclick="openModal('08')">
-                <div class="section-number">SECTION 08</div>
-                <h2 class="section-title">Learning Resources</h2>
-                <div class="section-meta">
-                    <span>📄 7,244 words</span>
-                    <span>✅ Complete</span>
-                </div>
-            </div>
-
-            <div class="section-card" onclick="openModal('09')">
-                <div class="section-number">SECTION 09</div>
-                <h2 class="section-title">Learning Journal</h2>
-                <div class="section-meta">
-                    <span>📄 2,823 words</span>
-                    <span>✅ Complete</span>
-                </div>
-            </div>
-
-            <div class="section-card" onclick="openModal('10')">
-                <div class="section-number">SECTION 10</div>
-                <h2 class="section-title">Reference Library</h2>
-                <div class="section-meta">
-                    <span>📄 3,716 words</span>
-                    <span>✅ Complete</span>
-                </div>
-            </div>
-
-            <div class="section-card" onclick="openModal('11')">
-                <div class="section-number">SECTION 11</div>
-                <h2 class="section-title">Visual Identity System</h2>
-                <div class="section-meta">
-                    <span>📄 5,393 words</span>
-                    <span>✅ Complete</span>
-                </div>
-            </div>
-
-            <div class="section-card" onclick="window.open('BRAND-MESSAGING.html', '_blank')">
-                <div class="section-number">SECTION 12</div>
-                <h2 class="section-title">Brand Messaging</h2>
-                <div class="section-meta">
-                    <span>📄 2,677 words</span>
-                    <span>✅ Complete</span>
-                </div>
-            </div>
-
-            <div class="section-card" onclick="openModal('13')">
-                <div class="section-number">SECTION 13</div>
-                <h2 class="section-title">Data Sources & Verification</h2>
-                <div class="section-meta">
-                    <span>📄 5,157 words</span>
-                    <span>✅ Complete</span>
-                </div>
-            </div>
-
-            <div class="section-card" onclick="window.open('BRAND-COMMUNICATION.html', '_blank')">
-                <div class="section-number">SECTION 14</div>
-                <h2 class="section-title">Brand Communication</h2>
-                <div class="section-meta">
-                    <span>📄 3,082 words</span>
-                    <span>✅ Complete</span>
-                </div>
-            </div>
-
-            <div class="section-card" onclick="window.open('ENEMY-AND-TRIBE.md', '_blank')">
-                <div class="section-number">SECTION 15</div>
-                <h2 class="section-title">Enemy & Tribe</h2>
-                <div class="section-meta">
-                    <span>📄 2,187 words</span>
-                    <span>✅ Complete</span>
-                </div>
-            </div>
-
-            <div class="section-card" onclick="window.open('BRAND-POSITIONING-EXECUTIVE-SUMMARY.md', '_blank')">
-                <div class="section-number">SECTION 16</div>
-                <h2 class="section-title">Executive Summary</h2>
-                <div class="section-meta">
-                    <span>📄 1,079 words</span>
-                    <span>✅ Complete</span>
-                </div>
-            </div>
-
-            <div class="section-card" onclick="window.open('SOCIAL-STRATEGY-INSTAGRAM.html', '_blank')">
-                <div class="section-number">SECTION 17</div>
-                <h2 class="section-title">Social Strategy - Instagram</h2>
-                <div class="section-meta">
-                    <span>📄 2,635 words</span>
-                    <span>✅ Complete</span>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div id="modal-01" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('01')">✕ Close</button>
-            <div class="section-content">
-                <h1 id="flyberry-brand-strategy">FLYBERRY BRAND STRATEGY</h1>
+<header id="title-block-header">
+<h1 class="title">Flyberry Brand Strategy - Complete Documentation</h1>
+<p class="date">January 2026</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#flyberry-brand-strategy" id="toc-flyberry-brand-strategy">FLYBERRY BRAND STRATEGY</a>
+<ul>
+<li><a href="#section-1-brand-foundation" id="toc-section-1-brand-foundation">Section 1: Brand Foundation</a></li>
+<li><a href="#the-core-idea-reimagining-food" id="toc-the-core-idea-reimagining-food">THE CORE IDEA: REIMAGINING
+FOOD</a></li>
+<li><a href="#brand-purpose" id="toc-brand-purpose">BRAND
+PURPOSE</a></li>
+<li><a href="#brand-vision" id="toc-brand-vision">BRAND VISION</a></li>
+<li><a href="#brand-mission" id="toc-brand-mission">BRAND
+MISSION</a></li>
+<li><a href="#the-1-philosophy" id="toc-the-1-philosophy">THE #1
+PHILOSOPHY</a></li>
+<li><a href="#strategic-context" id="toc-strategic-context">STRATEGIC
+CONTEXT</a></li>
+<li><a href="#the-transformation" id="toc-the-transformation">THE
+TRANSFORMATION</a></li>
+<li><a href="#brand-essence" id="toc-brand-essence">BRAND
+ESSENCE</a></li>
+<li><a href="#foundation-summary" id="toc-foundation-summary">FOUNDATION
+SUMMARY</a></li>
+<li><a href="#positioning-statement" id="toc-positioning-statement">POSITIONING STATEMENT</a></li>
+<li><a href="#the-positioning-pillars" id="toc-the-positioning-pillars">THE POSITIONING PILLARS</a></li>
+<li><a href="#competitive-positioning" id="toc-competitive-positioning">COMPETITIVE POSITIONING</a></li>
+<li><a href="#category-redefinition" id="toc-category-redefinition">CATEGORY REDEFINITION</a></li>
+<li><a href="#brand-archetype" id="toc-brand-archetype">BRAND
+ARCHETYPE</a></li>
+<li><a href="#brand-personality" id="toc-brand-personality">BRAND
+PERSONALITY</a></li>
+<li><a href="#voice-tone" id="toc-voice-tone">VOICE &amp; TONE</a></li>
+<li><a href="#positioning-proof-points" id="toc-positioning-proof-points">POSITIONING PROOF POINTS</a></li>
+<li><a href="#customer-testimonials-case-studies" id="toc-customer-testimonials-case-studies">2.9 CUSTOMER TESTIMONIALS
+&amp; CASE STUDIES</a></li>
+<li><a href="#competitive-scenario-planning-response-strategies" id="toc-competitive-scenario-planning-response-strategies">2.10
+COMPETITIVE SCENARIO PLANNING &amp; RESPONSE STRATEGIES</a></li>
+<li><a href="#positioning-summary" id="toc-positioning-summary">POSITIONING SUMMARY</a></li>
+<li><a href="#the-value-hierarchy" id="toc-the-value-hierarchy">THE
+VALUE HIERARCHY</a></li>
+<li><a href="#the-5-non-negotiables" id="toc-the-5-non-negotiables">THE
+5 NON-NEGOTIABLES</a></li>
+<li><a href="#the-anti-values" id="toc-the-anti-values">THE
+ANTI-VALUES</a></li>
+<li><a href="#value-decision-framework" id="toc-value-decision-framework">VALUE DECISION FRAMEWORK</a></li>
+<li><a href="#values-in-practice" id="toc-values-in-practice">VALUES IN
+PRACTICE</a></li>
+<li><a href="#value-hierarchy-when-values-conflict" id="toc-value-hierarchy-when-values-conflict">VALUE HIERARCHY: WHEN
+VALUES CONFLICT</a></li>
+<li><a href="#values-summary" id="toc-values-summary">VALUES
+SUMMARY</a></li>
+<li><a href="#persona-framework" id="toc-persona-framework">PERSONA
+FRAMEWORK</a></li>
+<li><a href="#persona-1-the-corporate-connoisseur" id="toc-persona-1-the-corporate-connoisseur">PERSONA 1: THE CORPORATE
+CONNOISSEUR</a></li>
+<li><a href="#persona-2-the-gifting-enthusiast" id="toc-persona-2-the-gifting-enthusiast">PERSONA 2: THE GIFTING
+ENTHUSIAST</a></li>
+<li><a href="#persona-3-the-conscious-millennial" id="toc-persona-3-the-conscious-millennial">PERSONA 3: THE CONSCIOUS
+MILLENNIAL</a></li>
+<li><a href="#persona-4-the-wellness-warrior" id="toc-persona-4-the-wellness-warrior">PERSONA 4: THE WELLNESS
+WARRIOR</a></li>
+<li><a href="#persona-comparison-matrix" id="toc-persona-comparison-matrix">PERSONA COMPARISON MATRIX</a></li>
+<li><a href="#revenue-potential-by-persona" id="toc-revenue-potential-by-persona">REVENUE POTENTIAL BY
+PERSONA</a></li>
+<li><a href="#persona-validation-research-methodology" id="toc-persona-validation-research-methodology">4.8 PERSONA VALIDATION
+&amp; RESEARCH METHODOLOGY</a></li>
+<li><a href="#architecture-model-branded-house" id="toc-architecture-model-branded-house">ARCHITECTURE MODEL: BRANDED
+HOUSE</a></li>
+<li><a href="#the-8-category-portfolio" id="toc-the-8-category-portfolio">THE 8 CATEGORY PORTFOLIO</a></li>
+<li><a href="#category-1-premium-dates" id="toc-category-1-premium-dates">CATEGORY 1: PREMIUM DATES</a></li>
+<li><a href="#category-2-exotic-nuts" id="toc-category-2-exotic-nuts">CATEGORY 2: EXOTIC NUTS</a></li>
+<li><a href="#category-3-vacuum-fried-chips" id="toc-category-3-vacuum-fried-chips">CATEGORY 3: VACUUM-FRIED
+CHIPS</a></li>
+<li><a href="#category-4-super-seeds" id="toc-category-4-super-seeds">CATEGORY 4: SUPER SEEDS</a></li>
+<li><a href="#category-5-dried-berries" id="toc-category-5-dried-berries">CATEGORY 5: DRIED BERRIES</a></li>
+<li><a href="#category-6-dried-fruits" id="toc-category-6-dried-fruits">CATEGORY 6: DRIED FRUITS</a></li>
+<li><a href="#category-7-date-innovations" id="toc-category-7-date-innovations">CATEGORY 7: DATE
+INNOVATIONS</a></li>
+<li><a href="#category-8-gift-collections" id="toc-category-8-gift-collections">CATEGORY 8: GIFT
+COLLECTIONS</a></li>
+<li><a href="#product-naming-convention" id="toc-product-naming-convention">PRODUCT NAMING CONVENTION</a></li>
+<li><a href="#visual-hierarchy" id="toc-visual-hierarchy">VISUAL
+HIERARCHY</a></li>
+<li><a href="#portfolio-extension-guidelines" id="toc-portfolio-extension-guidelines">PORTFOLIO EXTENSION
+GUIDELINES</a></li>
+<li><a href="#product-performance-matrix" id="toc-product-performance-matrix">5.6 PRODUCT PERFORMANCE
+MATRIX</a></li>
+<li><a href="#architecture-summary" id="toc-architecture-summary">ARCHITECTURE SUMMARY</a></li>
+<li><a href="#strategic-framework" id="toc-strategic-framework">STRATEGIC FRAMEWORK</a></li>
+<li><a href="#pricing-strategy" id="toc-pricing-strategy">1. PRICING
+STRATEGY</a></li>
+<li><a href="#packaging-strategy" id="toc-packaging-strategy">2.
+PACKAGING STRATEGY</a></li>
+<li><a href="#communication-strategy-4" id="toc-communication-strategy-4">3. COMMUNICATION STRATEGY</a></li>
+<li><a href="#channel-strategy-matrix" id="toc-channel-strategy-matrix">4. CHANNEL STRATEGY MATRIX</a></li>
+<li><a href="#implementation-priorities" id="toc-implementation-priorities">5. IMPLEMENTATION PRIORITIES</a></li>
+<li><a href="#strategic-summary" id="toc-strategic-summary">STRATEGIC
+SUMMARY</a></li>
+<li><a href="#the-brand-manifesto" id="toc-the-brand-manifesto">THE
+BRAND MANIFESTO</a></li>
+<li><a href="#tagline-system" id="toc-tagline-system">TAGLINE
+SYSTEM</a></li>
+<li><a href="#narrative-frameworks" id="toc-narrative-frameworks">NARRATIVE FRAMEWORKS</a></li>
+<li><a href="#story-templates" id="toc-story-templates">STORY
+TEMPLATES</a></li>
+<li><a href="#brand-voice-examples" id="toc-brand-voice-examples">BRAND
+VOICE EXAMPLES</a></li>
+<li><a href="#narrative-application-guide" id="toc-narrative-application-guide">NARRATIVE APPLICATION
+GUIDE</a></li>
+<li><a href="#manifesto-summary" id="toc-manifesto-summary">MANIFESTO
+SUMMARY</a></li>
+<li><a href="#purpose-1" id="toc-purpose-1">PURPOSE</a></li>
+<li><a href="#foundational-books" id="toc-foundational-books">8.1
+FOUNDATIONAL BOOKS</a></li>
+<li><a href="#brand-strategy-frameworks-applied" id="toc-brand-strategy-frameworks-applied">8.2 BRAND STRATEGY FRAMEWORKS
+APPLIED</a></li>
+<li><a href="#case-studies-examples" id="toc-case-studies-examples">8.3
+CASE STUDIES &amp; EXAMPLES</a></li>
+<li><a href="#knowledge-synthesis-tables" id="toc-knowledge-synthesis-tables">8.4 KNOWLEDGE SYNTHESIS
+TABLES</a></li>
+<li><a href="#citation-source-index" id="toc-citation-source-index">8.5
+CITATION &amp; SOURCE INDEX</a></li>
+<li><a href="#learning-roadmap" id="toc-learning-roadmap">8.6 LEARNING
+ROADMAP</a></li>
+<li><a href="#quick-reference-key-takeaways" id="toc-quick-reference-key-takeaways">8.7 QUICK REFERENCE: KEY
+TAKEAWAYS</a></li>
+<li><a href="#next-steps" id="toc-next-steps">NEXT STEPS</a></li>
+<li><a href="#purpose-2" id="toc-purpose-2">PURPOSE</a></li>
+<li><a href="#what-worked-successful-decisions-approaches" id="toc-what-worked-successful-decisions-approaches">9.1 WHAT WORKED:
+Successful Decisions &amp; Approaches</a></li>
+<li><a href="#what-failed-anti-patterns-abandoned-approaches" id="toc-what-failed-anti-patterns-abandoned-approaches">9.2 WHAT FAILED:
+Anti-Patterns &amp; Abandoned Approaches</a></li>
+<li><a href="#llm-to-llm-context-critical-insights-for-future-ai-collaborators" id="toc-llm-to-llm-context-critical-insights-for-future-ai-collaborators">9.3
+LLM-TO-LLM CONTEXT: Critical Insights for Future AI
+Collaborators</a></li>
+<li><a href="#lessons-learned-by-topic" id="toc-lessons-learned-by-topic">9.4 LESSONS LEARNED BY TOPIC</a></li>
+<li><a href="#retrospective-what-wed-do-differently" id="toc-retrospective-what-wed-do-differently">9.5 RETROSPECTIVE: What
+We’d Do Differently</a></li>
+<li><a href="#confidence-assessment" id="toc-confidence-assessment">9.6
+CONFIDENCE ASSESSMENT</a></li>
+<li><a href="#open-questions-future-research" id="toc-open-questions-future-research">9.7 OPEN QUESTIONS &amp; FUTURE
+RESEARCH</a></li>
+<li><a href="#handoff-notes-for-next-llm" id="toc-handoff-notes-for-next-llm">9.8 HANDOFF NOTES FOR NEXT
+LLM</a></li>
+<li><a href="#purpose-3" id="toc-purpose-3">PURPOSE</a></li>
+<li><a href="#strategic-concepts-glossary" id="toc-strategic-concepts-glossary">10.1 STRATEGIC CONCEPTS
+GLOSSARY</a></li>
+<li><a href="#framework-quick-cards" id="toc-framework-quick-cards">10.2
+FRAMEWORK QUICK CARDS</a></li>
+<li><a href="#competitive-analysis-archive" id="toc-competitive-analysis-archive">10.3 COMPETITIVE ANALYSIS
+ARCHIVE</a></li>
+<li><a href="#citation-source-index-1" id="toc-citation-source-index-1">10.4 CITATION &amp; SOURCE
+INDEX</a></li>
+<li><a href="#quick-decision-checklists" id="toc-quick-decision-checklists">10.5 QUICK DECISION
+CHECKLISTS</a></li>
+<li><a href="#voice-tone-quick-reference" id="toc-voice-tone-quick-reference">10.6 VOICE &amp; TONE QUICK
+REFERENCE</a></li>
+<li><a href="#glossary-of-brand-strategy-terms" id="toc-glossary-of-brand-strategy-terms">10.7 GLOSSARY OF BRAND
+STRATEGY TERMS</a></li>
+<li><a href="#common-questions-answers" id="toc-common-questions-answers">10.8 COMMON QUESTIONS &amp;
+ANSWERS</a></li>
+<li><a href="#brand-asset-locations" id="toc-brand-asset-locations">10.9
+BRAND ASSET LOCATIONS</a></li>
+<li><a href="#one-page-brand-summary" id="toc-one-page-brand-summary">10.10 ONE-PAGE BRAND SUMMARY</a></li>
+<li><a href="#visual-brand-philosophy" id="toc-visual-brand-philosophy">VISUAL BRAND PHILOSOPHY</a></li>
+<li><a href="#core-visual-principles" id="toc-core-visual-principles">CORE VISUAL PRINCIPLES</a></li>
+<li><a href="#brand-color-system" id="toc-brand-color-system">BRAND
+COLOR SYSTEM</a></li>
+<li><a href="#typography-system" id="toc-typography-system">TYPOGRAPHY
+SYSTEM</a></li>
+<li><a href="#logo-system" id="toc-logo-system">LOGO SYSTEM</a></li>
+<li><a href="#iconography-system" id="toc-iconography-system">ICONOGRAPHY SYSTEM</a></li>
+<li><a href="#photography-style" id="toc-photography-style">PHOTOGRAPHY
+STYLE</a></li>
+<li><a href="#packaging-design-system" id="toc-packaging-design-system">PACKAGING DESIGN SYSTEM</a></li>
+<li><a href="#digital-presence" id="toc-digital-presence">DIGITAL
+PRESENCE</a></li>
+<li><a href="#retailstore-design-system" id="toc-retailstore-design-system">RETAIL/STORE DESIGN SYSTEM</a></li>
+<li><a href="#print-collateral" id="toc-print-collateral">PRINT
+COLLATERAL</a></li>
+<li><a href="#brand-voice-in-visual-execution" id="toc-brand-voice-in-visual-execution">BRAND VOICE IN VISUAL
+EXECUTION</a></li>
+<li><a href="#visual-identity-governance" id="toc-visual-identity-governance">VISUAL IDENTITY GOVERNANCE</a></li>
+<li><a href="#visual-identity-evolution" id="toc-visual-identity-evolution">VISUAL IDENTITY EVOLUTION</a></li>
+<li><a href="#visual-identity-summary" id="toc-visual-identity-summary">VISUAL IDENTITY SUMMARY</a></li>
+<li><a href="#purpose-of-this-document" id="toc-purpose-of-this-document">PURPOSE OF THIS DOCUMENT</a></li>
+<li><a href="#verification-status-legend" id="toc-verification-status-legend">VERIFICATION STATUS LEGEND</a></li>
+<li><a href="#section-1-market-growth-claims" id="toc-section-1-market-growth-claims">SECTION 1: MARKET &amp; GROWTH
+CLAIMS</a></li>
+<li><a href="#section-2-customer-satisfaction-claims" id="toc-section-2-customer-satisfaction-claims">SECTION 2: CUSTOMER
+SATISFACTION CLAIMS</a></li>
+<li><a href="#section-3-fortune-500-validation-claims" id="toc-section-3-fortune-500-validation-claims">SECTION 3: FORTUNE 500
+VALIDATION CLAIMS</a></li>
+<li><a href="#section-4-product-performance-claims" id="toc-section-4-product-performance-claims">SECTION 4: PRODUCT
+PERFORMANCE CLAIMS</a></li>
+<li><a href="#section-5-innovation-technology-claims" id="toc-section-5-innovation-technology-claims">SECTION 5: INNOVATION
+&amp; TECHNOLOGY CLAIMS</a></li>
+<li><a href="#section-6-competitive-intelligence-sources" id="toc-section-6-competitive-intelligence-sources">SECTION 6:
+COMPETITIVE INTELLIGENCE SOURCES</a></li>
+<li><a href="#section-7-nutritional-claims-verification" id="toc-section-7-nutritional-claims-verification">SECTION 7:
+NUTRITIONAL CLAIMS VERIFICATION</a></li>
+<li><a href="#section-8-origin-sourcing-claims" id="toc-section-8-origin-sourcing-claims">SECTION 8: ORIGIN &amp;
+SOURCING CLAIMS</a></li>
+<li><a href="#section-9-revenue-business-claims" id="toc-section-9-revenue-business-claims">SECTION 9: REVENUE &amp;
+BUSINESS CLAIMS</a></li>
+<li><a href="#section-10-verification-workflow" id="toc-section-10-verification-workflow">SECTION 10: VERIFICATION
+WORKFLOW</a></li>
+<li><a href="#section-11-evidence-repository-structure" id="toc-section-11-evidence-repository-structure">SECTION 11: EVIDENCE
+REPOSITORY STRUCTURE</a></li>
+<li><a href="#section-12-immediate-action-items" id="toc-section-12-immediate-action-items">SECTION 12: IMMEDIATE ACTION
+ITEMS</a></li>
+<li><a href="#section-13-compliance-legal-notes" id="toc-section-13-compliance-legal-notes">SECTION 13: COMPLIANCE &amp;
+LEGAL NOTES</a></li>
+<li><a href="#section-14-changelog" id="toc-section-14-changelog">SECTION 14: CHANGELOG</a></li>
+<li><a href="#appendix-a-verification-templates" id="toc-appendix-a-verification-templates">APPENDIX A: VERIFICATION
+TEMPLATES</a></li>
+<li><a href="#conclusion" id="toc-conclusion">CONCLUSION</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="flyberry-brand-strategy">FLYBERRY BRAND STRATEGY</h1>
 <h2 id="section-1-brand-foundation">Section 1: Brand Foundation</h2>
 <hr />
 <h2 id="the-core-idea-reimagining-food">THE CORE IDEA: REIMAGINING
@@ -716,18 +651,8 @@ innovations</td>
 </table>
 <hr />
 <p><em>Next: <a href="./02-BRAND-POSITIONING.md">Section 2 - Brand
-Positioning</a></em></p>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-02" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('02')">✕ Close</button>
-            <div class="section-content">
-                <h1 id="flyberry-brand-strategy">FLYBERRY BRAND STRATEGY</h1>
-<h2 id="section-2-brand-positioning">Section 2: Brand Positioning</h2>
+Positioning</a></em> # FLYBERRY BRAND STRATEGY ## Section 2: Brand
+Positioning</p>
 <hr />
 <h2 id="positioning-statement">POSITIONING STATEMENT</h2>
 <blockquote>
@@ -1235,8 +1160,7 @@ showing: - Why they chose Flyberry - What products they use - Impact on
 their gifting/wellness programs - Duration of relationship</p>
 <hr />
 <h4 id="case-study-template">Case Study Template</h4>
-<div class="sourceCode" id="cb8"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### CASE STUDY: [Client Name]</span></span>
+<div class="sourceCode" id="cb8"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### CASE STUDY: [Client Name]</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>**Client Profile**</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Company: <span class="co">[</span><span class="ot">Name</span><span class="co">]</span></span>
@@ -1323,8 +1247,7 @@ feedback on gifts] - [Metric pending: relationship impact]</p>
 — [Name pending], [Title pending], Deloitte India</code></pre>
 <p><strong>Permission Status</strong>: 🔶 PENDING</p>
 <hr />
-<h4
-id="case-study-3-startup-swiggy---not-fortune-500-but-high-profile">Case
+<h4 id="case-study-3-startup-swiggy---not-fortune-500-but-high-profile">Case
 Study #3: Startup (Swiggy - Not Fortune 500, but high-profile)</h4>
 <p><strong>Note</strong>: Swiggy is NOT Fortune 500 (Indian startup),
 but high-profile client worth case study</p>
@@ -2236,19 +2159,8 @@ innovations</td>
 <hr />
 <p><em>Previous: <a href="./01-BRAND-FOUNDATION.md">Section 1 - Brand
 Foundation</a></em> <em>Next: <a href="./03-BRAND-VALUES.md">Section 3 -
-Brand Values</a></em></p>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-03" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('03')">✕ Close</button>
-            <div class="section-content">
-                <h1 id="flyberry-brand-strategy">FLYBERRY BRAND STRATEGY</h1>
-<h2 id="section-3-brand-values-belief-system">Section 3: Brand Values
-&amp; Belief System</h2>
+Brand Values</a></em> # FLYBERRY BRAND STRATEGY ## Section 3: Brand
+Values &amp; Belief System</p>
 <hr />
 <h2 id="the-value-hierarchy">THE VALUE HIERARCHY</h2>
 <pre><code>                    ┌─────────────────────────────┐
@@ -2887,19 +2799,8 @@ partner</li>
 <hr />
 <p><em>Previous: <a href="./02-BRAND-POSITIONING.md">Section 2 - Brand
 Positioning</a></em> <em>Next: <a href="./04-TARGET-PERSONAS.md">Section
-4 - Target Personas</a></em></p>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-04" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('04')">✕ Close</button>
-            <div class="section-content">
-                <h1 id="flyberry-brand-strategy">FLYBERRY BRAND STRATEGY</h1>
-<h2 id="section-4-target-audience-personas">Section 4: Target Audience
-Personas</h2>
+4 - Target Personas</a></em> # FLYBERRY BRAND STRATEGY ## Section 4:
+Target Audience Personas</p>
 <hr />
 <h2 id="persona-framework">PERSONA FRAMEWORK</h2>
 <pre><code>                         ┌─────────────────────────┐
@@ -4385,7 +4286,7 @@ snacks - Client recommendations (as wellness coach)</p>
 <hr />
 <h2 id="persona-validation-research-methodology">4.8 PERSONA VALIDATION
 &amp; RESEARCH METHODOLOGY</h2>
-<h3 id="why-this-section-matters">Why This Section Matters</h3>
+<h3 id="why-this-section-matters-2">Why This Section Matters</h3>
 <p><strong>Gap Identified</strong>: Section 04 has 4 detailed personas
 (Priya, Ananya, Rahul, Meera) but provides no indication whether these
 are based on real customer research or hypothetical assumptions. Are
@@ -4587,50 +4488,49 @@ product (date syrup, berries) sales</li>
 <li><strong>Document Assumptions vs. Facts</strong></li>
 </ol>
 <p><strong>Example</strong>:</p>
-<div class="sourceCode" id="cb7"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### PERSONA: Priya (Corporate Gifting)</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>**Status**: ✅ VALIDATED (Based on 8 customer interviews + sales data)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>**Data Sources**:</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Interviews: 8 corporate procurement managers (June 2025)</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sales Data: 47 B2B accounts analyzed (last 12 months)</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Revenue Share: 38% (actual, vs. 40% projected) ✅ Close match</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>**Validated Attributes**:</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Age 35-45 (avg: 39 from interviews)</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ AOV ₹18,000-30,000 (avg: ₹23,500 from sales data)</span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Quarterly purchase frequency (avg: 3.8 orders/year)</span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Decision drivers: Reliability (mentioned by 8/8), Premium packaging (7/8), On-time delivery (8/8)</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>**Assumptions Still Unverified**:</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>🔶 Specific job titles (HR Directors, Office Managers) - need larger sample</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>🔶 Income ₹20-30 LPA - most declined to share salary</span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>**Real Customer Quote**:</span>
-<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>&quot;We switched to Flyberry after a disaster with another brand&#39;s Diwali hampers arriving late. Flyberry has never missed a deadline in 2 years. That reliability is worth the premium price.&quot;</span>
-<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>— Corporate Procurement Manager, Tech Company (Bangalore)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### PERSONA: Priya (Corporate Gifting)</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>**Status**: ✅ VALIDATED (Based on 8 customer interviews + sales data)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>**Data Sources**:</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Interviews: 8 corporate procurement managers (June 2025)</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Sales Data: 47 B2B accounts analyzed (last 12 months)</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Revenue Share: 38% (actual, vs. 40% projected) ✅ Close match</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>**Validated Attributes**:</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Age 35-45 (avg: 39 from interviews)</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ AOV ₹18,000-30,000 (avg: ₹23,500 from sales data)</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Quarterly purchase frequency (avg: 3.8 orders/year)</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>✅ Decision drivers: Reliability (mentioned by 8/8), Premium packaging (7/8), On-time delivery (8/8)</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>**Assumptions Still Unverified**:</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>🔶 Specific job titles (HR Directors, Office Managers) - need larger sample</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>🔶 Income ₹20-30 LPA - most declined to share salary</span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>**Real Customer Quote**:</span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>&quot;We switched to Flyberry after a disaster with another brand&#39;s Diwali hampers arriving late. Flyberry has never missed a deadline in 2 years. That reliability is worth the premium price.&quot;</span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>— Corporate Procurement Manager, Tech Company (Bangalore)</span></code></pre></div>
 <hr />
 <h3 id="persona-validation-checklist">4.8.3 PERSONA VALIDATION
 CHECKLIST</h3>
 <p><strong>For Each Persona, Verify</strong>:</p>
 <ul class="task-list">
-<li><label><input type="checkbox" /><strong>Sample Size</strong>:
+<li><label><input type="checkbox"></input><strong>Sample Size</strong>:
 Minimum 5 interviews per persona</label></li>
-<li><label><input type="checkbox" /><strong>Revenue Match</strong>:
+<li><label><input type="checkbox"></input><strong>Revenue Match</strong>:
 Projected revenue % matches actual sales data (±5%)</label></li>
-<li><label><input type="checkbox" /><strong>Demographic
+<li><label><input type="checkbox"></input><strong>Demographic
 Accuracy</strong>: Age, income, location match real
 customers</label></li>
-<li><label><input type="checkbox" /><strong>Behavioral
+<li><label><input type="checkbox"></input><strong>Behavioral
 Accuracy</strong>: Purchase frequency, AOV, product mix match sales
 data</label></li>
-<li><label><input type="checkbox" /><strong>Pain Points</strong>: At
+<li><label><input type="checkbox"></input><strong>Pain Points</strong>: At
 least 3 pain points mentioned by &gt;50% of interviewed
 customers</label></li>
-<li><label><input type="checkbox" /><strong>Decision Drivers</strong>:
+<li><label><input type="checkbox"></input><strong>Decision Drivers</strong>:
 Priority ranking matches what customers actually said</label></li>
-<li><label><input type="checkbox" /><strong>Real Quotes</strong>: Each
+<li><label><input type="checkbox"></input><strong>Real Quotes</strong>: Each
 persona has 2-3 actual customer quotes (with permission)</label></li>
 </ul>
 <hr />
@@ -4743,7 +4643,7 @@ Decision: Launch 1kg packs targeting Meera + Rahul, price at ₹2,199 (vs. 2× 5
 
 Expected Impact: +5-10% revenue from Wellness segment</code></pre>
 <hr />
-<h3 id="evidence-repository">4.8.6 EVIDENCE REPOSITORY</h3>
+<h3 id="evidence-repository-1">4.8.6 EVIDENCE REPOSITORY</h3>
 <p><strong>File Location</strong>:
 <code>/docs/brand-strategy/evidence/persona-research/</code></p>
 <p><strong>Structure</strong>:</p>
@@ -4839,18 +4739,8 @@ sales data within ±10%.</p>
 <hr />
 <p><em>Previous: <a href="./03-BRAND-VALUES.md">Section 3 - Brand
 Values</a></em> <em>Next: <a href="./05-BRAND-ARCHITECTURE.md">Section 5
-- Brand Architecture</a></em></p>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-05" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('05')">✕ Close</button>
-            <div class="section-content">
-                <h1 id="flyberry-brand-strategy">FLYBERRY BRAND STRATEGY</h1>
-<h2 id="section-5-brand-architecture">Section 5: Brand Architecture</h2>
+- Brand Architecture</a></em> # FLYBERRY BRAND STRATEGY ## Section 5:
+Brand Architecture</p>
 <hr />
 <h2 id="architecture-model-branded-house">ARCHITECTURE MODEL: BRANDED
 HOUSE</h2>
@@ -5764,7 +5654,7 @@ Consideration</h3>
 </table>
 <hr />
 <h2 id="product-performance-matrix">5.6 PRODUCT PERFORMANCE MATRIX</h2>
-<h3 id="why-this-section-matters">Why This Section Matters</h3>
+<h3 id="why-this-section-matters-3">Why This Section Matters</h3>
 <p><strong>Gap Identified</strong>: Section 05 lists 44 products across
 8 categories, but doesn’t indicate which products sell best, which are
 most profitable, or which drive customer acquisition. Portfolio
@@ -6227,8 +6117,7 @@ VACUUM-FRIED CHIPS (6 Products)</h4>
 </tbody>
 </table>
 <hr />
-<h4
-id="category-4-8-similar-tables-for-seeds-berries-dried-fruits-date-innovations-gift-collections">CATEGORY
+<h4 id="category-4-8-similar-tables-for-seeds-berries-dried-fruits-date-innovations-gift-collections">CATEGORY
 4-8: [Similar Tables for Seeds, Berries, Dried Fruits, Date Innovations,
 Gift Collections]</h4>
 <p><strong>Note</strong>: Full tables for all 8 categories to be
@@ -6916,26 +6805,25 @@ Director</p>
 (products growing/declining) - [ ] Flag underperformers for review - [ ]
 Recommend actions (discontinue, reposition, invest)</p>
 <p><strong>Monthly Report Format</strong>:</p>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># MONTH YYYY Product Performance Report</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Total Revenue: ₹XX.X Cr (<span class="co">[</span><span class="ot">+XX% / -XX%</span><span class="co">]</span> vs. last month)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Top Product: <span class="co">[</span><span class="ot">Name</span><span class="co">]</span> (₹XX.X L)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Fastest Growing: <span class="co">[</span><span class="ot">Name</span><span class="co">]</span> (<span class="co">[</span><span class="ot">+XX%</span><span class="co">]</span> YoY)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Underperformer: <span class="co">[</span><span class="ot">Name</span><span class="co">]</span> (₹XX.X L, <span class="co">[</span><span class="ot">action recommended</span><span class="co">]</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Category Highlights</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Key insights from each of 8 categories</span><span class="co">]</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Actions This Month</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Discontinued: <span class="co">[</span><span class="ot">Product name</span><span class="co">]</span> (reason: low revenue + margin)</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Increased inventory: <span class="co">[</span><span class="ot">Product name</span><span class="co">]</span> (reason: high demand)</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Price adjustment: <span class="co">[</span><span class="ot">Product name</span><span class="co">]</span> (old: ₹XXX, new: ₹XXX, reason: margin improvement)</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>**Next Month Focus**: <span class="co">[</span><span class="ot">Priorities</span><span class="co">]</span></span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># MONTH YYYY Product Performance Report</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">## Summary</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Total Revenue: ₹XX.X Cr (<span class="co">[</span><span class="ot">+XX% / -XX%</span><span class="co">]</span> vs. last month)</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Top Product: <span class="co">[</span><span class="ot">Name</span><span class="co">]</span> (₹XX.X L)</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Fastest Growing: <span class="co">[</span><span class="ot">Name</span><span class="co">]</span> (<span class="co">[</span><span class="ot">+XX%</span><span class="co">]</span> YoY)</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Underperformer: <span class="co">[</span><span class="ot">Name</span><span class="co">]</span> (₹XX.X L, <span class="co">[</span><span class="ot">action recommended</span><span class="co">]</span>)</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="fu">## Category Highlights</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Key insights from each of 8 categories</span><span class="co">]</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Actions This Month</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Discontinued: <span class="co">[</span><span class="ot">Product name</span><span class="co">]</span> (reason: low revenue + margin)</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Increased inventory: <span class="co">[</span><span class="ot">Product name</span><span class="co">]</span> (reason: high demand)</span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Price adjustment: <span class="co">[</span><span class="ot">Product name</span><span class="co">]</span> (old: ₹XXX, new: ₹XXX, reason: margin improvement)</span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>**Next Month Focus**: <span class="co">[</span><span class="ot">Priorities</span><span class="co">]</span></span></code></pre></div>
 <hr />
-<h3 id="evidence-repository">5.6.11 EVIDENCE REPOSITORY</h3>
+<h3 id="evidence-repository-2">5.6.11 EVIDENCE REPOSITORY</h3>
 <p><strong>File Location</strong>:
 <code>/docs/brand-strategy/evidence/product-performance/</code></p>
 <p><strong>Structure</strong>:</p>
@@ -7068,21 +6956,9 @@ matrix.</p>
 </table>
 <hr />
 <p><em>Previous: <a href="./04-TARGET-PERSONAS.md">Section 4 - Target
-Personas</a></em> <em>Next: <a
-href="./06-STRATEGIC-RECOMMENDATIONS.md">Section 6 - Strategic
-Recommendations</a></em></p>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-06" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('06')">✕ Close</button>
-            <div class="section-content">
-                <h1 id="flyberry-brand-strategy">FLYBERRY BRAND STRATEGY</h1>
-<h2 id="section-6-strategic-recommendations">Section 6: Strategic
-Recommendations</h2>
+Personas</a></em> <em>Next: <a href="./06-STRATEGIC-RECOMMENDATIONS.md">Section 6 - Strategic
+Recommendations</a></em> # FLYBERRY BRAND STRATEGY ## Section 6:
+Strategic Recommendations</p>
 <hr />
 <h2 id="strategic-framework">STRATEGIC FRAMEWORK</h2>
 <pre><code>┌─────────────────────────────────────────────────────────────────────────┐
@@ -7752,7 +7628,7 @@ Fortune 500 validation + cold chain + origin specificity</strong></p>
 <hr />
 <h3 id="pricing-methodology-research">Pricing Methodology &amp;
 Research</h3>
-<h4 id="why-this-section-matters">Why This Section Matters</h4>
+<h4 id="why-this-section-matters-4">Why This Section Matters</h4>
 <p><strong>Gap Identified</strong>: Section 06 lists 4 tiers with
 specific prices, but provides no rationale for why these exact numbers
 were chosen. Why ₹899 for Medjoul (not ₹850 or ₹950)? Why ₹49 for chips
@@ -8533,7 +8409,7 @@ Specifications</h3>
 </tbody>
 </table>
 <hr />
-<h2 id="communication-strategy">3. COMMUNICATION STRATEGY</h2>
+<h2 id="communication-strategy-4">3. COMMUNICATION STRATEGY</h2>
 <h3 id="the-5-message-pillars">The 5 Message Pillars</h3>
 <p><strong>Pillar 1: FORTUNE 500 TRUST</strong> <em>“If it’s good enough
 for Fortune 500, it’s good enough for you.”</em></p>
@@ -8871,43 +8747,43 @@ Reliability track record 5. Volume pricing</p>
 <h3 id="phase-1-foundation-months-1-3">Phase 1: Foundation (Months
 1-3)</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" />Finalize visual identity
+<li><label><input type="checkbox"></input>Finalize visual identity
 system</label></li>
-<li><label><input type="checkbox" />Update packaging across top 15
+<li><label><input type="checkbox"></input>Update packaging across top 15
 SKUs</label></li>
-<li><label><input type="checkbox" />Launch refreshed
+<li><label><input type="checkbox"></input>Launch refreshed
 website</label></li>
-<li><label><input type="checkbox" />Train sales team on brand
+<li><label><input type="checkbox"></input>Train sales team on brand
 narrative</label></li>
-<li><label><input type="checkbox" />Create corporate presentation
+<li><label><input type="checkbox"></input>Create corporate presentation
 deck</label></li>
 </ul>
 <h3 id="phase-2-activation-months-4-6">Phase 2: Activation (Months
 4-6)</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" />Roll out new packaging to full
+<li><label><input type="checkbox"></input>Roll out new packaging to full
 portfolio</label></li>
-<li><label><input type="checkbox" />Launch “Fortune 500 Trusted”
+<li><label><input type="checkbox"></input>Launch “Fortune 500 Trusted”
 campaign</label></li>
-<li><label><input type="checkbox" />Implement tiered pricing
+<li><label><input type="checkbox"></input>Implement tiered pricing
 strategy</label></li>
-<li><label><input type="checkbox" />Expand quick commerce
+<li><label><input type="checkbox"></input>Expand quick commerce
 presence</label></li>
-<li><label><input type="checkbox" />Execute first influencer
+<li><label><input type="checkbox"></input>Execute first influencer
 partnerships</label></li>
 </ul>
 <h3 id="phase-3-amplification-months-7-12">Phase 3: Amplification
 (Months 7-12)</h3>
 <ul class="task-list">
-<li><label><input type="checkbox" />Scale influencer
+<li><label><input type="checkbox"></input>Scale influencer
 program</label></li>
-<li><label><input type="checkbox" />Launch corporate gifting
+<li><label><input type="checkbox"></input>Launch corporate gifting
 microsite</label></li>
-<li><label><input type="checkbox" />Introduce subscription
+<li><label><input type="checkbox"></input>Introduce subscription
 options</label></li>
-<li><label><input type="checkbox" />Expand to new retail
+<li><label><input type="checkbox"></input>Expand to new retail
 partners</label></li>
-<li><label><input type="checkbox" />Measure and optimize based on
+<li><label><input type="checkbox"></input>Measure and optimize based on
 data</label></li>
 </ul>
 <hr />
@@ -8955,21 +8831,9 @@ data</label></li>
 </table>
 <hr />
 <p><em>Previous: <a href="./05-BRAND-ARCHITECTURE.md">Section 5 - Brand
-Architecture</a></em> <em>Next: <a
-href="./07-MANIFESTO-NARRATIVES.md">Section 7 - Manifesto &amp;
-Narratives</a></em></p>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-07" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('07')">✕ Close</button>
-            <div class="section-content">
-                <h1 id="flyberry-brand-strategy">FLYBERRY BRAND STRATEGY</h1>
-<h2 id="section-7-brand-manifesto-narrative-frameworks">Section 7: Brand
-Manifesto &amp; Narrative Frameworks</h2>
+Architecture</a></em> <em>Next: <a href="./07-MANIFESTO-NARRATIVES.md">Section 7 - Manifesto &amp;
+Narratives</a></em> # FLYBERRY BRAND STRATEGY ## Section 7: Brand
+Manifesto &amp; Narrative Frameworks</p>
 <hr />
 <h2 id="the-brand-manifesto">THE BRAND MANIFESTO</h2>
 <h3 id="reimagining-food">“REIMAGINING FOOD”</h3>
@@ -9506,23 +9370,11 @@ innovations</td>
 </table>
 <hr />
 <p><em>Previous: <a href="./06-STRATEGIC-RECOMMENDATIONS.md">Section 6 -
-Strategic Recommendations</a></em> <em>Next: <a
-href="./00-MASTER-INDEX.md">Master Document - Complete
-Index</a></em></p>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-08" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('08')">✕ Close</button>
-            <div class="section-content">
-                <h1 id="flyberry-brand-strategy">FLYBERRY BRAND STRATEGY</h1>
-<h2 id="section-8-learning-resources-frameworks">Section 8: Learning
-Resources &amp; Frameworks</h2>
+Strategic Recommendations</a></em> <em>Next: <a href="./00-MASTER-INDEX.md">Master Document - Complete Index</a></em> #
+FLYBERRY BRAND STRATEGY ## Section 8: Learning Resources &amp;
+Frameworks</p>
 <hr />
-<h2 id="purpose">PURPOSE</h2>
+<h2 id="purpose-1">PURPOSE</h2>
 <p>This section serves as a <strong>cumulative knowledge base</strong>
 for brand strategy expertise. Every resource shared (books, frameworks,
 articles, case studies) is extracted, synthesized, and connected to
@@ -9802,8 +9654,7 @@ archetypes). <strong>Source</strong>: Josh Lowman PDF (19 pages),
 synthesized with Sections 01-07 brand strategy <strong>Last
 Updated</strong>: 2026-01-06</p>
 <hr />
-<h3
-id="storytelling-with-data-10-rules-for-data-storytelling-avinash-kaushik">8.1.4
+<h3 id="storytelling-with-data-10-rules-for-data-storytelling-avinash-kaushik">8.1.4
 Storytelling With Data: 10 Rules for Data Storytelling (Avinash
 Kaushik)</h3>
 <p><strong>Source</strong>: /Users/kalpeshjaju/Downloads/Storytelling
@@ -11055,29 +10906,17 @@ create packaging briefs, website copy, social content</li>
 </ol>
 <hr />
 <p><em>Previous: <a href="./07-MANIFESTO-NARRATIVES.md">Section 7 -
-Manifesto &amp; Narratives</a></em> <em>Next: <a
-href="./09-LEARNING-JOURNAL.md">Section 9 - Learning
+Manifesto &amp; Narratives</a></em> <em>Next: <a href="./09-LEARNING-JOURNAL.md">Section 9 - Learning
 Journal</a></em></p>
 <hr />
 <p><strong>Document Version</strong>: 1.0 <strong>Last Updated</strong>:
 2026-01-06 <strong>Primary Author</strong>: Claude (Sonnet 4.5)
 <strong>For</strong>: Multi-LLM collaboration (Claude, Gemini, GPT-5,
 Cursor) <strong>Sources</strong>: Designing Brand Identity (Wheeler),
-Storytelling Techniques Deck (The Plot)</p>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-09" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('09')">✕ Close</button>
-            <div class="section-content">
-                <h1 id="flyberry-brand-strategy">FLYBERRY BRAND STRATEGY</h1>
-<h2 id="section-9-cumulative-learning-journal">Section 9: Cumulative
-Learning Journal</h2>
+Storytelling Techniques Deck (The Plot) # FLYBERRY BRAND STRATEGY ##
+Section 9: Cumulative Learning Journal</p>
 <hr />
-<h2 id="purpose">PURPOSE</h2>
+<h2 id="purpose-2">PURPOSE</h2>
 <p>This document captures <strong>what worked, what failed, and
 why</strong> throughout Flyberry’s brand strategy development. It serves
 as institutional memory for future decisions and enables seamless
@@ -11195,8 +11034,7 @@ coherent but not one-dimensional)</p>
 while highlighting innovation (Innovator) - Dual archetype supports both
 heritage (10+ years) and progress (industry-firsts)</p>
 <hr />
-<h3
-id="narrative-frameworks-origin-innovation-trust-wellness-comparison">9.1.5
+<h3 id="narrative-frameworks-origin-innovation-trust-wellness-comparison">9.1.5
 Narrative Frameworks (Origin, Innovation, Trust, Wellness,
 Comparison)</h3>
 <p><strong>Decision</strong>: Create 5 repeatable narrative frameworks
@@ -11296,8 +11134,7 @@ pillars (Sourcing Mastery, Process Innovation, Selection Rigor, Product
 Excellence, Trust Validation) - Single tagline: “Every Product, #1 In
 Its Class” - Messaging hierarchy (Section 08) shows 5 clear levels</p>
 <hr />
-<h2
-id="llm-to-llm-context-critical-insights-for-future-ai-collaborators">9.3
+<h2 id="llm-to-llm-context-critical-insights-for-future-ai-collaborators">9.3
 LLM-TO-LLM CONTEXT: Critical Insights for Future AI Collaborators</h2>
 <h3 id="understanding-flyberrys-unique-position">9.3.1 Understanding
 Flyberry’s Unique Position</h3>
@@ -11569,29 +11406,17 @@ rationale</p>
 from.</strong></p>
 <hr />
 <p><em>Previous: <a href="./08-LEARNING-RESOURCES.md">Section 8 -
-Learning Resources</a></em> <em>Next: <a
-href="./10-REFERENCE-LIBRARY.md">Section 10 - Reference
+Learning Resources</a></em> <em>Next: <a href="./10-REFERENCE-LIBRARY.md">Section 10 - Reference
 Library</a></em></p>
 <hr />
 <p><strong>Document Version</strong>: 1.0 <strong>Last Updated</strong>:
 2026-01-06 <strong>Primary Author</strong>: Claude (Sonnet 4.5)
 <strong>For</strong>: Multi-LLM collaboration - institutional memory and
 decision history <strong>Status</strong>: Living document (update as new
-decisions are made)</p>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-10" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('10')">✕ Close</button>
-            <div class="section-content">
-                <h1 id="flyberry-brand-strategy">FLYBERRY BRAND STRATEGY</h1>
-<h2 id="section-10-brand-strategy-reference-library">Section 10: Brand
-Strategy Reference Library</h2>
+decisions are made) # FLYBERRY BRAND STRATEGY ## Section 10: Brand
+Strategy Reference Library</p>
 <hr />
-<h2 id="purpose">PURPOSE</h2>
+<h2 id="purpose-3">PURPOSE</h2>
 <p>This is a <strong>quick reference guide</strong> for anyone working
 on Flyberry’s brand. Think of it as a glossary, cheat sheet, and
 framework quick-cards combined.</p>
@@ -11614,7 +11439,7 @@ name)</p>
 <p><strong>Why This Matters</strong>: Clear architecture enables
 portfolio growth while maintaining brand coherence.</p>
 <hr />
-<h3 id="brand-archetype">Brand Archetype</h3>
+<h3 id="brand-archetype-1">Brand Archetype</h3>
 <p><strong>Definition</strong>: Universal personality pattern customers
 recognize and connect with emotionally (based on Carl Jung’s
 psychology).</p>
@@ -11625,7 +11450,7 @@ improvement</p>
 <p><strong>Why This Matters</strong>: Archetypes create voice/tone
 consistency across all touchpoints.</p>
 <hr />
-<h3 id="brand-essence">Brand Essence</h3>
+<h3 id="brand-essence-1">Brand Essence</h3>
 <p><strong>Definition</strong>: The single most important thing a brand
 stands for (emotional core).</p>
 <p><strong>Flyberry Application</strong>: &gt; “Every product, the best
@@ -11944,7 +11769,7 @@ elegant retail - <strong>Weakness</strong>: High price, single-category,
 limited accessibility - <strong>Opportunity for Flyberry</strong>:
 Accessible ultra-premium, multi-category, innovation</p>
 <hr />
-<h2 id="citation-source-index">10.4 CITATION &amp; SOURCE INDEX</h2>
+<h2 id="citation-source-index-1">10.4 CITATION &amp; SOURCE INDEX</h2>
 <h3 id="primary-sources-full-text-available">Primary Sources (Full Text
 Available)</h3>
 <table>
@@ -12196,7 +12021,7 @@ quality, not arrogant)</p>
 marketing speak - Apologetic about premium pricing - Aggressive sales
 language</p>
 <hr />
-<h3 id="tone-by-context">Tone by Context</h3>
+<h3 id="tone-by-context-1">Tone by Context</h3>
 <div class="line-block">Context | Tone | Example |</div>
 <p>|———|——|———|| <strong>Product Description</strong> | Expert, specific
 | “Majestic-grade Medjoul, 5× larger than common varieties, with deep
@@ -12296,8 +12121,7 @@ altitude) affecting product quality (borrowed from wine)</p>
 <hr />
 <h2 id="common-questions-answers">10.8 COMMON QUESTIONS &amp;
 ANSWERS</h2>
-<h3
-id="why-is-flyberry-positioned-as-fortune-500-trusted-instead-of-something-more-consumer-friendly">“Why
+<h3 id="why-is-flyberry-positioned-as-fortune-500-trusted-instead-of-something-more-consumer-friendly">“Why
 is Flyberry positioned as ‘Fortune 500-trusted’ instead of something
 more consumer-friendly?”</h3>
 <p><strong>Answer</strong>: Fortune 500 validation is Flyberry’s moat
@@ -12306,8 +12130,7 @@ real, not marketing claims. When Google trusts Flyberry for executive
 gifting, consumers can trust it too. It’s the ultimate quality
 shortcut.</p>
 <hr />
-<h3
-id="isnt-1-in-every-category-too-ambitious-what-if-we-cant-deliver">“Isn’t
+<h3 id="isnt-1-in-every-category-too-ambitious-what-if-we-cant-deliver">“Isn’t
 ‘#1 in every category’ too ambitious? What if we can’t deliver?”</h3>
 <p><strong>Answer</strong>: That’s the point. The #1 promise is a
 quality forcing function. If a product can’t be provably #1, it
@@ -12331,8 +12154,7 @@ Framework - <strong>Corporate pitch</strong>: StoryBrand
 (Hero-Villain-Guide) - <strong>Social media</strong>: Teasers, Real Life
 Stories</p>
 <hr />
-<h3
-id="what-if-i-need-to-make-a-brand-decision-and-im-not-sure-if-its-on-brand">“What
+<h3 id="what-if-i-need-to-make-a-brand-decision-and-im-not-sure-if-its-on-brand">“What
 if I need to make a brand decision and I’m not sure if it’s ‘on
 brand’?”</h3>
 <p><strong>Answer</strong>: Use Section 10.5.1 (Is This On Brand
@@ -12450,19 +12272,8 @@ Index</a></em></p>
 2026-01-06 <strong>Primary Author</strong>: Claude (Sonnet 4.5)
 <strong>For</strong>: Fast reference, quick onboarding, decision-making
 <strong>Print This</strong>: Yes (use as physical reference during
-execution)</p>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-11" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('11')">✕ Close</button>
-            <div class="section-content">
-                <h1 id="flyberry-brand-strategy">FLYBERRY BRAND STRATEGY</h1>
-<h2 id="section-11-visual-identity-system">Section 11: Visual Identity
-System</h2>
+execution) # FLYBERRY BRAND STRATEGY ## Section 11: Visual Identity
+System</p>
 <hr />
 <h2 id="visual-brand-philosophy">VISUAL BRAND PHILOSOPHY</h2>
 <blockquote>
@@ -12710,8 +12521,7 @@ marks</li>
 </ul>
 <hr />
 <h2 id="typography-system">TYPOGRAPHY SYSTEM</h2>
-<h3
-id="type-philosophy-approachable-refinement-not-unapproachable-elegance">Type
+<h3 id="type-philosophy-approachable-refinement-not-unapproachable-elegance">Type
 Philosophy: <strong>Approachable Refinement, Not Unapproachable
 Elegance</strong></h3>
 <p><strong>Strategic Rationale</strong>: Typography must express
@@ -13029,8 +12839,7 @@ Checkmark</strong></h4>
 <li><strong>Usage</strong>: Quality proof contexts</li>
 </ul>
 <hr />
-<h3
-id="validation-icons-10-visual-weight---proof-icons---small-subtle">VALIDATION
+<h3 id="validation-icons-10-visual-weight---proof-icons---small-subtle">VALIDATION
 ICONS (10% Visual Weight - PROOF ICONS - SMALL &amp; SUBTLE)</h3>
 <h4 id="fortune-500-trust-mark">10. <strong>Fortune 500 Trust
 Mark</strong></h4>
@@ -13078,8 +12887,7 @@ Whisper (10%)</h4>
 </ul>
 <hr />
 <h2 id="photography-style">PHOTOGRAPHY STYLE</h2>
-<h3
-id="photography-philosophy-familiar-transformed-through-craft">Photography
+<h3 id="photography-philosophy-familiar-transformed-through-craft">Photography
 Philosophy: <strong>Familiar Transformed Through Craft</strong></h3>
 <p><strong>Strategic Rationale</strong>: Photography must show
 <strong>transformation in action</strong> — familiar ingredients
@@ -13226,8 +13034,7 @@ storytelling</td>
 </ul>
 <hr />
 <h2 id="packaging-design-system">PACKAGING DESIGN SYSTEM</h2>
-<h3
-id="packaging-philosophy-50-taste-hero-25-innovation-story-15-transparency-10-validation">Packaging
+<h3 id="packaging-philosophy-50-taste-hero-25-innovation-story-15-transparency-10-validation">Packaging
 Philosophy: <strong>50% Taste Hero, 25% Innovation Story, 15%
 Transparency, 10% Validation</strong></h3>
 <p><strong>From Act 4 Brand Pillar Hierarchy</strong></p>
@@ -13355,7 +13162,7 @@ craft)</li>
 </ul>
 <hr />
 <h3 id="packaging-size-format">PACKAGING SIZE &amp; FORMAT</h3>
-<h4 id="tier-1-essential-49-399">Tier 1: Essential (₹49-₹399)</h4>
+<h4 id="tier-1-essential-49-399-1">Tier 1: Essential (₹49-₹399)</h4>
 <ul>
 <li><strong>Format</strong>: Small stand-up pouches (20g chips, 100g
 nuts)</li>
@@ -13364,14 +13171,14 @@ name 30%, logo 10%)</li>
 <li><strong>Back Panel</strong>: QR code + batch code (transparency
 focus)</li>
 </ul>
-<h4 id="tier-2-signature-399-999">Tier 2: Signature (₹399-₹999)</h4>
+<h4 id="tier-2-signature-399-999-1">Tier 2: Signature (₹399-₹999)</h4>
 <ul>
 <li><strong>Format</strong>: Medium pouches (250-500g)</li>
 <li><strong>Front Panel</strong>: Full hierarchy (50/30/20 split)</li>
 <li><strong>Back Panel</strong>: All four sections (innovation,
 transparency, nutrition, validation)</li>
 </ul>
-<h4 id="tier-3-reserve-999-2599">Tier 3: Reserve (₹999-₹2,599)</h4>
+<h4 id="tier-3-reserve-999-2599-1">Tier 3: Reserve (₹999-₹2,599)</h4>
 <ul>
 <li><strong>Format</strong>: Rigid boxes or premium pouches</li>
 <li><strong>Front Panel</strong>: Photography-dominant (50%), refined
@@ -13379,7 +13186,7 @@ typography</li>
 <li><strong>Back Panel</strong>: Extended origin story +
 transparency</li>
 </ul>
-<h4 id="tier-4-atelier-2599-7249">Tier 4: Atelier (₹2,599-₹7,249)</h4>
+<h4 id="tier-4-atelier-2599-7249-1">Tier 4: Atelier (₹2,599-₹7,249)</h4>
 <ul>
 <li><strong>Format</strong>: Luxury rigid boxes, gift hampers</li>
 <li><strong>Front Panel</strong>: Minimal (product name + subtle
@@ -13499,8 +13306,7 @@ corporate-sterile) - Infographics using brand colors - Real photography
 (not stock)</p>
 <hr />
 <h2 id="retailstore-design-system">RETAIL/STORE DESIGN SYSTEM</h2>
-<h3
-id="store-layout-philosophy-tasting-counter-as-centerpiece-50-weight">Store
+<h3 id="store-layout-philosophy-tasting-counter-as-centerpiece-50-weight">Store
 Layout Philosophy: <strong>Tasting Counter as Centerpiece (50%
 weight)</strong></h3>
 <p><strong>From Act 4</strong>: “Tasting Counter as Centerpiece:
@@ -13557,8 +13363,7 @@ Certificates</strong>: Supplier stamps, certifications</p>
 <p><strong>Signage</strong>: - “Every Claim Verified” - “Scan to See Lab
 Reports” - “Traceable to Source”</p>
 <hr />
-<h4
-id="zone-4-fortune-500-validation-wall-10-of-store-space---smallest-zone">Zone
+<h4 id="zone-4-fortune-500-validation-wall-10-of-store-space---smallest-zone">Zone
 4: FORTUNE 500 VALIDATION WALL (10% of store space - SMALLEST zone)</h4>
 <p><strong>Purpose</strong>: Quiet proof, not loud bragging</p>
 <p><strong>Design Elements</strong>: - <strong>Corporate Logo
@@ -13746,25 +13551,13 @@ allocation)</li>
 </ul></li>
 </ol>
 <hr />
-<p><strong>Next Section</strong>: <a
-href="./12-PERFORMANCE-DASHBOARD.md">Section 12 - Performance
+<p><strong>Next Section</strong>: <a href="./12-PERFORMANCE-DASHBOARD.md">Section 12 - Performance
 Dashboard</a> <em>(to be created)</em></p>
 <hr />
 <p><em>“Flyberry reimagines food — and our visual identity reimagines
 how premium brands can look: approachable, artful, and grounded in what
-you taste.”</em></p>
-
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-13" class="modal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal('13')">✕ Close</button>
-            <div class="section-content">
-                <h1 id="flyberry-brand-strategy">FLYBERRY BRAND STRATEGY</h1>
-<h2 id="section-13-data-sources-verification-appendix">Section 13: Data
-Sources &amp; Verification Appendix</h2>
+you taste.”</em> # FLYBERRY BRAND STRATEGY ## Section 13: Data Sources
+&amp; Verification Appendix</p>
 <hr />
 <h2 id="purpose-of-this-document">PURPOSE OF THIS DOCUMENT</h2>
 <p><strong>Why This Matters:</strong> Every claim in the Flyberry brand
@@ -14678,77 +14471,75 @@ public domain</p>
 TEMPLATES</h2>
 <h3 id="template-1-quarterly-claim-verification-report">Template 1:
 Quarterly Claim Verification Report</h3>
-<div class="sourceCode" id="cb17"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Q[X] 20XX Claim Verification Report</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>**Reporting Period**: <span class="co">[</span><span class="ot">Start Date</span><span class="co">]</span> to <span class="co">[</span><span class="ot">End Date</span><span class="co">]</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>**Prepared By**: <span class="co">[</span><span class="ot">Name</span><span class="co">]</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>**Date**: <span class="co">[</span><span class="ot">DD-MM-YYYY</span><span class="co">]</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Claims Verified This Quarter</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Claim <span class="pp">|</span> Status <span class="pp">|</span> Evidence Updated <span class="pp">|</span> Notes <span class="pp">|</span></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------|--------|------------------|-------|</span></span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Customer Rating 4.8/5 <span class="pp">|</span> ✅ VERIFIED <span class="pp">|</span> Amazon export dated XX-XX-XXXX <span class="pp">|</span> Rating now 4.9/5 (improved) <span class="pp">|</span></span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Fortune 500 Clients 50+ <span class="pp">|</span> ✅ VERIFIED <span class="pp">|</span> Client database updated <span class="pp">|</span> Now 53 clients (+3 this quarter) <span class="pp">|</span></span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Amazon Best-Seller <span class="pp">|</span> ✅ VERIFIED <span class="pp">|</span> Screenshot dated XX-XX-XXXX <span class="pp">|</span> Still #1 in Premium Dates <span class="pp">|</span></span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="co">[</span><span class="ot">Continue for all claims</span><span class="co">]</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span></span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Claims Needing Attention</span></span>
-<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Claim <span class="pp">|</span> Issue <span class="pp">|</span> Action Required <span class="pp">|</span> Owner <span class="pp">|</span> Deadline <span class="pp">|</span></span>
-<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------|-------|----------------|-------|----------|</span></span>
-<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Brand Awareness &lt;20% <span class="pp">|</span> No survey data <span class="pp">|</span> Commission survey <span class="pp">|</span> Marketing Dir <span class="pp">|</span> <span class="co">[</span><span class="ot">Date</span><span class="co">]</span> <span class="pp">|</span></span>
-<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="co">[</span><span class="ot">Continue</span><span class="co">]</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span></span>
-<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## New Evidence Added</span></span>
-<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">File name and location</span><span class="co">]</span></span>
-<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">File name and location</span><span class="co">]</span></span>
-<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Recommendations for Next Quarter</span></span>
-<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span><span class="co">[</span><span class="ot">Recommendation</span><span class="co">]</span></span>
-<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span><span class="co">[</span><span class="ot">Recommendation</span><span class="co">]</span></span>
-<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a>**Approved By**: <span class="co">[</span><span class="ot">Name, Title</span><span class="co">]</span></span>
-<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a>**Next Review Date**: <span class="co">[</span><span class="ot">Date</span><span class="co">]</span></span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Q[X] 20XX Claim Verification Report</span></span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>**Reporting Period**: <span class="co">[</span><span class="ot">Start Date</span><span class="co">]</span> to <span class="co">[</span><span class="ot">End Date</span><span class="co">]</span></span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>**Prepared By**: <span class="co">[</span><span class="ot">Name</span><span class="co">]</span></span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>**Date**: <span class="co">[</span><span class="ot">DD-MM-YYYY</span><span class="co">]</span></span>
+<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a><span class="fu">## Claims Verified This Quarter</span></span>
+<span id="cb61-8"><a href="#cb61-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-9"><a href="#cb61-9" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Claim <span class="pp">|</span> Status <span class="pp">|</span> Evidence Updated <span class="pp">|</span> Notes <span class="pp">|</span></span>
+<span id="cb61-10"><a href="#cb61-10" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------|--------|------------------|-------|</span></span>
+<span id="cb61-11"><a href="#cb61-11" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Customer Rating 4.8/5 <span class="pp">|</span> ✅ VERIFIED <span class="pp">|</span> Amazon export dated XX-XX-XXXX <span class="pp">|</span> Rating now 4.9/5 (improved) <span class="pp">|</span></span>
+<span id="cb61-12"><a href="#cb61-12" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Fortune 500 Clients 50+ <span class="pp">|</span> ✅ VERIFIED <span class="pp">|</span> Client database updated <span class="pp">|</span> Now 53 clients (+3 this quarter) <span class="pp">|</span></span>
+<span id="cb61-13"><a href="#cb61-13" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Amazon Best-Seller <span class="pp">|</span> ✅ VERIFIED <span class="pp">|</span> Screenshot dated XX-XX-XXXX <span class="pp">|</span> Still #1 in Premium Dates <span class="pp">|</span></span>
+<span id="cb61-14"><a href="#cb61-14" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="co">[</span><span class="ot">Continue for all claims</span><span class="co">]</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span></span>
+<span id="cb61-15"><a href="#cb61-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-16"><a href="#cb61-16" aria-hidden="true" tabindex="-1"></a><span class="fu">## Claims Needing Attention</span></span>
+<span id="cb61-17"><a href="#cb61-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-18"><a href="#cb61-18" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Claim <span class="pp">|</span> Issue <span class="pp">|</span> Action Required <span class="pp">|</span> Owner <span class="pp">|</span> Deadline <span class="pp">|</span></span>
+<span id="cb61-19"><a href="#cb61-19" aria-hidden="true" tabindex="-1"></a><span class="pp">|-------|-------|----------------|-------|----------|</span></span>
+<span id="cb61-20"><a href="#cb61-20" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Brand Awareness &lt;20% <span class="pp">|</span> No survey data <span class="pp">|</span> Commission survey <span class="pp">|</span> Marketing Dir <span class="pp">|</span> <span class="co">[</span><span class="ot">Date</span><span class="co">]</span> <span class="pp">|</span></span>
+<span id="cb61-21"><a href="#cb61-21" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> <span class="co">[</span><span class="ot">Continue</span><span class="co">]</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span> <span class="pp">|</span></span>
+<span id="cb61-22"><a href="#cb61-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-23"><a href="#cb61-23" aria-hidden="true" tabindex="-1"></a><span class="fu">## New Evidence Added</span></span>
+<span id="cb61-24"><a href="#cb61-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-25"><a href="#cb61-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">File name and location</span><span class="co">]</span></span>
+<span id="cb61-26"><a href="#cb61-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">File name and location</span><span class="co">]</span></span>
+<span id="cb61-27"><a href="#cb61-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-28"><a href="#cb61-28" aria-hidden="true" tabindex="-1"></a><span class="fu">## Recommendations for Next Quarter</span></span>
+<span id="cb61-29"><a href="#cb61-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-30"><a href="#cb61-30" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span><span class="co">[</span><span class="ot">Recommendation</span><span class="co">]</span></span>
+<span id="cb61-31"><a href="#cb61-31" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span><span class="co">[</span><span class="ot">Recommendation</span><span class="co">]</span></span>
+<span id="cb61-32"><a href="#cb61-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-33"><a href="#cb61-33" aria-hidden="true" tabindex="-1"></a>**Approved By**: <span class="co">[</span><span class="ot">Name, Title</span><span class="co">]</span></span>
+<span id="cb61-34"><a href="#cb61-34" aria-hidden="true" tabindex="-1"></a>**Next Review Date**: <span class="co">[</span><span class="ot">Date</span><span class="co">]</span></span></code></pre></div>
 <hr />
 <h3 id="template-2-new-claim-addition-form">Template 2: New Claim
 Addition Form</h3>
-<div class="sourceCode" id="cb18"><pre
-class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># New Claim Addition Request</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>**Requested By**: <span class="co">[</span><span class="ot">Name</span><span class="co">]</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>**Date**: <span class="co">[</span><span class="ot">DD-MM-YYYY</span><span class="co">]</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Claim Details</span></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>**Claim**: <span class="co">[</span><span class="ot">Exact wording to be used in brand materials</span><span class="co">]</span></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>**Location**: <span class="co">[</span><span class="ot">Where will this appear? Section XX, marketing copy, website, etc.</span><span class="co">]</span></span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>**Category**: <span class="co">[</span><span class="ot">Market data / Customer proof / Product performance / etc.</span><span class="co">]</span></span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evidence Provided</span></span>
-<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>**Evidence Type**: <span class="co">[</span><span class="ot">Lab report / Survey / Sales data / etc.</span><span class="co">]</span></span>
-<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>**Evidence Source**: <span class="co">[</span><span class="ot">Where did this data come from?</span><span class="co">]</span></span>
-<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>**Evidence Date**: <span class="co">[</span><span class="ot">When was evidence created/collected?</span><span class="co">]</span></span>
-<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>**File Location**: <span class="co">[</span><span class="ot">Path to evidence file</span><span class="co">]</span></span>
-<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Verification</span></span>
-<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>**Verification Method**: <span class="co">[</span><span class="ot">How was this validated?</span><span class="co">]</span></span>
-<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>**Verified By**: <span class="co">[</span><span class="ot">Name</span><span class="co">]</span></span>
-<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>**Verification Date**: <span class="co">[</span><span class="ot">DD-MM-YYYY</span><span class="co">]</span></span>
-<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a>**Confidence Level**: <span class="co">[</span><span class="ot">High / Medium / Low</span><span class="co">]</span></span>
-<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Approval</span></span>
-<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>**Approved By**: <span class="co">[</span><span class="ot">Brand Strategy Owner</span><span class="co">]</span></span>
-<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>**Approval Date**: <span class="co">[</span><span class="ot">DD-MM-YYYY</span><span class="co">]</span></span>
-<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>**Status**: <span class="co">[</span><span class="ot">APPROVED / REJECTED / NEEDS REVISION</span><span class="co">]</span></span>
-<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>**Next Review Date**: <span class="co">[</span><span class="ot">When should this claim be re-verified?</span><span class="co">]</span></span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># New Claim Addition Request</span></span>
+<span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a>**Requested By**: <span class="co">[</span><span class="ot">Name</span><span class="co">]</span></span>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>**Date**: <span class="co">[</span><span class="ot">DD-MM-YYYY</span><span class="co">]</span></span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Claim Details</span></span>
+<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-8"><a href="#cb62-8" aria-hidden="true" tabindex="-1"></a>**Claim**: <span class="co">[</span><span class="ot">Exact wording to be used in brand materials</span><span class="co">]</span></span>
+<span id="cb62-9"><a href="#cb62-9" aria-hidden="true" tabindex="-1"></a>**Location**: <span class="co">[</span><span class="ot">Where will this appear? Section XX, marketing copy, website, etc.</span><span class="co">]</span></span>
+<span id="cb62-10"><a href="#cb62-10" aria-hidden="true" tabindex="-1"></a>**Category**: <span class="co">[</span><span class="ot">Market data / Customer proof / Product performance / etc.</span><span class="co">]</span></span>
+<span id="cb62-11"><a href="#cb62-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-12"><a href="#cb62-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Evidence Provided</span></span>
+<span id="cb62-13"><a href="#cb62-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-14"><a href="#cb62-14" aria-hidden="true" tabindex="-1"></a>**Evidence Type**: <span class="co">[</span><span class="ot">Lab report / Survey / Sales data / etc.</span><span class="co">]</span></span>
+<span id="cb62-15"><a href="#cb62-15" aria-hidden="true" tabindex="-1"></a>**Evidence Source**: <span class="co">[</span><span class="ot">Where did this data come from?</span><span class="co">]</span></span>
+<span id="cb62-16"><a href="#cb62-16" aria-hidden="true" tabindex="-1"></a>**Evidence Date**: <span class="co">[</span><span class="ot">When was evidence created/collected?</span><span class="co">]</span></span>
+<span id="cb62-17"><a href="#cb62-17" aria-hidden="true" tabindex="-1"></a>**File Location**: <span class="co">[</span><span class="ot">Path to evidence file</span><span class="co">]</span></span>
+<span id="cb62-18"><a href="#cb62-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-19"><a href="#cb62-19" aria-hidden="true" tabindex="-1"></a><span class="fu">## Verification</span></span>
+<span id="cb62-20"><a href="#cb62-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-21"><a href="#cb62-21" aria-hidden="true" tabindex="-1"></a>**Verification Method**: <span class="co">[</span><span class="ot">How was this validated?</span><span class="co">]</span></span>
+<span id="cb62-22"><a href="#cb62-22" aria-hidden="true" tabindex="-1"></a>**Verified By**: <span class="co">[</span><span class="ot">Name</span><span class="co">]</span></span>
+<span id="cb62-23"><a href="#cb62-23" aria-hidden="true" tabindex="-1"></a>**Verification Date**: <span class="co">[</span><span class="ot">DD-MM-YYYY</span><span class="co">]</span></span>
+<span id="cb62-24"><a href="#cb62-24" aria-hidden="true" tabindex="-1"></a>**Confidence Level**: <span class="co">[</span><span class="ot">High / Medium / Low</span><span class="co">]</span></span>
+<span id="cb62-25"><a href="#cb62-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-26"><a href="#cb62-26" aria-hidden="true" tabindex="-1"></a><span class="fu">## Approval</span></span>
+<span id="cb62-27"><a href="#cb62-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-28"><a href="#cb62-28" aria-hidden="true" tabindex="-1"></a>**Approved By**: <span class="co">[</span><span class="ot">Brand Strategy Owner</span><span class="co">]</span></span>
+<span id="cb62-29"><a href="#cb62-29" aria-hidden="true" tabindex="-1"></a>**Approval Date**: <span class="co">[</span><span class="ot">DD-MM-YYYY</span><span class="co">]</span></span>
+<span id="cb62-30"><a href="#cb62-30" aria-hidden="true" tabindex="-1"></a>**Status**: <span class="co">[</span><span class="ot">APPROVED / REJECTED / NEEDS REVISION</span><span class="co">]</span></span>
+<span id="cb62-31"><a href="#cb62-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-32"><a href="#cb62-32" aria-hidden="true" tabindex="-1"></a>**Next Review Date**: <span class="co">[</span><span class="ot">When should this claim be re-verified?</span><span class="co">]</span></span></code></pre></div>
 <hr />
 <h2 id="conclusion">CONCLUSION</h2>
 <p>This Data Sources &amp; Verification Appendix serves as the
@@ -14774,41 +14565,6 @@ Lead <strong>Last Updated</strong>: January 2026 <strong>Next
 Review</strong>: April 2026 (Quarterly)</p>
 <hr />
 <p><em>Previous: <a href="./12-PERFORMANCE-DASHBOARD.md">Section 12 -
-Performance Dashboard</a></em> <em>Back to: <a
-href="./00-MASTER-INDEX.md">Master Index</a></em></p>
-
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function openModal(num) {
-            document.getElementById('modal-' + num).classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        
-        function closeModal(num) {
-            document.getElementById('modal-' + num).classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-        
-        document.querySelectorAll('.modal').forEach(modal => {
-            modal.addEventListener('click', function(e) {
-                if (e.target === this) {
-                    this.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-        });
-        
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                document.querySelectorAll('.modal.active').forEach(modal => {
-                    modal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                });
-            }
-        });
-    </script>
+Performance Dashboard</a></em> <em>Back to: <a href="./00-MASTER-INDEX.md">Master Index</a></em></p>
 </body>
 </html>

@@ -356,6 +356,445 @@ Curated collections for corporate and personal gifting. Same quality Fortune 500
 
 ---
 
+## 5.6 PRODUCT PERFORMANCE MATRIX
+
+### Why This Section Matters
+
+**Gap Identified**: Section 05 lists 44 products across 8 categories, but doesn't indicate which products sell best, which are most profitable, or which drive customer acquisition. Portfolio decisions are made blindly without performance data.
+
+**Purpose**: Document product-level performance metrics to make data-driven decisions about:
+- Product prioritization (which to push harder in marketing)
+- Inventory allocation (stock more of what sells)
+- Portfolio optimization (discontinue underperformers, double down on winners)
+- Category strategy (which categories drive revenue vs. margin)
+
+---
+
+### 5.6.1 PERFORMANCE METRICS FRAMEWORK
+
+#### Key Metrics to Track (Per Product)
+
+| Metric | Definition | Why It Matters | Data Source |
+|--------|------------|----------------|-------------|
+| **Revenue** | Total sales (₹) in last 12 months | Identifies top revenue drivers | Sales system / Amazon Seller Central |
+| **Unit Sales** | Total units sold in last 12 months | Volume indicator | Sales system |
+| **Gross Margin** | (Revenue - COGS) / Revenue × 100% | Profitability per product | Finance / Accounting |
+| **Contribution Margin** | Revenue - Variable Costs | True profit after variable costs | Finance |
+| **Repeat Purchase Rate** | % of customers who buy again within 90 days | Loyalty indicator | CRM / Analytics |
+| **Customer Acquisition Cost (CAC)** | Marketing spend / New customers acquired | Efficiency of customer acquisition | Marketing analytics |
+| **Customer Lifetime Value (CLV)** | Average revenue per customer over lifetime | Long-term value | CRM / Analytics |
+| **Amazon Best-Seller Rank** | Sales rank in category | Competitive positioning | Amazon Seller Central |
+| **Average Rating** | Customer satisfaction (out of 5) | Quality perception | Amazon / Website reviews |
+| **Return Rate** | % of units returned | Quality issues indicator | Returns data |
+
+---
+
+### 5.6.2 PRODUCT PERFORMANCE MATRIX (Template)
+
+**Status**: 🔶 PENDING - Data collection required
+
+**Data Collection Period**: [Last 12 Months: Month YYYY - Month YYYY]
+
+#### CATEGORY 1: PREMIUM DATES (12 Products)
+
+| Product | Revenue (₹L) | Units Sold | Gross Margin % | Repeat Rate % | Avg Rating | BSR Rank | Status |
+|---------|--------------|------------|----------------|---------------|------------|----------|--------|
+| Majestic Medjoul 500g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Ajwa 500g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Deglet Nour 500g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Mabroom 500g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Kalmi 500g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Deri 500g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Halawi 500g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Ameri 500g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Mazafati 500g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Sukkari 500g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Khudri 500g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Safawi 500g | [XX.X] | [XXXX] | [XX%] | [X X%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| **CATEGORY TOTAL** | **[XXX.X]** | **[XXXXX]** | **[XX%]** | **[XX%]** | **[X.X/5]** | - | - |
+
+**Category Insights** (TO BE FILLED):
+- **Top Revenue Driver**: [Product name] (₹XX.X L, XX% of category revenue)
+- **Most Profitable**: [Product name] (XX% gross margin)
+- **Highest Repeat Rate**: [Product name] (XX% repurchase within 90 days)
+- **Best Rated**: [Product name] (X.X/5 stars, XXXX reviews)
+
+---
+
+#### CATEGORY 2: EXOTIC NUTS (6 Products)
+
+| Product | Revenue (₹L) | Units Sold | Gross Margin % | Repeat Rate % | Avg Rating | BSR Rank | Status |
+|---------|--------------|------------|----------------|---------------|------------|----------|--------|
+| Macadamia 250g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Pecan 250g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Brazil Nuts 250g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Pine Nuts 250g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Hazelnuts 250g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Walnuts 250g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| **CATEGORY TOTAL** | **[XXX.X]** | **[XXXXX]** | **[XX%]** | **[XX%]** | **[X.X/5]** | - | - |
+
+---
+
+#### CATEGORY 3: VACUUM-FRIED CHIPS (6 Products)
+
+| Product | Revenue (₹L) | Units Sold | Gross Margin % | Repeat Rate % | Avg Rating | BSR Rank | Status |
+|---------|--------------|------------|----------------|---------------|------------|----------|--------|
+| Spiced Okra 20g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Chickpea Crisps 20g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Sweet Beet 20g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Spiced Taro 20g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Toasted Coconut 20g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| Banana Chips 20g | [XX.X] | [XXXX] | [XX%] | [XX%] | [X.X/5] | [#XX] | 🔶 PENDING |
+| **CATEGORY TOTAL** | **[XXX.X]** | **[XXXXX]** | **[XX%]** | **[XX%]** | **[X.X/5]** | - | - |
+
+---
+
+#### CATEGORY 4-8: [Similar Tables for Seeds, Berries, Dried Fruits, Date Innovations, Gift Collections]
+
+**Note**: Full tables for all 8 categories to be populated with actual sales data
+
+---
+
+### 5.6.3 CATEGORY PERFORMANCE COMPARISON
+
+#### Revenue Contribution by Category
+
+**Status**: 🔶 PENDING - Data required
+
+| Category | Revenue (₹L) | % of Total Revenue | Units Sold | % of Total Units | Avg Margin % | Strategic Priority |
+|----------|--------------|--------------------|-----------|-----------------|--------------|--------------------|
+| Premium Dates | [XXX] | [XX%] | [XXXXX] | [XX%] | [XX%] | 🔶 TBD |
+| Exotic Nuts | [XXX] | [XX%] | [XXXXX] | [XX%] | [XX%] | 🔶 TBD |
+| Vacuum Chips | [XXX] | [XX%] | [XXXXX] | [XX%] | [XX%] | 🔶 TBD |
+| Super Seeds | [XXX] | [XX%] | [XXXXX] | [XX%] | [XX%] | 🔶 TBD |
+| Dried Berries | [XXX] | [XX%] | [XXXXX] | [XX%] | [XX%] | 🔶 TBD |
+| Dried Fruits | [XXX] | [XX%] | [XXXXX] | [XX%] | [XX%] | 🔶 TBD |
+| Date Innovations | [XXX] | [XX%] | [XXXXX] | [XX%] | [XX%] | 🔶 TBD |
+| Gift Collections | [XXX] | [XX%] | [XXXXX] | [XX%] | [XX%] | 🔶 TBD |
+| **TOTAL** | **[XXX]** | **100%** | **[XXXXXX]** | **100%** | **[XX%]** | - |
+
+**Key Questions to Answer**:
+- Which category drives the most revenue? (Is it Dates as expected?)
+- Which category has the highest margin? (Should we push it harder?)
+- Which category has the lowest performance? (Should we discontinue or reinvest?)
+- Is there a Pareto distribution? (80% of revenue from 20% of products?)
+
+---
+
+### 5.6.4 HERO PRODUCT PERFORMANCE
+
+#### The 8 Hero Products (from Section 05:77-88)
+
+**Hypothesis**: Hero products should lead their categories in revenue and customer satisfaction
+
+| Hero Product | Category | Revenue (₹L) | Rank in Category | Avg Rating | Repeat Rate % | Status |
+|--------------|----------|--------------|------------------|------------|---------------|--------|
+| Majestic Medjoul Dates | Dates | [XX.X] | [#1 / #2 / #3] | [X.X/5] | [XX%] | 🔶 PENDING |
+| Ajwa Dates | Heritage Dates | [XX.X] | [#1 / #2 / #3] | [X.X/5] | [XX%] | 🔶 PENDING |
+| Macadamia Nuts | Exotic Nuts | [XX.X] | [#1 / #2 / #3] | [X.X/5] | [XX%] | 🔶 PENDING |
+| Pecan Nuts | Exotic Nuts | [XX.X] | [#1 / #2 / #3] | [X.X/5] | [XX%] | 🔶 PENDING |
+| Vacuum-Fried Chips | Healthy Snacks | [XX.X] | [#1 / #2 / #3] | [X.X/5] | [XX%] | 🔶 PENDING |
+| Berry Collection | Superfoods | [XX.X] | [#1 / #2 / #3] | [X.X/5] | [XX%] | 🔶 PENDING |
+| Date Syrup | Natural Sweeteners | [XX.X] | [#1 / #2 / #3] | [X.X/5] | [XX%] | 🔶 PENDING |
+| Hazelnut Spread | Spreads | [XX.X] | [#1 / #2 / #3] | [X.X/5] | [XX%] | 🔶 PENDING |
+
+**Validation**: If a "hero product" is NOT #1 in its category, why not?
+- Pricing misalignment?
+- Marketing underinvestment?
+- Product quality issue?
+- Wrong hero selection?
+
+---
+
+### 5.6.5 CUSTOMER ACQUISITION & RETENTION
+
+#### First Purchase Analysis
+
+**Purpose**: Which products bring in new customers?
+
+**Status**: 🔶 PENDING - CRM/Analytics data required
+
+| Product | New Customers Acquired | % of Total New Customers | CAC (₹) | 90-Day Repeat Rate % | CLV (₹) | Status |
+|---------|------------------------|--------------------------|---------|----------------------|---------|--------|
+| [Product 1] | [XXXX] | [XX%] | [XXX] | [XX%] | [X,XXX] | 🔶 PENDING |
+| [Product 2] | [XXXX] | [XX%] | [XXX] | [XX%] | [X,XXX] | 🔶 PENDING |
+| [Continue for top 10 acquisition products] | | | | | | |
+
+**Insights to Discover**:
+- **Gateway Products**: Which products convert first-time buyers best?
+- **Retention Champions**: Which products have highest repeat purchase rates?
+- **CLV Winners**: Which first-purchase products lead to highest lifetime value?
+
+**Strategic Implication**: Invest more marketing budget in high-CLV gateway products
+
+---
+
+#### Repeat Purchase Behavior
+
+**Analysis Framework**:
+
+| Purchase Sequence | % of Customers | Avg Time Between Purchases | Avg Order Value (₹) | Status |
+|-------------------|----------------|----------------------------|---------------------|--------|
+| 1st Purchase Only | [XX%] | - | [XXX] | 🔶 PENDING |
+| 2 Purchases | [XX%] | [XX days] | [XXX] | 🔶 PENDING |
+| 3-5 Purchases | [XX%] | [XX days] | [XXX] | 🔶 PENDING |
+| 6-10 Purchases | [XX%] | [XX days] | [XXX] | 🔶 PENDING |
+| 10+ Purchases (Loyal) | [XX%] | [XX days] | [XXX] | 🔶 PENDING |
+
+**Key Questions**:
+- What % of customers are one-time buyers? (Target: <40%)
+- What triggers second purchase? (Time-based discount? Product quality satisfaction?)
+- What's the churn rate after first purchase? (Target: <50%)
+
+---
+
+### 5.6.6 PRICING & PROFITABILITY ANALYSIS
+
+#### Margin Analysis by Product Tier
+
+**Hypothesis**: Higher-priced products have higher margins but lower volume
+
+**Status**: 🔶 PENDING - Finance data required
+
+| Price Tier | Products in Tier | Avg Price (₹) | Avg Margin % | Total Revenue (₹L) | Units Sold | Status |
+|------------|------------------|---------------|--------------|-------------------|------------|--------|
+| **Premium (₹1,500+)** | [X products] | [₹X,XXX] | [XX%] | [XX.X] | [XXX] | 🔶 PENDING |
+| **Mid-Premium (₹500-₹1,499)** | [X products] | [₹XXX] | [XX%] | [XX.X] | [X,XXX] | 🔶 PENDING |
+| **Accessible (₹199-₹499)** | [X products] | [₹XXX] | [XX%] | [XX.X] | [XX,XXX] | 🔶 PENDING |
+| **Entry (₹49-₹199)** | [X products] | [₹XX] | [XX%] | [XX.X] | [XXX,XXX] | 🔶 PENDING |
+
+**Strategic Insights**:
+- Is the "Premium" tier pulling its weight? (High margin but low volume = still profitable?)
+- Is the "Entry" tier cannibalizing higher-tier sales? (Or is it acquiring customers who trade up?)
+- Sweet spot pricing? (Which tier has best margin × volume balance?)
+
+---
+
+### 5.6.7 CHANNEL PERFORMANCE
+
+#### Revenue & Margin by Sales Channel
+
+**Status**: 🔶 PENDING - Sales/Finance data required
+
+| Channel | Revenue (₹L) | % of Total | Avg Margin % | CAC (₹) | Repeat Rate % | Strategic Focus |
+|---------|--------------|-----------|--------------|---------|---------------|-----------------|
+| **B2B Corporate** | [XX] | [XX%] | [XX%] | [XXX] | [XX%] | 🔶 TBD |
+| **D2C Website** | [XX] | [XX%] | [XX%] | [XXX] | [XX%] | 🔶 TBD |
+| **Amazon India** | [XX] | [XX%] | [XX%] | [XXX] | [XX%] | 🔶 TBD |
+| **Swiggy Instamart** | [XX] | [XX%] | [XX%] | [XXX] | [XX%] | 🔶 TBD |
+| **Other Marketplaces** | [XX] | [XX%] | [XX%] | [XXX] | [XX%] | 🔶 TBD |
+| **TOTAL** | **[XX]** | **100%** | **[XX%]** | **[XXX]** | **[XX%]** | - |
+
+**Critical Questions** (from Section 13: Data Sources Appendix):
+- What's the revenue split? (70% corporate, 30% D2C? 50/50?)
+- Which channel has higher margins? (D2C vs. marketplace vs. corporate)
+- Where should we invest for growth? (Highest CLV channel)
+
+**Hypothesis**: B2B corporate has highest margins (no marketplace fees), but D2C has highest CLV (repeat purchase potential)
+
+---
+
+### 5.6.8 PRODUCT LIFECYCLE ANALYSIS
+
+#### Product Age vs. Performance
+
+**Purpose**: Are newer products outperforming older ones? Or are established products still dominant?
+
+**Status**: 🔶 PENDING - Product launch dates + performance data required
+
+| Product | Launch Date | Age (Years) | Revenue (₹L) | Growth Rate (YoY %) | Lifecycle Stage | Status |
+|---------|-------------|-------------|--------------|---------------------|-----------------|--------|
+| [Product 1] | [MM-YYYY] | [X.X] | [XX.X] | [+XX% / -XX%] | [Intro / Growth / Maturity / Decline] | 🔶 PENDING |
+| [Continue for all 44 products] | | | | | | |
+
+**Lifecycle Stage Definitions**:
+- **Introduction**: <1 year old, low revenue, high growth potential
+- **Growth**: 1-3 years, rapid revenue growth (>30% YoY)
+- **Maturity**: 3-5 years, stable revenue, dominant in category
+- **Decline**: >5 years, declining revenue (<0% YoY)
+
+**Strategic Implications**:
+- **Declining products**: Refresh or discontinue?
+- **Growth products**: Invest more in marketing
+- **Mature products**: Maintain, don't over-invest
+
+---
+
+### 5.6.9 PORTFOLIO OPTIMIZATION RECOMMENDATIONS
+
+**Based on Performance Data** (To be completed once data is collected)
+
+#### High Priority Actions
+
+**Stars** (High Revenue + High Margin):
+- [Product names to be identified]
+- **Action**: Double down—increase inventory, marketing spend, retail distribution
+
+**Cash Cows** (High Revenue + Low Margin):
+- [Product names to be identified]
+- **Action**: Optimize costs, maintain volume, avoid over-investing in marketing
+
+**Question Marks** (Low Revenue + High Margin):
+- [Product names to be identified]
+- **Action**: Invest in marketing to scale, or discontinue if no traction after 6 months
+
+**Dogs** (Low Revenue + Low Margin):
+- [Product names to be identified]
+- **Action**: Discontinue or completely re position (new packaging, pricing, target audience)
+
+---
+
+#### SKU Rationalization
+
+**Hypothesis**: 80/20 rule applies (80% of revenue from 20% of products)
+
+**Analysis** (TO BE COMPLETED):
+- Top 20% of products (9 out of 44): Generate [XX]% of revenue
+- Bottom 20% of products (9 out of 44): Generate [XX]% of revenue
+
+**Decision Framework**:
+- If bottom 20% generates <5% of revenue: **Consider discontinuing**
+- If bottom 20% generates 5-10% of revenue: **Optimize or reposition**
+- If bottom 20% generates >10% of revenue: **Portfolio is balanced**
+
+**Long-Tail Strategy**:
+- Keep low-volume products if they:
+  - Serve niche personas (e.g., Ajwa Dates for health-conscious Muslims)
+  - Support brand positioning (e.g., exotic Pine Nuts show sourcing mastery)
+  - Have high repeat rates (loyal micro-segment)
+
+---
+
+### 5.6.10 DATA COLLECTION WORKFLOW
+
+#### Step 1: Identify Data Sources
+
+| Data Needed | Source System | Responsible Team | Export Frequency |
+|-------------|---------------|------------------|------------------|
+| Revenue by SKU | [ERP / Accounting System] | Finance | Monthly |
+| Unit Sales | [Inventory Management System] | Operations | Monthly |
+| Amazon Data | Amazon Seller Central | E-commerce Manager | Weekly |
+| Customer Data | [CRM / Shopify / Website Analytics] | Marketing / Tech | Monthly |
+| Margin Data | [Accounting System] | Finance | Quarterly |
+| Returns Data | [Customer Service System] | Customer Success | Monthly |
+
+---
+
+#### Step 2: Set Up Automated Reporting
+
+**Goal**: Monthly Product Performance Dashboard
+
+**Tools**:
+- Google Sheets / Excel (manual, short-term)
+- Tableau / Power BI (automated, long-term)
+- Custom dashboard (if engineering resources available)
+
+**KPIs to Track**:
+1. Revenue by product (monthly, quarterly, annual)
+2. Top 10 products by revenue
+3. Top 10 products by margin
+4. Top 10 products by units sold
+5. Bottom 10 products (candidates for discontinuation)
+6. Category performance comparison
+7. Channel performance comparison
+
+---
+
+#### Step 3: Monthly Review Process
+
+**Responsibility**: Product Manager / Marketing Director
+
+**Tasks**:
+- [ ] Export sales data from all channels
+- [ ] Update Section 05.6 product performance tables
+- [ ] Identify trends (products growing/declining)
+- [ ] Flag underperformers for review
+- [ ] Recommend actions (discontinue, reposition, invest)
+
+**Monthly Report Format**:
+```markdown
+# MONTH YYYY Product Performance Report
+
+## Summary
+- Total Revenue: ₹XX.X Cr ([+XX% / -XX%] vs. last month)
+- Top Product: [Name] (₹XX.X L)
+- Fastest Growing: [Name] ([+XX%] YoY)
+- Underperformer: [Name] (₹XX.X L, [action recommended])
+
+## Category Highlights
+[Key insights from each of 8 categories]
+
+## Actions This Month
+- Discontinued: [Product name] (reason: low revenue + margin)
+- Increased inventory: [Product name] (reason: high demand)
+- Price adjustment: [Product name] (old: ₹XXX, new: ₹XXX, reason: margin improvement)
+
+**Next Month Focus**: [Priorities]
+```
+
+---
+
+### 5.6.11 EVIDENCE REPOSITORY
+
+**File Location**: `/docs/brand-strategy/evidence/product-performance/`
+
+**Structure**:
+```
+/product-performance/
+├── monthly-reports/
+│   ├── 2025-01-product-performance.xlsx
+│   ├── 2025-02-product-performance.xlsx
+│   └── [monthly files]
+├── amazon-data/
+│   ├── bestseller-ranks/
+│   ├── sales-reports/
+│   └── customer-reviews/
+├── channel-reports/
+│   ├── b2b-corporate-sales.xlsx
+│   ├── d2c-website-sales.xlsx
+│   └── marketplace-sales.xlsx
+├── dashboards/
+│   ├── product-performance-dashboard.pbix (Power BI)
+│   └── product-kpis.xlsx (Excel template)
+└── annual-analysis/
+    ├── 2024-product-performance-annual.pdf
+    └── 2025-product-performance-annual.pdf
+```
+
+**Maintained By**: Product Manager / Finance Analyst
+**Update Frequency**: Monthly
+
+---
+
+### SECTION 5.6 SUMMARY
+
+| Element | Target | Current Status | Action Required |
+|---------|--------|----------------|-----------------|
+| **Product-Level Data** | All 44 products tracked | 🔶 0 products tracked | Export sales data from ERP/Amazon |
+| **Category Performance** | 8 categories compared | 🔶 No data | Aggregate product data by category |
+| **Channel Split** | Revenue % by channel documented | 🔶 Unknown | Finance team export channel data |
+| **Hero Product Validation** | 8 hero products verified as top performers | 🔶 Not validated | Compare hero products to category peers |
+| **Monthly Reporting** | Automated dashboard live | 🔶 Not set up | Build Excel/Tableau dashboard |
+
+**Immediate Action Items** (Next 30 Days):
+1. **Data Export**: Finance team exports last 12 months sales data (revenue, units, margin) by SKU
+2. **Amazon Data**: E-commerce manager exports Best-Seller Rank, ratings, review count
+3. **CRM Analysis**: Marketing extracts repeat purchase rates and CLV by first-purchase product
+4. **Populate Tables**: Fill Section 05.6.2 product performance tables with actual data
+5. **Category Analysis**: Calculate category revenue contribution % (Section 05.6.3)
+
+**Short-Term** (Next 90 Days):
+6. **Portfolio Optimization**: Identify Stars/Cash Cows/Question Marks/Dogs (Section 05.6.9)
+7. **SKU Rationalization**: Decide which products to discontinue (if any)
+8. **Monthly Dashboard**: Set up automated reporting process (Section 05.6.10)
+
+**Owner**: Product Manager + Finance Director
+**Timeline**: 90-day sprint (start immediately)
+
+**Success Metric**: By end of Q1 2026, all portfolio decisions (new product launches, discontinuations, marketing budget allocation) are data-driven based on Section 05.6 performance matrix.
+
+---
+
 ## ARCHITECTURE SUMMARY
 
 | Element | Definition |

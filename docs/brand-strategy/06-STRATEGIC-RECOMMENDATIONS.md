@@ -184,6 +184,302 @@ Price reflects value, not cost. Fortune 500 validation justifies premium. Each t
 
 ---
 
+### Pricing Methodology & Research
+
+#### Why This Section Matters
+
+**Gap Identified**: Section 06 lists 4 tiers with specific prices, but provides no rationale for why these exact numbers were chosen. Why ₹899 for Medjoul (not ₹850 or ₹950)? Why ₹49 for chips (not ₹39 or ₹59)? Pricing appears arbitrary without documented methodology.
+
+**Purpose**: Document the research, logic, and psychological principles behind Flyberry's pricing to ensure:
+- Prices are defensible to stakeholders (investors, partners)
+- Pricing reflects value perception (not just cost+margin)
+- Premium positioning is justified by willingness-to-pay research
+
+---
+
+#### 1.6.1 PRICING FRAMEWORK: VALUE-BASED, NOT COST-PLUS
+
+**Philosophy**: Price reflects perceived value (origin, quality, Fortune 500 validation), not just COGS + margin.
+
+**Traditional (Cost-Plus) Model** ❌:
+```
+Price = COGS + (COGS × Target Margin %)
+Example: COGS ₹400 + 50% margin = ₹600
+```
+
+**Flyberry (Value-Based) Model** ✅:
+```
+Price = Customer Willingness to Pay - (Based on positioning, competitive alternatives, value perception)
+Then validate: Does price achieve target margin?
+```
+
+**Key Principles**:
+1. **Anchor to perceived value**: "Jordan Valley Medjoul, cold-chain fresh" commands premium vs. "dates from Middle East"
+2. **Reference competitors**: Price slightly above (<15%) to signal quality without being inaccessible
+3. **Psychological pricing**: Use endings (₹49, ₹99, ₹899) that feel more accessible than round numbers
+4. **Tier logic**: Each tier serves a distinct purchase occasion (trial, regular, gifting, luxury)
+
+---
+
+#### 1.6.2 COMPETITIVE PRICE BENCHMARKING
+
+**Methodology** (TO BE IMPLEMENTED):
+
+| Step | Action | Data Source | Status |
+|------|--------|-------------|--------|
+| 1 | List top 10 Flyberry products | Internal SKU list | ✅ DONE |
+| 2 | Identify direct competitors per product | Happilo, Farmley, Bateel, Amazon private label | 🔶 PENDING |
+| 3 | Scrape competitor prices | Amazon API, manual website checks | 🔶 PENDING |
+| 4 | Calculate Flyberry's price premium % | (Flyberry Price / Competitor Price) - 1 | 🔶 PENDING |
+| 5 | Validate premium is justified | Does quality/positioning support +XX%? | 🔶 PENDING |
+
+**Example (Hypothetical - TO BE REPLACED WITH REAL DATA)**:
+
+| Product | Flyberry | Happilo | Farmley | Bateel | Avg Competitor | Premium % | Justified? |
+|---------|----------|---------|---------|--------|----------------|-----------|------------|
+| Medjoul 500g | ₹899 | ₹799 | ₹849 | ₹2,500+ | ₹824 | +9% | ✅ Yes (cold chain, Jordan origin) |
+| Macadamia 250g | ₹1,399 | ₹1,249 | ₹1,299 | N/A | ₹1,274 | +10% | ✅ Yes (Australian Style 0 grade) |
+| Okra Chips 20g | ₹49 | ₹39 | ₹45 | N/A | ₹42 | +17% | ⚠️ Check (high premium for small pack) |
+
+**Action Items**:
+- [ ] Quarterly competitive price monitoring (every 3 months)
+- [ ] Adjust Flyberry prices if competitor gap exceeds 15% (signals overpricing)
+- [ ] Document why premium is justified (origin, quality, packaging)
+
+---
+
+#### 1.6.3 WILLINGNESS-TO-PAY RESEARCH
+
+**Status**: 🔶 PENDING - No formal WTP study conducted
+
+**What is Willingness-to-Pay (WTP)?**
+The maximum price a customer is willing to pay for a product before choosing an alternative or not buying.
+
+**Research Methods**:
+
+**Method 1: Van Westendorp Price Sensitivity Meter** (Recommended)
+- Survey 200+ target customers (Priya, Ananya, Rahul, Meera personas)
+- Ask 4 questions per product:
+  1. At what price would you consider this product too expensive to buy?
+  2. At what price would you consider this product expensive but still worth buying?
+  3. At what price would you consider this product a bargain?
+  4. At what price would you consider this product too cheap that you'd question the quality?
+
+- Plot responses to find:
+  - **Optimal Price Point (OPP)**: Intersection of "too expensive" and "bargain"
+  - **Acceptable Price Range**: Between "too cheap" and "too expensive"
+
+**Example Output** (Hypothetical - Medjoul Dates 500g):
+```
+Too Cheap: ₹500 (quality concern)
+Bargain: ₹700
+Optimal Price: ₹850 (OPP)
+Expensive but Acceptable: ₹1,100
+Too Expensive: ₹1,300
+
+Current Flyberry Price: ₹899 (within acceptable range ✅)
+```
+
+**Method 2: A/B Price Testing** (E-commerce)
+- Test 2-3 price points on website/Amazon for same product
+- Measure:
+  - Conversion rate (purchases / views)
+  - Revenue per visitor (price × conversion)
+  - Customer acquisition by price point
+
+**Example Test** (Hypothetical):
+| Price Point | Views | Purchases | Conv Rate | Revenue/Visitor | Winner? |
+|-------------|-------|-----------|-----------|-----------------|---------|
+| ₹799 (low) | 1,000 | 120 | 12% | ₹95.88 | ❌ |
+| ₹899 (current) | 1,000 | 95 | 9.5% | ₹85.41 | ⚠️ |
+| ₹999 (high) | 1,000 | 70 | 7% | ₹69.93 | ❌ |
+
+**Conclusion**: ₹799 maximizes revenue per visitor (despite lower margin)
+
+**Action Items**:
+- [ ] Commission Van Westendorp study for top 10 products (Q1 2026, Budget: ₹3-5L)
+- [ ] Run A/B price tests on 3 hero products (D2C website, 30-day test)
+- [ ] Document findings in this section
+
+---
+
+#### 1.6.4 MARGIN ANALYSIS: ARE WE PROFITABLE?
+
+**Status**: 🔶 PENDING - Finance data required
+
+**Target Margins** (Industry Benchmarks):
+
+| Product Category | Target Gross Margin % | Typical in F&B Industry | Flyberry Target | Status |
+|------------------|----------------------|-------------------------|-----------------|--------|
+| **Premium Dates** | 45-55% | 40-50% (dried fruit) | 50% | 🔶 TBD |
+| **Exotic Nuts** | 40-50% | 35-45% (nuts) | 45% | 🔶 TBD |
+| **Vacuum Chips** | 50-60% | 45-55% (snacks) | 55% | 🔶 TBD |
+| **Gift Hampers** | 30-40% | 25-35% (bundled) | 35% | 🔶 TBD |
+
+**Margin Calculation** (per Product):
+```
+COGS (Cost of Goods Sold) = Import Cost + Packaging + Quality Testing + Cold Chain Logistics
+Gross Margin % = ((Price - COGS) / Price) × 100%
+
+Example (Medjoul Dates 500g):
+- Import Cost: ₹350/500g
+- Packaging: ₹60
+- Testing + Cold Chain: ₹40
+- Total COGS: ₹450
+- Selling Price: ₹899
+- Gross Margin: ((899 - 450) / 899) × 100% = 49.9% ✅ (meets 45-50% target)
+```
+
+**Actual Margin Data** (TO BE FILLED):
+
+| Product | Price (₹) | COGS (₹) | Gross Margin % | Target | Status |
+|---------|-----------|----------|----------------|--------|--------|
+| Medjoul 500g | 899 | [XXX] | [XX%] | 50% | 🔶 PENDING |
+| Macadamia 250g | 1,399 | [XXX] | [XX%] | 45% | 🔶 PENDING |
+| Okra Chips 20g | 49 | [XXX] | [XX%] | 55% | 🔶 PENDING |
+| [Continue for all products] | | | | | |
+
+**Action Items**:
+- [ ] Finance team exports COGS data for all 44 products
+- [ ] Calculate actual gross margin % for each SKU
+- [ ] Identify products with <30% margin (re-price or discontinue)
+- [ ] Identify products with >60% margin (opportunity to price lower for volume or maintain for premium positioning)
+
+---
+
+#### 1.6.5 PSYCHOLOGICAL PRICING PRINCIPLES
+
+**Why ₹899 not ₹900? Why ₹49 not ₹50?**
+
+**Charm Pricing (₹X99, ₹X9 endings)**:
+- **₹899** feels significantly less than ₹900 (despite ₹1 difference)
+- **₹49** perceived as "under ₹50" (impulse-friendly)
+- **Research**: Charm prices increase sales 20-30% vs. round numbers (Gendall et al., 1998)
+
+**Prestige Pricing (Round numbers)**:
+- **₹2,000** signals luxury (not ₹1,999)
+- **₹5,000** for Fortune 500 hampers (prestigious, not discount-seeking)
+- Use for ultra-premium tier (Atelier)
+
+**Flyberry Pricing Endings**:
+
+| Price Range | Ending | Psychology | Examples |
+|-------------|--------|------------|----------|
+| ₹50-₹99 | **₹49, ₹99** | Impulse, under threshold | Chips ₹49, Seeds ₹99 |
+| ₹100-₹499 | **₹99, ₹49** | Value perception | Dates ₹349, ₹449, Nuts ₹399 |
+| ₹500-₹999 | **₹99** | Premium but accessible | Dates ₹899, Nuts ₹699 |
+| ₹1,000-₹2,499 | **₹99** | Premium category | Nuts ₹1,399, ₹1,199 |
+| ₹2,500+ | **₹00 (round)** | Prestige, luxury | Hampers ₹5,000, ₹7,000 |
+
+**Price Anchoring**:
+- Show "Original Price" ₹1,200 → "Sale Price" ₹899 = perceived 25% discount
+- Display per-100g price to make premium products comparable (Macadamia ₹560/100g vs. Walnut ₹280/100g = 2× price justified by rarity)
+
+---
+
+#### 1.6.6 TIER LOGIC: WHY 4 TIERS?
+
+**Why Not 3 Tiers? Why Not 5 Tiers?**
+
+**Psychology of Choice Architecture**:
+- **Too Few (2-3 tiers)**: Customers feel limited choice
+- **Too Many (5+ tiers)**: Decision paralysis (Barry Schwartz, "The Paradox of Choice")
+- **Optimal: 3-4 tiers** (Goldilocks principle: low, mid, high, luxury)
+
+**Flyberry's 4-Tier Rationale**:
+
+| Tier | Purpose | Customer Psychology | % of Revenue (Hypothesis) |
+|------|---------|---------------------|---------------------------|
+| **1: Essential** | **Trial & acquisition** | "Low risk to try" | 15% (high volume, low margin) |
+| **2: Signature** | **Regular purchase** | "My staple choice" | 55% (core revenue driver) |
+| **3: Reserve** | **Special occasions** | "Treat myself/others" | 20% (gifting, premium) |
+| **4: Atelier** | **Luxury/Corporate** | "Only the best" | 10% (high margin, Fortune 500) |
+
+**Decoy Effect** (Tier 2 as "Default Choice"):
+- Tier 1 (₹49-₹399): Makes Tier 2 feel premium
+- Tier 3 (₹999+): Makes Tier 2 feel affordable
+- **Result**: Most customers choose Tier 2 (₹399-₹999) = highest revenue tier
+
+---
+
+#### 1.6.7 PRICING SCENARIOS: WHAT IF?
+
+**Scenario 1: Competitor Undercuts by 20%**
+- **Example**: Happilo prices Medjoul at ₹649 (vs. Flyberry ₹899)
+- **Response**:
+  - ❌ Don't match price (erodes premium positioning)
+  - ✅ Reinforce differentiation (cold chain, Jordan origin, Fortune 500 validation)
+  - ✅ Offer value bundles (2× 500g for ₹1,699 = ₹850 effective price per pack)
+
+**Scenario 2: Rising Import Costs (+15%)**
+- **Example**: Jordan Medjoul import cost rises ₹350 → ₹402.50
+- **COGS**: ₹450 → ₹502.50
+- **Current Margin**: 49.9% → 44.1% (below 45% target)
+- **Response Options**:
+  - **Option A**: Raise price ₹899 → ₹949 (maintains margin, risks volume)
+  - **Option B**: Absorb cost (accept lower margin temporarily, monitor)
+  - **Option C**: Source alternative origin (risk quality dilution)
+  - **Recommended**: Option B short-term, Option A if costs stay high >6 months
+
+**Scenario 3: New Premium Entrant (₹1,500+ Medjoul)**
+- **Example**: Luxury brand prices Medjoul at ₹1,899
+- **Impact**: Makes Flyberry ₹899 feel like "mid-tier" (no longer ultra-premium)
+- **Response**:
+  - ✅ Launch ultra-premium "Reserve Medjoul" at ₹1,499 (limited edition, Majestic++  grade)
+  - ✅ Maintain ₹899 as "Signature Medjoul" (accessible premium)
+
+---
+
+#### 1.6.8 PRICING GOVERNANCE & REVIEW
+
+**Responsibility**: Pricing Committee (Finance Director + Marketing Director + Product Manager)
+
+**Review Frequency**:
+- **Quarterly**: Competitive price monitoring, margin analysis
+- **Bi-Annual**: Willingness-to-pay research (survey or A/B tests)
+- **Annual**: Comprehensive pricing strategy review
+
+**Price Change Protocol**:
+
+| Price Change Type | Approval Required | Notification | Timeline |
+|-------------------|-------------------|--------------|----------|
+| **<5% adjustment** | Product Manager | Internal only | Immediate |
+| **5-15% adjustment** | Pricing Committee | Customers via email | 2-week notice |
+| **>15% increase** | CEO + Board | Public announcement | 1-month notice |
+| **Promotional discount** | Marketing Director | Campaign materials | Campaign duration |
+
+**Documentation**:
+- All price changes logged in Section 06 (this document)
+- Rationale documented (cost increase, competitor move, repositioning)
+- Impact tracked (revenue change, margin change, volume change)
+
+---
+
+#### SECTION 1.6 SUMMARY
+
+| Element | Target | Current Status | Action Required |
+|---------|--------|----------------|-----------------|
+| **Competitive Benchmarking** | Quarterly price scraping | 🔶 No formal process | Set up automated price tracking tool |
+| **Willingness-to-Pay Study** | 200+ customer survey | 🔶 Not conducted | Commission Van Westendorp study (Q1 2026) |
+| **Margin Analysis** | All 44 products analyzed | 🔶 COGS data missing | Finance exports COGS, calculate margins |
+| **Pricing Scenarios** | War-gamed 3-5 scenarios | ✅ Framework created | Annual scenario planning workshop |
+| **Governance Process** | Pricing Committee meets quarterly | 🔶 Not formalized | Schedule first meeting, define roles |
+
+**Immediate Actions** (Next 30 Days):
+1. Finance exports COGS for all products → Calculate actual gross margins
+2. Scrape competitor prices for top 10 products → Calculate Flyberry premium %
+3. Identify 1-2 products for A/B price testing on website
+
+**Short-Term** (Next 90 Days):
+4. Commission Van Westendorp willingness-to-pay study (top 10 products)
+5. Formalize Pricing Committee → Schedule quarterly reviews
+6. Document pricing changes in governance log
+
+**Owner**: Finance Director + Marketing Director
+**Timeline**: 90-day sprint
+
+---
+
 ## 2. PACKAGING STRATEGY
 
 ### Pack Size Logic
