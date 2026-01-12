@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyberry Campaign Strategies</title>
+    <style>
+        :root {
+            --color-primary: #8B5A3C;
+            --color-secondary: #4A3728;
+            --color-background: #F8F5F0;
+            --color-white: #FFFFFF;
+            --color-border: #E5E5E5;
+            --color-text: #4A3728;
+            --color-text-light: #6B6B6B;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--color-background);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: var(--color-white);
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            border-left: 6px solid var(--color-primary);
+        }
+
+        .header h1 {
+            color: var(--color-primary);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-subtitle {
+            color: var(--color-text-light);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .header-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+        }
+
+        .header-meta span {
+            padding: 0.5rem 1rem;
+            background: var(--color-background);
+            border-radius: 6px;
+        }
+
+        .intro-section {
+            background: var(--color-white);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .intro-section h2 {
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .intro-section p {
+            color: var(--color-text-light);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .sections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .section-card {
+            background: var(--color-white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-left: 6px solid var(--color-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .section-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .section-card:hover::before {
+            opacity: 1;
+        }
+
+        .section-number {
+            font-size: 0.9rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-description {
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .section-highlights {
+            background: var(--color-background);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-highlights h4 {
+            color: var(--color-secondary);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .section-highlights ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section-highlights li {
+            padding: 0.25rem 0;
+            color: var(--color-text);
+            font-size: 0.95rem;
+        }
+
+        .section-highlights li::before {
+            content: '✓ ';
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+
+        .section-meta {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+        }
+
+        .section-meta span {
+            background: var(--color-background);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--color-primary);
+            color: var(--color-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: var(--color-secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .back-link {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .back-link a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link a:hover {
+            color: var(--color-secondary);
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--color-text-light);
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .sections-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Flyberry Campaign Strategies</h1>
+            <p class="header-subtitle">Retail Presence & Digital Communication Frameworks</p>
+            <div class="header-meta">
+                <span>📁 2 Sections</span>
+                <span>📅 January 2026</span>
+                <span>📊 5,311 words</span>
+            </div>
+        </div>
+
+        <div class="intro-section">
+            <h2>About This Collection</h2>
+            <p>This curated collection brings together Flyberry's essential campaign execution strategies. These two comprehensive sections provide actionable frameworks for retail merchandising and digital customer engagement through WhatsApp.</p>
+            <p style="margin-top: 1rem;"><strong>Purpose:</strong> Enable consistent, high-quality campaign execution across both physical retail environments and digital communication channels.</p>
+        </div>
+
+        <div class="sections-grid">
+            <!-- SECTION 18: POSM -->
+            <div class="section-card" onclick="window.open('POSM-RETAIL-STRATEGY.html', '_blank')">
+                <div class="section-number">Section 18</div>
+                <h2 class="section-title">POSM & Retail Strategy</h2>
+
+                <p class="section-description">
+                    Complete point-of-sale materials strategy covering retail merchandising, in-store displays, sampling protocols, and seasonal campaigns.
+                </p>
+
+                <div class="section-highlights">
+                    <h4>Key Components:</h4>
+                    <ul>
+                        <li>Store type strategy (Modern Trade, Specialty, Traditional)</li>
+                        <li>Signage specifications (shelf-talkers, danglers, posters)</li>
+                        <li>Sampling station protocols and scripts</li>
+                        <li>Branded display fixtures and organizers</li>
+                        <li>Seasonal campaign materials (Diwali, New Year, Summer)</li>
+                        <li>ROI tracking and measurement frameworks</li>
+                    </ul>
+                </div>
+
+                <div class="section-meta">
+                    <span>📄 2,511 words</span>
+                    <span>🎯 7 Sections</span>
+                    <span>✅ Complete</span>
+                </div>
+
+                <a href="POSM-RETAIL-STRATEGY.html" class="cta-button" target="_blank">View Full Strategy →</a>
+            </div>
+
+            <!-- SECTION 19: WHATSAPP -->
+            <div class="section-card" onclick="window.open('WHATSAPP-CAMPAIGN-STRATEGY.html', '_blank')">
+                <div class="section-number">Section 19</div>
+                <h2 class="section-title">WhatsApp Campaign Strategy</h2>
+
+                <p class="section-description">
+                    Comprehensive WhatsApp communication framework covering customer service, retention campaigns, community building, and cross-channel integration.
+                </p>
+
+                <div class="section-highlights">
+                    <h4>Key Components:</h4>
+                    <ul>
+                        <li>WhatsApp philosophy and strategic approach</li>
+                        <li>4 content genres (Service, Retention, Community, Cross-channel)</li>
+                        <li>Persona-based message templates</li>
+                        <li>WhatsApp Business API integration</li>
+                        <li>Response protocols and SLAs (<2 hour response time)</li>
+                        <li>Content calendar framework (weekly, monthly, seasonal)</li>
+                        <li>Measurement & KPIs (>90% open rate, 15-20% revenue attribution)</li>
+                    </ul>
+                </div>
+
+                <div class="section-meta">
+                    <span>📄 2,800 words</span>
+                    <span>🎯 7 Sections</span>
+                    <span>✅ Complete</span>
+                </div>
+
+                <a href="WHATSAPP-CAMPAIGN-STRATEGY.html" class="cta-button" target="_blank">View Full Strategy →</a>
+            </div>
+        </div>
+
+        <div class="back-link">
+            <a href="index.html">← Back to Complete Brand Strategy (19 Sections)</a>
+        </div>
+
+        <footer>
+            <p><em>Flyberry Brand Strategy - Campaign Strategies Collection</em></p>
+            <p><em>Last updated: January 2026</em></p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyberry WhatsApp Campaign Strategy</title>
+    <style>
+        :root {
+            --color-primary: #8B5A3C;
+            --color-secondary: #4A3728;
+            --color-background: #F8F5F0;
+            --color-white: #FFFFFF;
+            --color-text: #4A3728;
+            --color-text-light: #6B5D52;
+            --color-success: #2E7D32;
+            --color-warning: #D32F2F;
+            --spacing-xs: 8px;
+            --spacing-sm: 16px;
+            --spacing-md: 24px;
+            --spacing-lg: 40px;
+            --spacing-xl: 60px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: var(--color-text);
+            background-color: var(--color-background);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--color-white);
+            padding: var(--spacing-lg);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header {
+            text-align: center;
+            padding-bottom: var(--spacing-lg);
+            border-bottom: 3px solid var(--color-primary);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-sm);
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--color-text-light);
+            font-style: italic;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .brand-section {
+            background: var(--color-white);
+            padding: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-left: 6px solid var(--color-primary);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--color-secondary);
+            margin-bottom: var(--spacing-md);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 2px solid var(--color-background);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            margin: var(--spacing-lg) 0 var(--spacing-md) 0;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            color: var(--color-secondary);
+            margin: var(--spacing-md) 0 var(--spacing-sm) 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: var(--spacing-md);
+            font-size: 1.05rem;
+            color: var(--color-text);
+        }
+
+        ul, ol {
+            margin: var(--spacing-md) 0;
+            padding-left: var(--spacing-lg);
+        }
+
+        li {
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+            padding: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        .non-negotiable {
+            background: #FFF3E0;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 6px;
+            border: 2px solid var(--color-primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .message-box {
+            background: #F5F5F5;
+            padding: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+            border-radius: 6px;
+            border-left: 4px solid #4CAF50;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+
+        .genre-card {
+            background: var(--color-white);
+            padding: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+            border-radius: 8px;
+            border: 2px solid var(--color-background);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+        }
+
+        .genre-card h4 {
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .do-dont-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+        }
+
+        .do-box, .dont-box {
+            padding: var(--spacing-md);
+            border-radius: 8px;
+        }
+
+        .do-box {
+            background: #E8F5E9;
+            border-left: 4px solid var(--color-success);
+        }
+
+        .dont-box {
+            background: #FFEBEE;
+            border-left: 4px solid var(--color-warning);
+        }
+
+        .do-box h4 {
+            color: var(--color-success);
+        }
+
+        .dont-box h4 {
+            color: var(--color-warning);
+        }
+
+        .frequency-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--spacing-md) 0;
+            background: var(--color-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .frequency-table th {
+            background: var(--color-primary);
+            color: var(--color-white);
+            padding: var(--spacing-sm);
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .frequency-table td {
+            padding: var(--spacing-sm);
+            border-bottom: 1px solid var(--color-background);
+        }
+
+        .frequency-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .frequency-table tr:nth-child(even) {
+            background: #FAFAFA;
+        }
+
+        .persona-card {
+            background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+            padding: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+            border-radius: 8px;
+            border-left: 5px solid var(--color-primary);
+        }
+
+        .persona-card h4 {
+            color: var(--color-secondary);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .api-feature {
+            background: #E3F2FD;
+            padding: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+            border-radius: 8px;
+            border-left: 4px solid #1976D2;
+        }
+
+        .sla-box {
+            background: #FFF9C4;
+            padding: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+            border-radius: 8px;
+            border-left: 4px solid #F57C00;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+        }
+
+        .metric-card {
+            background: var(--color-white);
+            padding: var(--spacing-md);
+            border-radius: 8px;
+            border: 2px solid var(--color-background);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+        }
+
+        .metric-card h4 {
+            color: var(--color-primary);
+            margin-bottom: var(--spacing-sm);
+            font-size: 1.1rem;
+        }
+
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-success);
+            margin: var(--spacing-sm) 0;
+        }
+
+        .flow-box {
+            background: #F3E5F5;
+            padding: var(--spacing-md);
+            margin: var(--spacing-md) 0;
+            border-radius: 8px;
+            border-left: 4px solid #7B1FA2;
+        }
+
+        strong {
+            color: var(--color-secondary);
+            font-weight: 600;
+        }
+
+        code {
+            background: #F5F5F5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #D32F2F;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+            border-top: 2px solid var(--color-background);
+            color: var(--color-text-light);
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: var(--spacing-md);
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            .do-dont-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .metric-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>FLYBERRY WHATSAPP CAMPAIGN STRATEGY</h1>
+            <p class="subtitle">Section 19: Personal, Retention-Focused Communication</p>
+        </header>
+
+        <!-- SECTION 1: PHILOSOPHY -->
+        <div class="brand-section">
+            <h2>1. WhatsApp Philosophy & Strategic Approach</h2>
+
+            <div class="highlight-box">
+                <h3>Core Principle</h3>
+                <p><strong>"WhatsApp is where brand becomes relationship. Not broadcast, but conversation."</strong></p>
+            </div>
+
+            <h3>Strategic Goals</h3>
+            <ul>
+                <li><strong>Retention:</strong> Keep customers engaged between purchases</li>
+                <li><strong>Personalization:</strong> 1-on-1 connection with high-value customers</li>
+                <li><strong>Community:</strong> Build VIP circles and wellness groups</li>
+                <li><strong>Service:</strong> Provide responsive, premium support experience</li>
+                <li><strong>Cross-channel:</strong> Bridge Instagram discovery to WhatsApp loyalty</li>
+            </ul>
+
+            <div class="non-negotiable">
+                <h3>Non-Negotiables</h3>
+                <ol>
+                    <li><strong>Respect privacy:</strong> Never spam, always opt-in</li>
+                    <li><strong>Response speed:</strong> &lt;2 hours during business hours, &lt;24 hours always</li>
+                    <li><strong>Tone consistency:</strong> Warm, personal, never robotic (see Brand Communication guide)</li>
+                    <li><strong>Value first:</strong> Every message must provide value (offer, info, support)</li>
+                    <li><strong>Integration:</strong> Link to larger customer journey (website, Instagram, retail)</li>
+                </ol>
+            </div>
+
+            <h3>WhatsApp Types We Use</h3>
+            <ul>
+                <li><strong>1-on-1 Messaging:</strong> Order updates, customer service, VIP engagement</li>
+                <li><strong>Broadcast Lists:</strong> Exclusive offers, product launches (segmented by persona)</li>
+                <li><strong>Groups:</strong> Wellness communities, corporate account managers, recipe circles</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 2: CONTENT GENRES -->
+        <div class="brand-section">
+            <h2>2. Content Genres for WhatsApp</h2>
+            <p><em>Parallel structure to Instagram strategy</em></p>
+
+            <div class="genre-card">
+                <h3>Genre 1: Customer Service & Support</h3>
+                <p><strong>Purpose:</strong> Responsive, premium support experience</p>
+
+                <h4>A. Order Status Updates</h4>
+                <div class="message-box">Hi [Name]! Your Medjoul Dates order is on its way 📦
+
+Expected delivery: Tomorrow by 6 PM
+Track: [Link]
+
+Questions? Just reply.</div>
+
+                <h4>B. Product Inquiry Responses</h4>
+                <div class="message-box">Great question about our Date Syrup!
+
+It's extracted from Medjoul dates (not manufactured).
+Lower GI than honey (54 vs. 58).
+No added sugar, preservatives, or processing.
+
+Want to try it? Here's a first-time discount: [Code]</div>
+
+                <h4>C. Issue Resolution</h4>
+                <div class="message-box">[Name], I'm sorry about the packaging issue.
+
+Here's what we're doing:
+1. Sending a replacement today (no charge)
+2. Following up with our logistics partner
+3. Including an extra pack as an apology
+
+Track your replacement: [Link]
+
+We appreciate you letting us know. Flyberry stands behind every product.</div>
+
+                <div class="do-dont-grid">
+                    <div class="do-box">
+                        <h4>✅ Do</h4>
+                        <ul>
+                            <li>Use customer's name (personal)</li>
+                            <li>Acknowledge issue first, then solve</li>
+                            <li>Provide specifics (tracking, timeline, compensation)</li>
+                            <li>Always close with gratitude</li>
+                        </ul>
+                    </div>
+                    <div class="dont-box">
+                        <h4>❌ Don't</h4>
+                        <ul>
+                            <li>Use generic "We apologize for the inconvenience"</li>
+                            <li>Deflect blame</li>
+                            <li>Leave issues unresolved</li>
+                            <li>Use robotic language</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="genre-card">
+                <h3>Genre 2: Retention Campaigns</h3>
+                <p><strong>Purpose:</strong> Keep customers engaged with exclusive value</p>
+
+                <h4>A. Exclusive Product Launches (VIP First Access)</h4>
+                <div class="message-box">[Name], you're one of the first to know:
+
+New: Australian Macadamia (Roasted + Salted) 🌰
+Style 0 grade. Coastal harvest. Buttery crunch.
+
+Early bird: 20% off for the next 48 hours
+Order now: [Link]
+
+(This discount is just for our WhatsApp community.)</div>
+
+                <h4>B. Personalized Recommendations</h4>
+                <div class="message-box">Hi [Name]!
+
+You loved the Medjoul Dates last month.
+Have you tried our Date Syrup? (Same Medjoul source.)
+
+Uses:
+- Morning coffee sweetener (½ tsp replaces sugar)
+- Pancake topping
+- Salad dressing base
+
+Try it: [Link] (15% off your next order)</div>
+
+                <h4>C. Re-Engagement (Lapsed Customers)</h4>
+                <div class="message-box">[Name], we miss you!
+
+It's been 3 months since your last order.
+Here's something new since then:
+
+Vacuum-Fried Chips - 70% less oil, tastes like vegetables 🥔
+(Not like regular chips. Try it: [Link])
+
+Welcome back offer: 25% off + free shipping
+Code: COMEBACK25</div>
+
+                <table class="frequency-table">
+                    <thead>
+                        <tr>
+                            <th>Customer Type</th>
+                            <th>Frequency</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Active customers</td>
+                            <td>Max 2 messages/week</td>
+                            <td>Avoid overwhelming engaged users</td>
+                        </tr>
+                        <tr>
+                            <td>Lapsed customers</td>
+                            <td>1 message/month</td>
+                            <td>Re-engagement only, not pushy</td>
+                        </tr>
+                        <tr>
+                            <td>VIPs</td>
+                            <td>Up to 3/week</td>
+                            <td>If they engage frequently</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="genre-card">
+                <h3>Genre 3: Community Building (WhatsApp Groups)</h3>
+                <p><strong>Purpose:</strong> Create VIP circles and wellness communities</p>
+
+                <h4>A. Wellness Circle (100-150 members)</h4>
+                <p><strong>Content:</strong> Nutrition tips, recipes, wellness challenges</p>
+                <p><strong>Posting Frequency:</strong> 2-3x/week</p>
+                <div class="message-box">🌰 Brazil Nut Tip:
+Just 2 nuts = 247% of daily selenium needs.
+
+Selenium benefits:
+- Thyroid function
+- Immune support
+- Antioxidant protection
+
+How do you eat yours?
+(Share your favorite way below!)</div>
+
+                <h4>B. Corporate VIP Group (Account Managers + Key Clients)</h4>
+                <p><strong>Content:</strong> Bulk order updates, corporate gifting ideas, early access</p>
+                <p><strong>Posting Frequency:</strong> 1x/week</p>
+                <div class="message-box">Corporate Gifting Update:
+
+New Diwali Hampers now available:
+- Premium: ₹2,599 (Medjoul + Macadamia + Date Syrup)
+- Luxury: ₹4,999 (Full premium range)
+
+Minimum order: 25 hampers
+Customization: Add your company logo
+Lead time: 14 days
+
+Interested? Reply with quantity.</div>
+
+                <h4>C. Recipe & Food Lovers Group</h4>
+                <p><strong>Content:</strong> Recipes using Flyberry products, cooking tips</p>
+                <p><strong>Posting Frequency:</strong> 2x/week</p>
+                <div class="message-box">Date Energy Balls Recipe 🍫
+
+Ingredients:
+- 10 Medjoul dates (pitted)
+- 1 cup mixed nuts (we use our Cashew + Almond mix)
+- 2 tbsp Date Syrup
+- 1 tbsp cocoa powder
+
+Blend → roll into balls → refrigerate
+
+Healthy snack ready in 10 minutes.
+(Post a pic if you try it!)</div>
+
+                <div class="non-negotiable">
+                    <h4>Group Management Rules</h4>
+                    <ul>
+                        <li>Pin welcome message with group rules</li>
+                        <li>No spamming/self-promotion by members</li>
+                        <li>Keep it 80% value, 20% product mentions</li>
+                        <li>Respond to questions within 2 hours</li>
+                        <li>Remove inactive members quarterly</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="genre-card">
+                <h3>Genre 4: Cross-Channel Integration</h3>
+                <p><strong>Purpose:</strong> Bridge Instagram discovery to WhatsApp loyalty</p>
+
+                <h4>A. Instagram → WhatsApp Funnel</h4>
+                <div class="flow-box">
+                    <p><strong>Instagram Post Caption:</strong></p>
+                    <p>"Want exclusive access to new products before anyone else?<br>
+                    Join our WhatsApp community: [Link]<br>
+                    (First 500 members get 20% off next order.)"</p>
+                </div>
+                <div class="message-box">Welcome to Flyberry's VIP circle! 🎉
+
+You're now part of a community that gets:
+- Early product launches
+- Exclusive discounts (WhatsApp-only)
+- Nutrition tips & recipes
+- Direct line to our team
+
+First gift: 20% off your next order
+Code: VIP20
+
+Excited to have you here!</div>
+
+                <h4>B. WhatsApp → Instagram Loop</h4>
+                <div class="message-box">Thanks for your order, [Name]!
+
+Follow us on Instagram for:
+- Behind-the-scenes stories
+- Origin documentaries
+- Recipe ideas
+
+instagram.com/flyberry_official
+
+(Tag us when you unbox! We love seeing your posts.)</div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: MESSAGE TEMPLATES BY PERSONA -->
+        <div class="brand-section">
+            <h2>3. Message Templates by Persona</h2>
+            <p><em>Tailored messaging for different customer types</em></p>
+
+            <div class="persona-card">
+                <h4>For Priya (Corporate Buyer)</h4>
+                <div class="message-box">Hi Priya,
+
+Your monthly bulk order for [Company Name] is confirmed:
+- 50kg Medjoul Dates
+- 30kg Mixed Nuts
+- Delivery: [Date]
+
+Invoice attached.
+
+For next month's order, we have a new addition:
+Vacuum-Fried Chips (70% less oil, perfect for office pantries).
+Sample pack coming with this delivery.
+
+Any changes needed? Just reply.
+
+Best,
+[Your Name], Flyberry</div>
+            </div>
+
+            <div class="persona-card">
+                <h4>For Ananya (Gifting Enthusiast)</h4>
+                <div class="message-box">Ananya, your Diwali hamper order looks amazing!
+
+15 Premium Hampers (₹2,599 each)
+Customization: Gold ribbon + your greeting card
+Delivery: Oct 20 (before Diwali)
+
+We're adding complimentary gift tags at no charge.
+
+Need anything else?
+(We can add personalized notes for each recipient.)</div>
+            </div>
+
+            <div class="persona-card">
+                <h4>For Rahul (Health-Conscious Millennial)</h4>
+                <div class="message-box">Rahul!
+
+Loved your question about Date Syrup vs. honey.
+
+Quick comparison:
+Date Syrup: 54 GI, natural minerals, no processing
+Honey: 58 GI, trace enzymes, pasteurized
+
+Both natural, but Date Syrup = lower GI + no added sugar.
+
+Try it: [Link] (20% off with code HEALTH20)
+
+More questions? Ask away.</div>
+            </div>
+
+            <div class="persona-card">
+                <h4>For Meera (Wellness Advocate)</h4>
+                <div class="message-box">Hi Meera!
+
+You're in our Wellness Circle WhatsApp group now 🌿
+
+Weekly content:
+- Nutrition science (not hype)
+- Recipes with our products
+- Wellness challenges
+
+First tip: Brazil nuts (2/day) give 247% selenium.
+(Most people don't get enough.)
+
+Excited to have you in the community!</div>
+            </div>
+        </div>
+
+        <!-- SECTION 4: WHATSAPP BUSINESS API -->
+        <div class="brand-section">
+            <h2>4. WhatsApp Business API Integration</h2>
+            <p><em>Technical setup for scale</em></p>
+
+            <h3>A. WhatsApp Business vs. WhatsApp Business API</h3>
+            <ul>
+                <li><strong>Business App:</strong> For small scale (&lt;1,000 customers), manual responses</li>
+                <li><strong>Business API:</strong> For scale (&gt;1,000 customers), automated + human hybrid</li>
+            </ul>
+
+            <h3>B. API Features We Use</h3>
+            <div class="api-feature">
+                <h4>Automated Order Updates</h4>
+                <p>Triggered by order status changes (confirmed → shipped → delivered)</p>
+            </div>
+
+            <div class="api-feature">
+                <h4>Chatbot for FAQs</h4>
+                <p>Handles common questions (delivery time, return policy, product info)</p>
+            </div>
+
+            <div class="api-feature">
+                <h4>Human Handoff</h4>
+                <p>Complex inquiries escalate to team member automatically</p>
+            </div>
+
+            <div class="api-feature">
+                <h4>Broadcast Segmentation</h4>
+                <p>Send different messages to different customer segments (VIPs, lapsed, corporate)</p>
+            </div>
+
+            <div class="api-feature">
+                <h4>Analytics</h4>
+                <p>Track message delivery, read rates, response times</p>
+            </div>
+
+            <h3>C. Integration Points</h3>
+            <ul>
+                <li><strong>E-commerce Platform:</strong> Sync order data for automated updates</li>
+                <li><strong>CRM:</strong> Maintain customer conversation history</li>
+                <li><strong>Instagram:</strong> Link bio to WhatsApp with pre-filled messages</li>
+                <li><strong>Website:</strong> "Chat with us on WhatsApp" button with context (e.g., product inquiry)</li>
+            </ul>
+
+            <h3>D. Message Templates (WhatsApp requires pre-approval)</h3>
+            <table class="frequency-table">
+                <thead>
+                    <tr>
+                        <th>Template Type</th>
+                        <th>Use Case</th>
+                        <th>Approval Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Order confirmation</td>
+                        <td>When order is placed</td>
+                        <td>Pre-approved</td>
+                    </tr>
+                    <tr>
+                        <td>Shipping update</td>
+                        <td>When order is shipped</td>
+                        <td>Pre-approved</td>
+                    </tr>
+                    <tr>
+                        <td>Delivery confirmation</td>
+                        <td>When order is delivered</td>
+                        <td>Pre-approved</td>
+                    </tr>
+                    <tr>
+                        <td>Payment reminder</td>
+                        <td>For pending payments (COD follow-up)</td>
+                        <td>Requires approval</td>
+                    </tr>
+                    <tr>
+                        <td>Re-engagement offer</td>
+                        <td>For lapsed customers</td>
+                        <td>Requires approval</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SECTION 5: RESPONSE PROTOCOLS -->
+        <div class="brand-section">
+            <h2>5. Response Protocols & SLAs</h2>
+            <p><em>Service level standards</em></p>
+
+            <h3>A. Response Time Targets</h3>
+            <div class="sla-box">
+                <ul>
+                    <li><strong>Simple Inquiries:</strong> &lt;1 hour (business hours)</li>
+                    <li><strong>Order Issues:</strong> &lt;30 minutes (critical)</li>
+                    <li><strong>General Questions:</strong> &lt;2 hours (business hours)</li>
+                    <li><strong>After Hours:</strong> &lt;24 hours (next business day)</li>
+                </ul>
+            </div>
+
+            <h3>B. Escalation Protocol</h3>
+            <ol>
+                <li><strong>Level 1 (Chatbot):</strong> FAQs, order tracking, basic info</li>
+                <li><strong>Level 2 (Customer Service Team):</strong> Product inquiries, order modifications</li>
+                <li><strong>Level 3 (Manager):</strong> Complaints, bulk orders, partnership inquiries</li>
+            </ol>
+
+            <h3>C. Quality Standards</h3>
+            <div class="do-dont-grid">
+                <div class="do-box">
+                    <h4>✅ Always Do</h4>
+                    <ul>
+                        <li>Address customer by name</li>
+                        <li>Acknowledge their message before solving</li>
+                        <li>Provide specific answers (not generic "we'll look into it")</li>
+                        <li>Set clear expectations (timeline, next steps)</li>
+                        <li>Close with gratitude and open door</li>
+                    </ul>
+                </div>
+                <div class="dont-box">
+                    <h4>❌ Never Do</h4>
+                    <ul>
+                        <li>Say "as per policy" (explain in human terms)</li>
+                        <li>Deflect blame (own the issue, solve it)</li>
+                        <li>Leave customer waiting without updates</li>
+                        <li>Use robotic corporate language</li>
+                        <li>Close conversation without resolution</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 6: CONTENT CALENDAR -->
+        <div class="brand-section">
+            <h2>6. Content Calendar Framework</h2>
+            <p><em>When to send what</em></p>
+
+            <h3>Weekly Rhythm</h3>
+            <table class="frequency-table">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Content Type</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Wellness tip or nutrition fact</td>
+                        <td>Start week right</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Product spotlight or recipe</td>
+                        <td>Mid-week value</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Weekend recipe or lifestyle content</td>
+                        <td>Prep for relaxation</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>Exclusive offer or early product access</td>
+                        <td>Weekend engagement</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Monthly Campaigns</h3>
+            <ul>
+                <li><strong>Week 1:</strong> New product launches or seasonal offers</li>
+                <li><strong>Week 2:</strong> Educational content (origin stories, processes)</li>
+                <li><strong>Week 3:</strong> Customer spotlights or testimonials</li>
+                <li><strong>Week 4:</strong> Re-engagement for lapsed customers</li>
+            </ul>
+
+            <h3>Seasonal Events</h3>
+            <table class="frequency-table">
+                <thead>
+                    <tr>
+                        <th>Season/Event</th>
+                        <th>Focus</th>
+                        <th>Timing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Diwali</td>
+                        <td>Gifting hampers, corporate orders</td>
+                        <td>Oct-Nov</td>
+                    </tr>
+                    <tr>
+                        <td>New Year</td>
+                        <td>Wellness resolutions, healthy snacking</td>
+                        <td>Jan</td>
+                    </tr>
+                    <tr>
+                        <td>Valentine's Day</td>
+                        <td>Premium gifting (dates, chocolates)</td>
+                        <td>Feb</td>
+                    </tr>
+                    <tr>
+                        <td>Summer</td>
+                        <td>Travel snacks, portable packs</td>
+                        <td>Apr-Jun</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Ad-Hoc Triggers</h3>
+            <ul>
+                <li><strong>Customer birthdays:</strong> Personalized offer</li>
+                <li><strong>Order anniversaries:</strong> "You first ordered 1 year ago!"</li>
+                <li><strong>Cart abandonment:</strong> 24-hour follow-up</li>
+            </ul>
+        </div>
+
+        <!-- SECTION 7: MEASUREMENT & KPIs -->
+        <div class="brand-section">
+            <h2>7. Measurement & KPIs</h2>
+            <p><em>How to know if WhatsApp strategy is working</em></p>
+
+            <h3>A. Engagement Metrics</h3>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <h4>Message Open Rate</h4>
+                    <p class="metric-value">&gt;90%</p>
+                    <p>Target: Nearly all messages opened (WhatsApp advantage)</p>
+                </div>
+                <div class="metric-card">
+                    <h4>Response Rate</h4>
+                    <p class="metric-value">&gt;30%</p>
+                    <p>Target: For campaigns and broadcasts</p>
+                </div>
+                <div class="metric-card">
+                    <h4>Opt-out Rate</h4>
+                    <p class="metric-value">&lt;2%</p>
+                    <p>Target: Keep unsubscribes minimal</p>
+                </div>
+                <div class="metric-card">
+                    <h4>Group Participation</h4>
+                    <p class="metric-value">&gt;40%</p>
+                    <p>Target: Active monthly in groups</p>
+                </div>
+            </div>
+
+            <h3>B. Business Impact</h3>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <h4>WhatsApp-Attributed Revenue</h4>
+                    <p class="metric-value">15-20%</p>
+                    <p>Target: Of total revenue</p>
+                </div>
+                <div class="metric-card">
+                    <h4>Repeat Purchase Rate</h4>
+                    <p class="metric-value">&gt;50%</p>
+                    <p>Target: For WhatsApp customers</p>
+                </div>
+                <div class="metric-card">
+                    <h4>Average Order Value</h4>
+                    <p class="metric-value">Higher</p>
+                    <p>WhatsApp vs. other channels</p>
+                </div>
+                <div class="metric-card">
+                    <h4>Customer Lifetime Value</h4>
+                    <p class="metric-value">2-3x</p>
+                    <p>WhatsApp subscribers vs. non-subscribers</p>
+                </div>
+            </div>
+
+            <h3>C. Operational Metrics</h3>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <h4>Average Response Time</h4>
+                    <p class="metric-value">&lt;2 hours</p>
+                    <p>Business hours target</p>
+                </div>
+                <div class="metric-card">
+                    <h4>First-Contact Resolution</h4>
+                    <p class="metric-value">&gt;70%</p>
+                    <p>Issues resolved in first message</p>
+                </div>
+                <div class="metric-card">
+                    <h4>Customer Satisfaction</h4>
+                    <p class="metric-value">&gt;4.5/5</p>
+                    <p>Post-chat survey score</p>
+                </div>
+            </div>
+
+            <h3>D. Cross-Channel Metrics</h3>
+            <ul>
+                <li><strong>Instagram → WhatsApp conversion rate:</strong> Track how many IG followers join WhatsApp</li>
+                <li><strong>Website → WhatsApp chat initiation rate:</strong> Button clicks from product pages</li>
+                <li><strong>WhatsApp → purchase conversion rate:</strong> Messages that lead to orders</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h4>Monthly Review Protocol</h4>
+                <p>Analyze metrics, adjust messaging frequency, test new content types. Review top-performing messages and replicate patterns. Identify drop-off points and optimize. Compare WhatsApp ROI against other channels.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p><em>Last updated: January 2026</em></p>
+        </footer>
+    </div>
+</body>
+</html>

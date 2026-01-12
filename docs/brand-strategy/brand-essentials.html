@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyberry Brand Essentials</title>
+    <style>
+        :root {
+            --color-primary: #8B5A3C;
+            --color-secondary: #4A3728;
+            --color-background: #F8F5F0;
+            --color-white: #FFFFFF;
+            --color-border: #E5E5E5;
+            --color-text: #4A3728;
+            --color-text-light: #6B6B6B;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--color-background);
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: var(--color-white);
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            border-left: 6px solid var(--color-primary);
+        }
+
+        .header h1 {
+            color: var(--color-primary);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-subtitle {
+            color: var(--color-text-light);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .header-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+        }
+
+        .header-meta span {
+            padding: 0.5rem 1rem;
+            background: var(--color-background);
+            border-radius: 6px;
+        }
+
+        .intro-section {
+            background: var(--color-white);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .intro-section h2 {
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .intro-section p {
+            color: var(--color-text-light);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .sections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .section-card {
+            background: var(--color-white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-left: 6px solid var(--color-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .section-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .section-card:hover::before {
+            opacity: 1;
+        }
+
+        .section-number {
+            font-size: 0.85rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            color: var(--color-secondary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-description {
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .section-highlights {
+            background: var(--color-background);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 1rem;
+        }
+
+        .section-highlights h4 {
+            color: var(--color-secondary);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .section-highlights ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section-highlights li {
+            padding: 0.25rem 0;
+            color: var(--color-text);
+            font-size: 0.95rem;
+        }
+
+        .section-highlights li::before {
+            content: '✓ ';
+            color: var(--color-primary);
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+
+        .section-meta {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            flex-wrap: wrap;
+        }
+
+        .section-meta span {
+            background: var(--color-background);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--color-primary);
+            color: var(--color-white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .cta-button:hover {
+            background: var(--color-secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .category-header {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+            color: var(--color-white);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            margin: 3rem 0 2rem 0;
+            text-align: center;
+        }
+
+        .category-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-header p {
+            font-size: 1.05rem;
+            opacity: 0.95;
+        }
+
+        .back-link {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .back-link a {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link a:hover {
+            color: var(--color-secondary);
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--color-text-light);
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .sections-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Flyberry Brand Essentials</h1>
+            <p class="header-subtitle">Foundation, Values, Personas & Communication Frameworks</p>
+            <div class="header-meta">
+                <span>📁 7 Core Sections</span>
+                <span>📅 January 2026</span>
+                <span>📊 ~35,000 words</span>
+            </div>
+        </div>
+
+        <div class="intro-section">
+            <h2>About This Collection</h2>
+            <p>This curated collection brings together the core strategic documents that define Flyberry's brand identity, positioning, and communication approach. These seven essential sections provide the foundation for all brand decisions, messaging, and customer engagement.</p>
+            <p style="margin-top: 1rem;"><strong>Purpose:</strong> Ensure consistent brand understanding across all teams—from marketing and sales to product development and customer service.</p>
+        </div>
+
+        <!-- FOUNDATIONAL SECTIONS -->
+        <div class="category-header">
+            <h2>Brand Foundation & Strategy</h2>
+            <p>Core identity, values, and target audiences</p>
+        </div>
+
+        <div class="sections-grid">
+            <!-- SECTION 01: BRAND FOUNDATION -->
+            <div class="section-card" onclick="window.location.href='index.html#section-01'">
+                <div class="section-number">Section 01</div>
+                <h2 class="section-title">Brand Foundation</h2>
+
+                <p class="section-description">
+                    The core idea behind Flyberry: reimagining what food can be. Defines purpose, vision, mission, and brand philosophy.
+                </p>
+
+                <div class="section-highlights">
+                    <h4>Key Components:</h4>
+                    <ul>
+                        <li>Brand purpose: Deliver world's finest natural foods</li>
+                        <li>Vision: India's Best-in-Class Gourmet leader</li>
+                        <li>Mission: Source extraordinary, deliver #1 products</li>
+                        <li>Brand philosophy and competitive moat</li>
+                        <li>2027 targets (₹100 Cr revenue, 60% awareness)</li>
+                    </ul>
+                </div>
+
+                <div class="section-meta">
+                    <span>📄 ~3,500 words</span>
+                    <span>✅ Complete</span>
+                </div>
+
+                <a href="index.html#section-01" class="cta-button">View in Main Index →</a>
+            </div>
+
+            <!-- SECTION 03: BRAND VALUES -->
+            <div class="section-card" onclick="window.location.href='index.html#section-03'">
+                <div class="section-number">Section 03</div>
+                <h2 class="section-title">Brand Values</h2>
+
+                <p class="section-description">
+                    The hierarchical value system that guides all decisions: TASTE (40%) → HOW (35%) → PROOF (25%).
+                </p>
+
+                <div class="section-highlights">
+                    <h4>Key Components:</h4>
+                    <ul>
+                        <li>Extraordinary taste as primary value (40% weight)</li>
+                        <li>HOW: Sourcing, processing, selection (35%)</li>
+                        <li>PROOF: Fortune 500 validation, QR verification (25%)</li>
+                        <li>Non-negotiable standards across all products</li>
+                        <li>Decision-making framework based on value hierarchy</li>
+                    </ul>
+                </div>
+
+                <div class="section-meta">
+                    <span>📄 ~4,200 words</span>
+                    <span>✅ Complete</span>
+                </div>
+
+                <a href="index.html#section-03" class="cta-button">View in Main Index →</a>
+            </div>
+
+            <!-- SECTION 04: TARGET PERSONAS -->
+            <div class="section-card" onclick="window.location.href='index.html#section-04'">
+                <div class="section-number">Section 04</div>
+                <h2 class="section-title">Target Personas</h2>
+
+                <p class="section-description">
+                    Four detailed customer personas that represent Flyberry's core audiences: Taste Authorities, Conscious Achievers, Generous Hosts, and Corporate Decision-Makers.
+                </p>
+
+                <div class="section-highlights">
+                    <h4>Key Personas:</h4>
+                    <ul>
+                        <li>Priya (Taste Authority) - Premium quality seeker, 32, ₹18L income</li>
+                        <li>Ananya (Conscious Achiever) - Health-conscious professional, 28, ₹12L</li>
+                        <li>Rahul (Generous Host) - Gifting enthusiast, 35, ₹25L</li>
+                        <li>Meera (Corporate Decision-Maker) - B2B buyer, 38, procurement role</li>
+                    </ul>
+                </div>
+
+                <div class="section-meta">
+                    <span>📄 ~6,800 words</span>
+                    <span>✅ Complete</span>
+                </div>
+
+                <a href="index.html#section-04" class="cta-button">View in Main Index →</a>
+            </div>
+
+            <!-- SECTION 07: MANIFESTO & NARRATIVES -->
+            <div class="section-card" onclick="window.location.href='index.html#section-07'">
+                <div class="section-number">Section 07</div>
+                <h2 class="section-title">Manifesto & Narratives</h2>
+
+                <p class="section-description">
+                    Brand manifesto and five narrative frameworks for different contexts: origin stories, quality proof, taste-first approach, wellness positioning, and corporate validation.
+                </p>
+
+                <div class="section-highlights">
+                    <h4>Key Narratives:</h4>
+                    <ul>
+                        <li>Brand manifesto: "We believe food should be extraordinary"</li>
+                        <li>Origin narrative: 7 countries, 10+ year partnerships</li>
+                        <li>Quality narrative: Fortune 500 validation stories</li>
+                        <li>Taste narrative: Sensory-first descriptions</li>
+                        <li>Wellness narrative: RDA documentation, natural ingredients</li>
+                    </ul>
+                </div>
+
+                <div class="section-meta">
+                    <span>📄 ~5,500 words</span>
+                    <span>✅ Complete</span>
+                </div>
+
+                <a href="index.html#section-07" class="cta-button">View in Main Index →</a>
+            </div>
+        </div>
+
+        <!-- COMMUNICATION SECTIONS -->
+        <div class="category-header">
+            <h2>Brand Communication & Messaging</h2>
+            <p>Voice, tone, and channel-specific strategies</p>
+        </div>
+
+        <div class="sections-grid">
+            <!-- BRAND MESSAGING -->
+            <div class="section-card" onclick="window.open('BRAND-MESSAGING.html', '_blank')">
+                <div class="section-number">Core Framework</div>
+                <h2 class="section-title">Brand Messaging</h2>
+
+                <p class="section-description">
+                    Comprehensive messaging architecture including positioning statements, key messages, proof points, and audience-specific messaging frameworks.
+                </p>
+
+                <div class="section-highlights">
+                    <h4>Key Components:</h4>
+                    <ul>
+                        <li>Brand positioning statement and tagline</li>
+                        <li>3-tier messaging hierarchy (TASTE → HOW → PROOF)</li>
+                        <li>Proof points library (origin, quality, validation)</li>
+                        <li>Messaging by persona (Priya, Ananya, Rahul, Meera)</li>
+                        <li>Competitive differentiation messaging</li>
+                        <li>Crisis communication protocols</li>
+                    </ul>
+                </div>
+
+                <div class="section-meta">
+                    <span>📄 ~4,500 words</span>
+                    <span>✅ Complete</span>
+                </div>
+
+                <a href="BRAND-MESSAGING.html" class="cta-button" target="_blank">View Full Document →</a>
+            </div>
+
+            <!-- BRAND COMMUNICATION -->
+            <div class="section-card" onclick="window.open('BRAND-COMMUNICATION.html', '_blank')">
+                <div class="section-number">Core Framework</div>
+                <h2 class="section-title">Brand Communication Guide</h2>
+
+                <p class="section-description">
+                    Complete brand voice, tone, and channel-specific communication guidelines for all customer touchpoints.
+                </p>
+
+                <div class="section-highlights">
+                    <h4>Key Components:</h4>
+                    <ul>
+                        <li>Brand voice: Warm, confident, specific (not vague)</li>
+                        <li>Tone variations by context (educational, promotional, service)</li>
+                        <li>Writing principles (specificity over buzzwords)</li>
+                        <li>Channel guidelines (website, social, email, packaging)</li>
+                        <li>Visual communication standards</li>
+                        <li>Do's and don'ts with examples</li>
+                    </ul>
+                </div>
+
+                <div class="section-meta">
+                    <span>📄 ~5,200 words</span>
+                    <span>✅ Complete</span>
+                </div>
+
+                <a href="BRAND-COMMUNICATION.html" class="cta-button" target="_blank">View Full Document →</a>
+            </div>
+
+            <!-- SECTION 17: SOCIAL STRATEGY -->
+            <div class="section-card" onclick="window.open('SOCIAL-STRATEGY-INSTAGRAM.html', '_blank')">
+                <div class="section-number">Section 17</div>
+                <h2 class="section-title">Social Strategy - Instagram</h2>
+
+                <p class="section-description">
+                    Instagram content strategy with four distinct content genres: conversational in-store content, taking Flyberry to places, trust-building founder content, and lifestyle content.
+                </p>
+
+                <div class="section-highlights">
+                    <h4>Content Genres:</h4>
+                    <ul>
+                        <li>Genre 1: In-store conversational content (Mokai-style)</li>
+                        <li>Genre 2: "Taking Flyberry to places" (travel, events, culture)</li>
+                        <li>Genre 3: Founder trust-building content (product education)</li>
+                        <li>Genre 4: Lifestyle content (food naturally present in life)</li>
+                        <li>Posting frequency, caption rules, visual guidelines</li>
+                    </ul>
+                </div>
+
+                <div class="section-meta">
+                    <span>📄 2,635 words</span>
+                    <span>✅ Complete</span>
+                </div>
+
+                <a href="SOCIAL-STRATEGY-INSTAGRAM.html" class="cta-button" target="_blank">View Full Strategy →</a>
+            </div>
+        </div>
+
+        <div class="back-link">
+            <a href="index.html">← Back to Complete Brand Strategy (19 Sections)</a>
+        </div>
+
+        <footer>
+            <p><em>Flyberry Brand Strategy - Essentials Collection</em></p>
+            <p><em>Last updated: January 2026</em></p>
+        </footer>
+    </div>
+</body>
+</html>
